@@ -2,6 +2,10 @@
 
 Use this page to find the authoritative project documents. The current working result is the tract-level Gurobi model; the ZIP-point model is retained only as a comparison and sensitivity baseline.
 
+## AI onboarding
+
+- [AI Project Reading and Handoff Guide](../AGENTS.md): mandatory reading order, source-of-truth hierarchy, current model facts, change restrictions, and verification protocol for any AI assistant working from a local clone.
+
 ## Report documents
 
 - [Milestone 4 Report Context and Reminders](../MILESTONE4_REPORT_REMINDERS.md): shared writing context, frozen formulation, assumptions requiring team confirmation, solver terminology, verified result, and wording cautions. This file remains in the repository root so every group member can see it immediately.

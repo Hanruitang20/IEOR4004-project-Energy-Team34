@@ -23,6 +23,7 @@ These values are a first working candidate solution under the stated data and sc
 
 | Need | Document or command |
 | --- | --- |
+| Give an AI assistant the full project context | [AI Project Reading and Handoff Guide](AGENTS.md) |
 | Write or review the Milestone 4 report | [Milestone 4 Report Context and Reminders](MILESTONE4_REPORT_REMINDERS.md) |
 | Run the project on a teammate's Gurobi environment | [Gurobi Run Instructions](GUROBI_RUN_INSTRUCTIONS.md) |
 | Read the implementation and sanity-check findings | [Milestone 4 Implementation and Results](docs/MILESTONE4.md) |
@@ -32,10 +33,15 @@ These values are a first working candidate solution under the stated data and sc
 | Run the ZIP-versus-tract comparison | `python run_geography_comparison.py` |
 | Run automated tests | `python -m unittest discover -s tests` |
 
+After pulling the repository, a teammate can start an AI session in the repository root and use:
+
+> Read `AGENTS.md` and follow its required reading order. Before changing anything, give me the six-part AI handoff summary requested at the end of that file.
+
 ## Repository structure
 
 ```text
 README.md                         Project overview and current verified result
+AGENTS.md                         Required reading order and rules for AI assistants
 MILESTONE4_REPORT_REMINDERS.md    Shared report-writing context at the repository root
 GUROBI_RUN_INSTRUCTIONS.md        Portable setup and execution instructions
 config/                           ZIP baseline and tract working-model assumptions
