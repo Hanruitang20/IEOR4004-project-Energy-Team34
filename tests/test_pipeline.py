@@ -4,8 +4,13 @@ import unittest
 from pathlib import Path
 
 import numpy as np
+import pandas as pd
 
-from src.data_preparation import haversine_matrix_miles, prepare_model_data
+from src.data_preparation import (
+    allocate_zip_demand_to_tracts,
+    haversine_matrix_miles,
+    prepare_model_data,
+)
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -41,6 +46,39 @@ class DataPreparationTests(unittest.TestCase):
         limits = self.data.municipal["max_additional_ports"]
         self.assertTrue(limits.ge(0).all())
         self.assertTrue((limits == limits.astype(int)).all())
+
+    def test_hud_residential_ratio_allocation_conserves_matched_records(self) -> None:
+        zip_demand = pd.DataFrame(
+            {
+                "zip": ["10001", "10002"],
+                "electric_registration_records": [100.0, 40.0],
+            }
+        )
+        crosswalk = pd.DataFrame(
+            {
+                "zip": ["10001", "10001", "10002", "99999"],
+                "tract_geoid": [
+                    "36061000100",
+                    "36061000200",
+                    "36061000200",
+                    "34001000100",
+                ],
+                "res_ratio": [0.25, 0.75, 0.50, 1.0],
+            }
+        )
+        tracts = pd.DataFrame(
+            {
+                "tract_geoid": ["36061000100", "36061000200"],
+                "latitude": [40.7, 40.8],
+                "longitude": [-74.0, -73.9],
+            }
+        )
+        allocated, audit = allocate_zip_demand_to_tracts(zip_demand, crosswalk, tracts)
+        by_tract = allocated.set_index("tract_geoid")["electric_registration_records"]
+        self.assertAlmostEqual(float(by_tract["36061000100"]), 25.0)
+        self.assertAlmostEqual(float(by_tract["36061000200"]), 115.0)
+        self.assertAlmostEqual(float(by_tract.sum()), 140.0)
+        self.assertAlmostEqual(float(audit["allocation_conservation_error_records"]), 0.0)
 
 
 if __name__ == "__main__":

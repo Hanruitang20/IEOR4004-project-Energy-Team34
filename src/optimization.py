@@ -255,7 +255,10 @@ def write_solution(solution: Solution, output_dir: Path) -> None:
     solution.municipal.sort_values(
         ["selected", "additional_ports", "facility_id"], ascending=[False, False, True]
     ).to_csv(output_dir / "municipal_candidate_solution.csv", index=False)
-    solution.demand.sort_values("zip").to_csv(output_dir / "demand_service_solution.csv", index=False)
+    demand_sort_column = "geography_id" if "geography_id" in solution.demand else "demand_id"
+    solution.demand.sort_values(demand_sort_column).to_csv(
+        output_dir / "demand_service_solution.csv", index=False
+    )
     solution.site_utilization.sort_values("site_id").to_csv(
         output_dir / "site_utilization.csv", index=False
     )

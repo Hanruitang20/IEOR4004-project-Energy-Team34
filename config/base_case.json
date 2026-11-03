@@ -1,5 +1,6 @@
 {
   "scenario_name": "base_case",
+  "demand_geography": "zip",
   "budget_usd": 3750000,
   "weekly_energy_per_ev_kwh": 60.0,
   "public_l2_share": 0.25,

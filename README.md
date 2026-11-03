@@ -28,6 +28,7 @@ results/    Reproducible base-case and sensitivity outputs
 | `municipal_usage_monthly.csv` | Municipal charging sessions aggregated by location and month | 511 rows |
 | `municipal_usage_status_counts.csv` | Session-status and invalidity-reason counts | 12 rows |
 | `nyc_acs_vehicle_households_2020_2024.csv` | ACS vehicle availability by NYC census tract | 2,324 rows |
+| `hud_zip_tract_crosswalk.csv` | Official HUD-USPS ZIP-to-tract residential-address ratios | Generated after HUD token setup |
 | `nyserda_nyc_plugin_snapshot_2023.csv` | Historical NYC BEV/PHEV registrations from the April 2023 NYSERDA snapshot | 401 rows |
 | `icct_l2_hardware_2019.csv` | ICCT Level 2 charging-hardware cost benchmarks | 4 rows |
 | `icct_l2_installation_2019.csv` | ICCT Level 2 installation cost benchmarks | 8 rows |
@@ -45,6 +46,7 @@ results/    Reproducible base-case and sensitivity outputs
 ## Important limitations
 
 - Mailing ZIP codes and Census ZCTAs are not identical geographic units.
+- HUD `RES_RATIO` allocates a ZIP total among tracts; it does not reveal any vehicle's address. The tract internal point remains an approximation for the 0.5-mile accessibility test.
 - EV registration counts are not charging-energy demand. Demand requires documented conversion assumptions.
 - Public stations may be accessible to more than one demand area. Accessible supply is therefore a proxy and not exclusive capacity for one ZIP.
 - The historical 2023 NYSERDA snapshot and 2026 DMV extract should not be combined without a comparability review.
@@ -80,6 +82,25 @@ Useful commands:
 python run_sensitivity.py
 python -m unittest discover -s tests
 ```
+
+## Tract-level demand refinement
+
+The original ZIP internal-point implementation remains the reproducible base case. A second configuration implements the spatial refinement identified by the Milestone 4 sanity check:
+
+1. Allocate each NYC ZIP's EV registration records across NYC Census tracts using the official HUD-USPS ZIP-to-tract `RES_RATIO`.
+2. Normalize a ZIP's positive ratios over matched NYC tracts because the DMV source rows used here represent NYC records.
+3. Aggregate allocated records by tract and use the ACS tract internal point for the 0.5-mile accessibility test.
+4. Leave ZIPs with no official crosswalk match unallocated and report them in the data audit; do not invent locations.
+
+HUD requires a free API token. Create one through the [official HUD API page](https://www.huduser.gov/portal/dataset/uspszip-api.html), then run:
+
+```bash
+HUD_API_TOKEN=YOUR_TOKEN python download_hud_crosswalk.py
+python run_model.py --config config/tract_case.json --output-dir results/tract_case
+python run_geography_comparison.py
+```
+
+Omitting year and quarter asks HUD for its latest available quarterly file; the returned period is saved in the metadata JSON for reproducibility. The token is used only in the request header and is never saved. Do not put it in the repository. The comparison output keeps the ZIP and tract results side by side so the effect of the spatial change can be sanity-checked rather than silently replacing the working base model.
 
 ## Data sources
 

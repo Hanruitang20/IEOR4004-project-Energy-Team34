@@ -61,9 +61,25 @@ def haversine_matrix_miles(
     return 2.0 * EARTH_RADIUS_MILES * np.arcsin(np.sqrt(np.clip(value, 0.0, 1.0)))
 
 
-def _load_demand(
+def _calculate_energy_demand(
+    demand: pd.DataFrame, config: dict[str, object]
+) -> pd.DataFrame:
+    demand = demand.copy()
+    demand["baseline_demand_kwh"] = (
+        demand["electric_registration_records"].astype(float)
+        * float(config["weekly_energy_per_ev_kwh"])
+        * float(config["public_l2_share"])
+    )
+    growth_multiplier = (1.0 + float(config["annual_demand_growth_rate"])) ** int(
+        config["planning_horizon_years"]
+    )
+    demand["projected_demand_kwh"] = demand["baseline_demand_kwh"] * growth_multiplier
+    return demand
+
+
+def _load_zip_demand(
     data_dir: Path, config: dict[str, object]
-) -> tuple[pd.DataFrame, dict[str, int]]:
+) -> tuple[pd.DataFrame, dict[str, object]]:
     demand = pd.read_csv(data_dir / "dmv_electric_zip_summary_2026.csv", dtype={"zip": str})
     nyc_flag = demand["nyc_zip_lookup"].astype(str).str.lower().eq("true")
     coordinate_flag = demand["zcta_latitude"].notna() & demand["zcta_longitude"].notna()
@@ -80,16 +96,218 @@ def _load_demand(
         & positive_flag
     ].copy()
     demand["demand_id"] = "ZIP:" + demand["zip"].str.zfill(5)
-    demand["baseline_demand_kwh"] = (
-        demand["electric_registration_records"].astype(float)
-        * float(config["weekly_energy_per_ev_kwh"])
-        * float(config["public_l2_share"])
-    )
-    growth_multiplier = (1.0 + float(config["annual_demand_growth_rate"])) ** int(
-        config["planning_horizon_years"]
-    )
-    demand["projected_demand_kwh"] = demand["baseline_demand_kwh"] * growth_multiplier
+    demand["demand_geography"] = "zip"
+    demand["geography_id"] = demand["zip"].str.zfill(5)
+    demand["latitude"] = demand["zcta_latitude"]
+    demand["longitude"] = demand["zcta_longitude"]
+    demand = _calculate_energy_demand(demand, config)
     return demand.reset_index(drop=True), audit
+
+
+def _read_zip_tract_crosswalk(path: Path) -> pd.DataFrame:
+    if not path.exists():
+        raise FileNotFoundError(
+            f"HUD ZIP-to-tract crosswalk not found: {path}. "
+            "Create a free HUD USER API token and run `python download_hud_crosswalk.py`, "
+            "or place an official ZIP_TRACT CSV/XLSX export at that path."
+        )
+    if path.suffix.lower() in {".xlsx", ".xls"}:
+        crosswalk = pd.read_excel(path, dtype=str)
+    else:
+        crosswalk = pd.read_csv(path, dtype=str)
+    crosswalk.columns = [str(column).strip().lower() for column in crosswalk.columns]
+    zip_column = next(
+        (column for column in ["zip", "zipcode", "zip_code"] if column in crosswalk),
+        None,
+    )
+    tract_column = next(
+        (column for column in ["tract", "geoid", "tract_geoid"] if column in crosswalk),
+        None,
+    )
+    ratio_column = next(
+        (column for column in ["res_ratio", "residential_ratio"] if column in crosswalk),
+        None,
+    )
+    if not all([zip_column, tract_column, ratio_column]):
+        raise ValueError(
+            "The crosswalk must contain ZIP, TRACT/GEOID, and RES_RATIO columns. "
+            f"Found: {sorted(crosswalk.columns)}"
+        )
+    result = crosswalk[[zip_column, tract_column, ratio_column]].rename(
+        columns={
+            zip_column: "zip",
+            tract_column: "tract_geoid",
+            ratio_column: "res_ratio",
+        }
+    )
+    result["zip"] = result["zip"].str.extract(r"(\d+)", expand=False).str.zfill(5)
+    result["tract_geoid"] = (
+        result["tract_geoid"].str.extract(r"(\d+)", expand=False).str.zfill(11)
+    )
+    result["res_ratio"] = pd.to_numeric(result["res_ratio"], errors="coerce")
+    result = result.dropna(subset=["zip", "tract_geoid", "res_ratio"])
+    if result["res_ratio"].lt(0).any():
+        raise ValueError("HUD RES_RATIO values must be nonnegative")
+    return result.loc[result["res_ratio"].gt(0)].reset_index(drop=True)
+
+
+def allocate_zip_demand_to_tracts(
+    zip_demand: pd.DataFrame,
+    crosswalk: pd.DataFrame,
+    tract_attributes: pd.DataFrame,
+    renormalize_over_nyc_tracts: bool = True,
+) -> tuple[pd.DataFrame, dict[str, object]]:
+    """Allocate NYC ZIP registration records to NYC tracts using HUD RES_RATIO.
+
+    DMV rows in this project already represent NYC records, so each ZIP's ratios are
+    normalized over matched NYC tracts. ZIPs with no positive NYC residential ratio
+    remain unmatched rather than being assigned to an invented tract.
+    """
+    zip_demand = zip_demand.copy()
+    zip_demand["zip"] = zip_demand["zip"].astype(str).str.zfill(5)
+    tract_attributes = tract_attributes.copy()
+    tract_attributes["tract_geoid"] = tract_attributes["tract_geoid"].astype(str).str.zfill(11)
+    crosswalk = crosswalk.copy()
+    crosswalk["zip"] = crosswalk["zip"].astype(str).str.zfill(5)
+    crosswalk["tract_geoid"] = crosswalk["tract_geoid"].astype(str).str.zfill(11)
+
+    nyc_crosswalk = crosswalk.merge(
+        tract_attributes, on="tract_geoid", how="inner", validate="many_to_one"
+    )
+    nyc_crosswalk = nyc_crosswalk.loc[nyc_crosswalk["res_ratio"].gt(0)].copy()
+    if nyc_crosswalk.empty:
+        raise ValueError(
+            "The HUD crosswalk has no positive RES_RATIO rows matching the NYC ACS tracts. "
+            "Use a 2023 Q1 or later crosswalk based on 2020 Census tract geography."
+        )
+    nyc_ratio_sum = nyc_crosswalk.groupby("zip")["res_ratio"].sum().rename("nyc_res_ratio_sum")
+    nyc_crosswalk = nyc_crosswalk.merge(nyc_ratio_sum, on="zip", validate="many_to_one")
+    if renormalize_over_nyc_tracts:
+        nyc_crosswalk["allocation_ratio"] = (
+            nyc_crosswalk["res_ratio"] / nyc_crosswalk["nyc_res_ratio_sum"]
+        )
+    else:
+        nyc_crosswalk["allocation_ratio"] = nyc_crosswalk["res_ratio"]
+
+    allocation = zip_demand.merge(nyc_crosswalk, on="zip", how="inner", validate="one_to_many")
+    allocation["allocated_registration_records"] = (
+        allocation["electric_registration_records"].astype(float)
+        * allocation["allocation_ratio"]
+    )
+    grouped = allocation.groupby("tract_geoid", as_index=False).agg(
+        electric_registration_records=("allocated_registration_records", "sum"),
+        source_zip_count=("zip", "nunique"),
+        source_zips=("zip", lambda values: ";".join(sorted(set(values)))),
+        raw_hud_res_ratio_sum=("res_ratio", "sum"),
+    )
+    grouped = grouped.merge(
+        tract_attributes, on="tract_geoid", how="left", validate="one_to_one"
+    )
+
+    matched_zips = set(allocation["zip"])
+    unmatched = zip_demand.loc[~zip_demand["zip"].isin(matched_zips)].copy()
+    matched_source_records = float(
+        zip_demand.loc[zip_demand["zip"].isin(matched_zips), "electric_registration_records"].sum()
+    )
+    allocated_records = float(grouped["electric_registration_records"].sum())
+    audit: dict[str, object] = {
+        "hud_crosswalk_rows_loaded": int(len(crosswalk)),
+        "hud_crosswalk_rows_matched_to_nyc_tracts": int(len(nyc_crosswalk)),
+        "dmv_nyc_positive_zip_rows": int(len(zip_demand)),
+        "dmv_zip_rows_allocated_to_tracts": int(len(matched_zips)),
+        "dmv_zip_rows_unmatched_in_crosswalk": int(len(unmatched)),
+        "unmatched_zip_codes": sorted(unmatched["zip"].tolist()),
+        "unmatched_electric_registration_records": float(
+            unmatched["electric_registration_records"].sum()
+        ),
+        "matched_source_electric_registration_records": matched_source_records,
+        "allocated_electric_registration_records": allocated_records,
+        "allocation_conservation_error_records": allocated_records - matched_source_records,
+        "tract_demand_points": int(len(grouped)),
+        "renormalize_hud_res_ratio_over_nyc_tracts": renormalize_over_nyc_tracts,
+        "minimum_pre_normalization_nyc_res_ratio_sum": float(nyc_ratio_sum.min()),
+        "maximum_pre_normalization_nyc_res_ratio_sum": float(nyc_ratio_sum.max()),
+        "allocation_note": (
+            "RES_RATIO is normalized over matched NYC tracts because the DMV input contains "
+            "NYC registration records; unmatched ZIPs are not imputed."
+            if renormalize_over_nyc_tracts
+            else "Raw HUD RES_RATIO is used without normalization; unmatched ZIPs are not imputed."
+        ),
+    }
+    return grouped, audit
+
+
+def _load_tract_demand(
+    data_dir: Path, config: dict[str, object]
+) -> tuple[pd.DataFrame, dict[str, object]]:
+    source = pd.read_csv(
+        data_dir / "dmv_electric_zip_summary_2026.csv", dtype={"zip": str}
+    )
+    nyc_flag = source["nyc_zip_lookup"].astype(str).str.lower().eq("true")
+    positive_flag = source["electric_registration_records"].gt(0)
+    zip_demand = source.loc[nyc_flag & positive_flag].copy()
+    zip_demand["zip"] = zip_demand["zip"].str.zfill(5)
+
+    tract_source = pd.read_csv(
+        data_dir / "nyc_acs_vehicle_households_2020_2024.csv", dtype={"GEOID": str}
+    )
+    tract_attributes = tract_source.rename(
+        columns={
+            "GEOID": "tract_geoid",
+            "NAME": "tract_name",
+            "County": "county_name",
+            "INTPTLAT": "latitude",
+            "INTPTLONG": "longitude",
+        }
+    )[
+        [
+            "tract_geoid",
+            "tract_name",
+            "county_name",
+            "households_with_vehicle",
+            "latitude",
+            "longitude",
+        ]
+    ]
+    crosswalk_path = Path(str(config.get("zip_tract_crosswalk_path", "data/hud_zip_tract_crosswalk.csv")))
+    if not crosswalk_path.is_absolute():
+        crosswalk_path = data_dir.parent / crosswalk_path
+    crosswalk = _read_zip_tract_crosswalk(crosswalk_path)
+    demand, allocation_audit = allocate_zip_demand_to_tracts(
+        zip_demand,
+        crosswalk,
+        tract_attributes,
+        renormalize_over_nyc_tracts=bool(
+            config.get("renormalize_hud_res_ratio_over_nyc_tracts", True)
+        ),
+    )
+    demand["demand_id"] = "TRACT:" + demand["tract_geoid"]
+    demand["demand_geography"] = "tract"
+    demand["geography_id"] = demand["tract_geoid"]
+    demand = _calculate_energy_demand(demand, config)
+    audit: dict[str, object] = {
+        "dmv_source_rows": int(len(source)),
+        "dmv_nyc_lookup_rows": int(nyc_flag.sum()),
+        "dmv_nyc_rows_missing_zcta_coordinates": int(
+            (nyc_flag & (source["zcta_latitude"].isna() | source["zcta_longitude"].isna())).sum()
+        ),
+        "demand_geography": "tract",
+        **allocation_audit,
+    }
+    return demand.reset_index(drop=True), audit
+
+
+def _load_demand(
+    data_dir: Path, config: dict[str, object]
+) -> tuple[pd.DataFrame, dict[str, object]]:
+    geography = str(config.get("demand_geography", "zip")).lower()
+    if geography == "zip":
+        demand, audit = _load_zip_demand(data_dir, config)
+        audit["demand_geography"] = "zip"
+        return demand, audit
+    if geography == "tract":
+        return _load_tract_demand(data_dir, config)
+    raise ValueError("demand_geography must be either 'zip' or 'tract'")
 
 
 def _reported_existing_ports(row: pd.Series) -> tuple[int, str]:
@@ -226,8 +444,8 @@ def prepare_model_data(
         raise ValueError("Duplicate physical site IDs remain after municipal/public matching")
 
     distance_matrix = haversine_matrix_miles(
-        demand["zcta_latitude"].to_numpy(float),
-        demand["zcta_longitude"].to_numpy(float),
+        demand["latitude"].to_numpy(float),
+        demand["longitude"].to_numpy(float),
         sites["latitude"].to_numpy(float),
         sites["longitude"].to_numpy(float),
     )

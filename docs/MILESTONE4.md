@@ -55,6 +55,14 @@ All automated checks passed: budget, demand, site capacity, activation, selected
 
 These findings do not prove that the model is final. They identify the main item to review before Milestone 5: whether one ZIP internal point and a 0.5-mile radius represent accessibility at an appropriate spatial resolution.
 
+## Tract-level refinement started now
+
+The repository now contains a second demand-preparation path for this refinement rather than postponing it. It uses the official HUD-USPS ZIP-to-tract residential-address ratio to distribute each ZIP's EV registration records among NYC Census tracts. The allocated tract total is then represented by the Census tract internal point in the same 0.5-mile accessibility calculation.
+
+This is more spatially detailed than treating an entire ZIP as one point, but it is not vehicle-level geolocation. The method estimates how many records belong to each tract; it cannot determine whether a particular EV is within 0.5 mile of a station. A tract internal point can also differ from the actual locations of households inside the tract, so the result must be described as a tract-level approximation.
+
+The original ZIP configuration remains unchanged as the base implementation. The tract case is in `config/tract_case.json`, the official-data downloader is `download_hud_crosswalk.py`, and `run_geography_comparison.py` produces a side-by-side sanity check. HUD requires a free API token; the code does not store it. ZIPs absent from the official crosswalk are reported and excluded rather than assigned an invented coordinate.
+
 ## Reproduction
 
 ```bash
@@ -63,6 +71,8 @@ source .venv/bin/activate
 pip install -r requirements.txt
 python run_model.py
 python run_sensitivity.py
+HUD_API_TOKEN=YOUR_TOKEN python download_hud_crosswalk.py
+python run_geography_comparison.py
 python -m unittest discover -s tests
 ```
 
