@@ -10,6 +10,9 @@ The model is intended to support code development for demand estimation, accessi
 data/       Source snapshots and prepared datasets
 notebooks/  Exploratory analysis and model-development notebooks
 src/        Reusable data preparation and optimization code
+config/     Explicit scenario assumptions
+docs/       Milestone 4 method and sanity-check interpretation
+results/    Reproducible base-case and sensitivity outputs
 ```
 
 ## Dataset inventory
@@ -58,6 +61,23 @@ pip install -r requirements.txt
 ```
 
 Gurobi requires a separate valid license. Do not commit license files, access tokens, API keys, or local `.env` files.
+
+## Milestone 4 first working model
+
+The repository now contains a Gurobi implementation of the Milestone 3 capacitated location-allocation model. It reads all inputs with repository-relative paths and exports a candidate solution plus automated feasibility checks.
+
+```bash
+python run_model.py
+```
+
+The base-case assumptions are stored in `config/base_case.json`. They are intentionally separated from values derived from the datasets. The current first run selects 9 municipal facilities and 44 additional ports. See `docs/MILESTONE4.md` for the model-to-code mapping, first results, sensitivity checks, and the main spatial-resolution issue identified by the sanity check.
+
+Useful commands:
+
+```bash
+python run_sensitivity.py
+python -m unittest discover -s tests
+```
 
 ## Data sources
 

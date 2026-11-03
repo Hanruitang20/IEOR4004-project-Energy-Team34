@@ -30,5 +30,4 @@ gurobi.lic
 # Local solver and generated output
 gurobi.log
 outputs/
-results/
 tmp/
