@@ -66,6 +66,8 @@ Gurobi requires a separate valid license. Do not commit license files, access to
 
 The repository now contains a Gurobi implementation of the Milestone 3 capacitated location-allocation model. It reads all inputs with repository-relative paths and exports a candidate solution plus automated feasibility checks.
 
+The finalized Milestone 3 formulation used by the implementation is saved as `docs/IEOR4004_Milestone3_Latest.pdf`.
+
 ```bash
 python run_model.py
 ```
