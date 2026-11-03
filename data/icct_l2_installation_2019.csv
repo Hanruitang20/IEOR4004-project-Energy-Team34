@@ -1,0 +1,9 @@
+region,chargers_per_site,labor,materials,permit,tax,reported_total_usd_2019_per_charger
+California,1,2471,1235,283,156,4148
+California,2,1786,958,172,121,3039
+California,3–5,1491,1014,110,128,2745
+California,6+,1747,908,65,115,2837
+Outside California,1,1544,1112,82,96,2836
+Outside California,2,1827,1039,62,89,3020
+Outside California,3–5,1647,1272,59,110,3090
+Outside California,6+,1316,874,38,75,2305
