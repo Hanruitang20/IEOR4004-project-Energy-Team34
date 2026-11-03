@@ -28,7 +28,7 @@ results/    Reproducible base-case and sensitivity outputs
 | `municipal_usage_monthly.csv` | Municipal charging sessions aggregated by location and month | 511 rows |
 | `municipal_usage_status_counts.csv` | Session-status and invalidity-reason counts | 12 rows |
 | `nyc_acs_vehicle_households_2020_2024.csv` | ACS vehicle availability by NYC census tract | 2,324 rows |
-| `hud_zip_tract_crosswalk.csv` | Official HUD-USPS ZIP-to-tract residential-address ratios | Generated after HUD token setup |
+| `hud_zip_tract_crosswalk.csv` | Official 2026 Q2 HUD-USPS New York ZIP-to-tract residential-address ratios | 11,320 rows |
 | `nyserda_nyc_plugin_snapshot_2023.csv` | Historical NYC BEV/PHEV registrations from the April 2023 NYSERDA snapshot | 401 rows |
 | `icct_l2_hardware_2019.csv` | ICCT Level 2 charging-hardware cost benchmarks | 4 rows |
 | `icct_l2_installation_2019.csv` | ICCT Level 2 installation cost benchmarks | 8 rows |
@@ -101,6 +101,8 @@ python run_geography_comparison.py
 ```
 
 Omitting year and quarter asks HUD for its latest available quarterly file; the returned period is saved in the metadata JSON for reproducibility. The token is used only in the request header and is never saved. Do not put it in the repository. The comparison output keeps the ZIP and tract results side by side so the effect of the spatial change can be sanity-checked rather than silently replacing the working base model.
+
+The checked-in 2026 Q2 comparison increases spatial demand points from 193 ZIP points to 2,285 tract points. Total served demand rises from approximately 418,368 to 493,415 kWh/week, while the projected-demand service rate rises from 42.6% to 50.2%. The tract solution selects 14 municipal sites and 31 added ports, compared with 9 sites and 44 ports in the ZIP solution. This wider distribution with fewer ports per selected site is directionally consistent with replacing concentrated ZIP internal-point demand by finer tract demand points. Both cases pass all automated feasibility checks.
 
 ## Data sources
 

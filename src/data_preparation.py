@@ -206,6 +206,7 @@ def allocate_zip_demand_to_tracts(
 
     matched_zips = set(allocation["zip"])
     unmatched = zip_demand.loc[~zip_demand["zip"].isin(matched_zips)].copy()
+    matched_ratio_sum = nyc_ratio_sum.loc[nyc_ratio_sum.index.isin(matched_zips)]
     matched_source_records = float(
         zip_demand.loc[zip_demand["zip"].isin(matched_zips), "electric_registration_records"].sum()
     )
@@ -225,8 +226,12 @@ def allocate_zip_demand_to_tracts(
         "allocation_conservation_error_records": allocated_records - matched_source_records,
         "tract_demand_points": int(len(grouped)),
         "renormalize_hud_res_ratio_over_nyc_tracts": renormalize_over_nyc_tracts,
-        "minimum_pre_normalization_nyc_res_ratio_sum": float(nyc_ratio_sum.min()),
-        "maximum_pre_normalization_nyc_res_ratio_sum": float(nyc_ratio_sum.max()),
+        "minimum_pre_normalization_matched_nyc_res_ratio_sum": float(
+            matched_ratio_sum.min()
+        ),
+        "maximum_pre_normalization_matched_nyc_res_ratio_sum": float(
+            matched_ratio_sum.max()
+        ),
         "allocation_note": (
             "RES_RATIO is normalized over matched NYC tracts because the DMV input contains "
             "NYC registration records; unmatched ZIPs are not imputed."

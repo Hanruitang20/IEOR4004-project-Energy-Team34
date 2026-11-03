@@ -63,6 +63,18 @@ This is more spatially detailed than treating an entire ZIP as one point, but it
 
 The original ZIP configuration remains unchanged as the base implementation. The tract case is in `config/tract_case.json`, the official-data downloader is `download_hud_crosswalk.py`, and `run_geography_comparison.py` produces a side-by-side sanity check. HUD requires a free API token; the code does not store it. ZIPs absent from the official crosswalk are reported and excluded rather than assigned an invented coordinate.
 
+### 2026 Q2 tract comparison
+
+The official 2026 Q2 HUD-USPS New York crosswalk produced 2,285 tract demand points and 7,185 accessible demand-site pairs. All automated checks passed, including the 0.5-mile limit; the largest positive-flow distance was approximately 0.4998 mile.
+
+- Projected demand remained essentially unchanged: 982,520 kWh/week for the tract case versus 982,462 for the ZIP case. The small difference represents a net three additional DMV registration records that could be allocated through the tract crosswalk despite missing ZCTA coordinates.
+- Served demand increased from approximately 418,368 to 493,415 kWh/week, raising the service rate from 42.6% to 50.2%.
+- The candidate solution changed from 9 selected municipal sites and 44 added ports to 14 selected sites and 31 added ports. Investment cost increased modestly from $453,548 to $472,727.
+- The wider site distribution with fewer ports per selected site is directionally plausible because tract points spread demand within each ZIP instead of concentrating it at one ZIP internal point.
+- Twenty-two DMV ZIP rows with 34 registration records had no positive NYC tract match and were excluded rather than imputed. The 51,322 matched registration records were conserved exactly during allocation.
+
+The equity-weighted objective values should not be compared as if they used an identical weighting system because the shortage score is recomputed at the selected demand geography. Total served energy and service rate are the more directly comparable metrics across the ZIP and tract representations.
+
 ## Reproduction
 
 ```bash
