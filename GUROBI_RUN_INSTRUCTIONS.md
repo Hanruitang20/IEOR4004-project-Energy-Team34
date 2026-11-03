@@ -114,4 +114,4 @@ The tract run writes:
 
 The current implementation defines accessible pairs using Haversine distance no greater than 0.5 mile. It does not implement a separate bridge, water, highway, or pedestrian-barrier screen. The report should not claim that barrier exclusions were executed in code.
 
-For the full reporting context, assumptions, terminology, limitations, and interpretation, see `MILESTONE4_REPORT_REMINDERS.md` in the repository root.
+For the full reporting context, assumptions, terminology, limitations, and interpretation, see [Milestone 4 Report Context and Reminders](MILESTONE4_REPORT_REMINDERS.md). The [Documentation Index](docs/README.md) links the remaining formulation and implementation documents.
