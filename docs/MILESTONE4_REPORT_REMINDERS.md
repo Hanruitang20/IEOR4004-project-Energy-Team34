@@ -67,6 +67,24 @@ These are scenario assumptions and should not be presented as estimates obtained
 - Maximum added ports at a site: the smaller of 20 ports and 10% of remaining parking spaces after existing ports.
 - Municipal/public-station matching radius for deduplication: 0.05 mile.
 
+### Team confirmation required before final submission
+
+The values \(r=5\%\), \(T=5\), and \(\lambda=1\) are inputs selected before optimization; they are not outputs calculated by Gurobi and are not estimates proven by the current cross-sectional datasets. The same applies to 60 kWh/EV/week and the 25% public-L2 charging share.
+
+The current candidate solution was generated using all five of these base-case assumptions. Before the report is finalized, the team should explicitly confirm that it accepts:
+
+1. 5% annual demand growth.
+2. A five-year planning horizon.
+3. An equity-policy weight of 1.0.
+4. 60 kWh of weekly charging energy per registered EV.
+5. A 25% public Level 2 charging share.
+
+If the team accepts them, the report should state:
+
+> For the first working base-case implementation, we set \(r=0.05\), \(T=5\), and \(\lambda=1.0\). Weekly energy use of 60 kWh per registered EV and a 25% public Level 2 charging share are also treated as scenario assumptions. These values are selected before optimization and are not claimed to be data-derived estimates.
+
+If the group changes any of these assumptions, the Gurobi model must be rerun and every affected result, comparison, and sanity-check statement must be updated. The existing numerical results should not be reported under a different parameter set.
+
 ## 3. Demand geography used for Milestone 4
 
 The refined working model uses Census tracts as demand points. The original ZIP-point model remains a sensitivity baseline.
@@ -121,7 +139,7 @@ The tract run contains:
 
 ## 6. Candidate solution to report
 
-For the tract base case, Gurobi returned an optimal candidate solution with:
+For the tract base case using \(r=5\%\), \(T=5\), \(\lambda=1\), 60 kWh/EV/week, and a 25% public-L2 share, Gurobi returned an optimal candidate solution with:
 
 - 14 selected municipal facilities.
 - 31 additional public Level 2 ports.
