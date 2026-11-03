@@ -4,6 +4,8 @@ This repository contains the datasets used to build a capacitated location-alloc
 
 The model is intended to support code development for demand estimation, accessibility analysis, equity weighting, capacity constraints, investment decisions, and demand-growth scenarios.
 
+**Team report context:** Review [`MILESTONE4_REPORT_REMINDERS.md`](MILESTONE4_REPORT_REMINDERS.md) before writing or revising the Milestone 4 report. It records the frozen formulation, assumptions requiring team confirmation, solver terminology, verified results, limitations, and wording cautions.
+
 ## Repository structure
 
 ```text

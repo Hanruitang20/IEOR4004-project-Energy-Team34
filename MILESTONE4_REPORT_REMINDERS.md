@@ -154,7 +154,25 @@ For the tract base case using \(r=5\%\), \(T=5\), \(\lambda=1\), 60 kWh/EV/week,
 
 The solution should be described as a first working candidate solution, not a final construction plan or an exact prediction of future charging activity.
 
-## 7. Required sanity-check discussion
+## 7. Solver and result terminology
+
+Use the following interpretations when describing the Gurobi output to readers who are not familiar with optimization terminology.
+
+- **Solver status: OPTIMAL.** Gurobi found a feasible solution and proved that no better solution exists for the implemented objective, constraints, data, and assumptions. It does not prove that the assumptions perfectly represent the real world.
+- **MIP gap.** The relative difference between the best feasible solution Gurobi has found and the best mathematical bound it has proved. A 0.0% final gap means the solver proved optimality for the implemented model. It is not a prediction-error measure or a data-quality measure.
+- **Demand points.** The geographic units at which charging demand is represented. The tract case has 2,285 Census tract demand points; this does not mean there are only 2,285 EVs.
+- **Accessible pairs.** Demand-point and supply-site combinations whose modeled distance is no greater than 0.5 mile. The tract case has 7,185 such pairs. A pair indicates that service is allowed in the model, not that charging flow must be assigned to it.
+- **Selected municipal sites.** Candidate NYC DOT facilities where the model chooses to install at least one additional public Level 2 port. The tract result selects 14 of the 39 modeled candidates.
+- **Additional ports.** The total number of new Level 2 charging ports installed across selected municipal sites. Existing ports are not included in this number.
+- **Investment cost.** The modeled fixed first-time site costs plus incremental per-port costs for the selected investment. It is a planning estimate based on the stated assumptions, not a contractor bid.
+- **Served demand.** Weekly charging energy allocated through the network flow variables, measured in kWh/week. It is limited by projected demand, site capacity, and accessibility.
+- **Projected demand.** Baseline estimated public Level 2 demand multiplied by \((1+r)^T\). It is a scenario quantity, not a direct observation of future charging activity.
+- **Service rate.** Total served demand divided by total projected demand. A 50.2% service rate means the modeled network serves approximately half of the projected demand under the stated constraints; it does not mean half of individual EV owners will necessarily receive service.
+- **Maximum positive-flow distance.** The largest distance among accessible pairs that actually receive positive charging flow in the solution. The tract value of approximately 0.4998 mile confirms that positive flows respect the 0.5-mile limit.
+- **Sanity checks.** Automated tests that verify the returned solution respects the implemented budget, demand, capacity, activation, and distance rules. Passing checks confirms internal consistency, not real-world engineering feasibility.
+- **Candidate solution.** The first working optimization result produced by the current model. It should not be described as a final construction plan.
+
+## 8. Required sanity-check discussion
 
 The report should explain why the result is directionally plausible.
 
@@ -167,7 +185,7 @@ The report should explain why the result is directionally plausible.
 
 Do not compare the ZIP and tract equity-weighted objective values as if they used identical weights. The shortage score \(g_i\) is recomputed when demand geography changes. Total served energy, service rate, sites, ports, and cost are more directly comparable across the two geographic representations.
 
-## 8. Data-audit facts to disclose
+## 9. Data-audit facts to disclose
 
 - 51,322 matched electric-registration records were allocated to tracts.
 - Allocated registration records equal matched source records exactly; the allocation conservation error is zero.
@@ -175,7 +193,7 @@ Do not compare the ZIP and tract equity-weighted objective values as if they use
 - The 34 excluded records represent approximately 0.066% of the 51,356 positive NYC registration records.
 - ZIPs with zero residential-address ratio remain in the data audit but are not assigned an invented residential coordinate.
 
-## 9. Important limitations and wording cautions
+## 10. Important limitations and wording cautions
 
 ### Barrier exclusions
 
@@ -205,7 +223,7 @@ The ICCT hardware and installation values are 2019 benchmarks, not current NYC b
 
 Do not state that every missing municipal charger count was independently verified as zero. Describe existing ports as based on reported municipal inventory and nearby public-station matching, and retain missing-inventory uncertainty as a limitation.
 
-## 10. Recommended 3-5 page report structure
+## 11. Recommended 3-5 page report structure
 
 1. **Final formulation:** sets, parameters, decision variables, objective, and all constraints.
 2. **Implementation and data preparation:** demand construction, tract allocation, supply capacity, candidate sites, costs, and accessible pairs.
@@ -213,7 +231,7 @@ Do not state that every missing municipal charger count was independently verifi
 4. **Sanity checks:** feasibility checks and ZIP-versus-tract interpretation.
 5. **Limitations and reproducibility:** assumptions, spatial approximation, unmatched ZIPs, barrier-screening limitation, and the GitHub link.
 
-## 11. Reproduction commands
+## 12. Reproduction commands
 
 From the repository root:
 
@@ -228,7 +246,7 @@ From the repository root:
 
 Repository: <https://github.com/Hanruitang20/IEOR4004-project-Energy-Team34>
 
-## 12. Items not to change without group agreement
+## 13. Items not to change without group agreement
 
 - Do not replace the current equity objective with socioeconomic equity without adding and validating the required data.
 - Do not change the 0.5-mile base radius without preserving it as the required base case.
