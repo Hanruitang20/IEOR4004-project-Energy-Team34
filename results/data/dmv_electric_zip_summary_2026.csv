@@ -1,0 +1,405 @@
+zip,county_labels,electric_registration_records,passenger_class_PAS_records,taxi_class_OMT_records,other_classes_records,date_filter,zcta_latitude,zcta_longitude,geography_note,nyc_zip_lookup
+10001,NEW YORK,177,160,2,15,2026-10-17,40.750649,-73.997298,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10002,KINGS; NEW YORK; RICHMOND,255,209,27,19,2026-10-17,40.715969,-73.986895,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10003,KINGS; NEW YORK; RICHMOND,216,199,3,14,2026-10-17,40.731865,-73.989124,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10004,NEW YORK,37,35,0,2,2026-10-17,40.689805,-74.017389,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10005,NEW YORK,57,53,3,1,2026-10-17,40.706215,-74.008687,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10006,NEW YORK,27,27,0,0,2026-10-17,40.70949,-74.013054,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10007,NEW YORK,103,96,1,6,2026-10-17,40.713868,-74.007866,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10008,NEW YORK,2,1,1,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+10009,NEW YORK; QUEENS,138,115,16,7,2026-10-17,40.726392,-73.978604,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10010,NEW YORK,149,124,1,24,2026-10-17,40.739045,-73.982616,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10011,NEW YORK; QUEENS,298,264,3,31,2026-10-17,40.74184,-74.000528,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10012,KINGS; NEW YORK,134,121,2,11,2026-10-17,40.725625,-73.997936,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10013,KINGS; NEW YORK; QUEENS,324,303,6,15,2026-10-17,40.720051,-74.004809,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10014,KINGS; NEW YORK,202,186,0,16,2026-10-17,40.734145,-74.006026,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10016,KINGS; NEW YORK,164,143,4,17,2026-10-17,40.745182,-73.978053,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10017,NEW YORK,86,75,2,9,2026-10-17,40.752387,-73.972678,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10018,NEW YORK,79,55,1,23,2026-10-17,40.755327,-73.992696,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10019,NEW YORK,260,215,4,41,2026-10-17,40.765735,-73.985065,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10020,NEW YORK,2,2,0,0,2026-10-17,40.759174,-73.980715,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10021,NEW YORK,215,199,1,15,2026-10-17,40.76964,-73.959018,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10022,KINGS; NEW YORK; RICHMOND,223,189,1,33,2026-10-17,40.75857,-73.96793,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10023,NEW YORK,393,361,6,26,2026-10-17,40.774567,-73.979016,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10024,KINGS; NEW YORK,319,297,1,21,2026-10-17,40.78566,-73.971269,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10025,NEW YORK; QUEENS,332,292,10,30,2026-10-17,40.798251,-73.968336,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10026,BRONX; NEW YORK,108,86,12,10,2026-10-17,40.802978,-73.953529,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10027,NEW YORK,172,138,21,13,2026-10-17,40.812657,-73.954983,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10028,NEW YORK; QUEENS,277,248,2,27,2026-10-17,40.776447,-73.953383,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10029,BRONX; KINGS; NEW YORK,124,80,33,11,2026-10-17,40.792249,-73.947333,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10030,NEW YORK,52,38,11,3,2026-10-17,40.818247,-73.942834,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10031,NEW YORK,86,50,27,9,2026-10-17,40.824804,-73.950206,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10032,BRONX; NEW YORK,90,54,27,9,2026-10-17,40.839041,-73.942812,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10033,NEW YORK,98,58,30,10,2026-10-17,40.847476,-73.93551,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10034,BRONX; NEW YORK,62,33,21,8,2026-10-17,40.867076,-73.924312,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10035,BRONX; NEW YORK,66,45,17,4,2026-10-17,40.795251,-73.930418,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10036,BRONX; NEW YORK,163,105,4,54,2026-10-17,40.759792,-73.990685,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10037,BRONX; NEW YORK,32,26,4,2,2026-10-17,40.813027,-73.937714,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10038,NEW YORK; QUEENS,127,115,3,9,2026-10-17,40.709264,-74.002903,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10039,NEW YORK,43,31,9,3,2026-10-17,40.826287,-73.937526,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10040,BRONX; NEW YORK,66,38,21,7,2026-10-17,40.858097,-73.9296,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10044,NEW YORK; QUEENS,61,55,2,4,2026-10-17,40.761907,-73.949967,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10055,NEW YORK,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+10064,NEW YORK,1,0,0,1,2026-10-17,,,No matching ZCTA; verify mailing ZIP; outside historical NYC ZIP lookup: review before locating demand,False
+10065,NEW YORK,160,146,0,14,2026-10-17,40.764689,-73.963264,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10069,KINGS; NEW YORK,90,80,1,9,2026-10-17,40.777382,-73.98883,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10075,KINGS; NEW YORK,168,140,0,28,2026-10-17,40.773413,-73.956291,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10106,NEW YORK,3,3,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+10107,NEW YORK,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+10111,NEW YORK,3,2,0,1,2026-10-17,40.759531,-73.978585,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10112,NEW YORK,1,1,0,0,2026-10-17,40.758904,-73.979044,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10118,NEW YORK,2,1,0,1,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+10119,NEW YORK,1,1,0,0,2026-10-17,40.750644,-73.992733,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10120,NEW YORK,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+10121,NEW YORK,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+10122,NEW YORK,3,1,0,2,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+10128,KINGS; NEW YORK,355,314,4,37,2026-10-17,40.781498,-73.950199,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10150,NEW YORK,5,0,5,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+10151,NEW YORK,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+10153,NEW YORK,3,2,0,1,2026-10-17,40.763622,-73.972439,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10162,NEW YORK,7,6,0,1,2026-10-17,40.769267,-73.949795,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10163,NEW YORK,1,0,0,1,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+10168,NEW YORK,1,1,0,0,2026-10-17,40.751448,-73.977103,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10170,NEW YORK,1,1,0,0,2026-10-17,40.752625,-73.975877,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10176,NEW YORK,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+10177,NEW YORK,1,1,0,0,2026-10-17,40.755139,-73.975934,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10271,NEW YORK,3,3,0,0,2026-10-17,40.708236,-74.010541,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10279,NEW YORK,2,2,0,0,2026-10-17,40.712626,-74.008669,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10280,NEW YORK,37,33,0,4,2026-10-17,40.709705,-74.016586,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10281,NEW YORK,2,1,0,1,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+10282,NEW YORK,40,39,1,0,2026-10-17,40.716381,-74.015004,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10285,NEW YORK,1,0,0,1,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+10301,KINGS; NEW YORK; RICHMOND,427,382,15,30,2026-10-17,40.627505,-74.094377,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10302,KINGS; NEW YORK; RICHMOND,119,101,6,12,2026-10-17,40.630806,-74.137664,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10303,RICHMOND,198,146,33,19,2026-10-17,40.629885,-74.17413,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10304,KINGS; NEW YORK; RICHMOND,547,458,44,45,2026-10-17,40.605965,-74.093535,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10305,KINGS; NEW YORK; RICHMOND,642,538,57,47,2026-10-17,40.596549,-74.075779,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10306,KINGS; NEW YORK; QUEENS; RICHMOND,865,741,52,72,2026-10-17,40.571714,-74.124264,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10307,RICHMOND,210,188,1,21,2026-10-17,40.507753,-74.242091,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10308,KINGS; RICHMOND,421,368,26,27,2026-10-17,40.552828,-74.151525,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10309,KINGS; NEW YORK; RICHMOND,611,554,18,39,2026-10-17,40.529842,-74.219777,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10310,KINGS; RICHMOND,172,146,11,15,2026-10-17,40.632612,-74.116148,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10312,KINGS; NEW YORK; QUEENS; RICHMOND,977,856,49,72,2026-10-17,40.545237,-74.180443,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10314,KINGS; NEW YORK; RICHMOND,1325,1131,96,98,2026-10-17,40.600699,-74.164314,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10451,BRONX; NEW YORK,73,42,21,10,2026-10-17,40.822168,-73.922616,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10452,BRONX; NEW YORK,177,39,132,6,2026-10-17,40.837791,-73.923339,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10453,BRONX,116,38,71,7,2026-10-17,40.852508,-73.913291,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10454,BRONX; NEW YORK,79,54,17,8,2026-10-17,40.805583,-73.916595,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10455,BRONX; QUEENS,95,35,32,28,2026-10-17,40.814798,-73.908601,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10456,BRONX,152,52,88,12,2026-10-17,40.830669,-73.908161,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10457,BRONX,88,39,44,5,2026-10-17,40.845707,-73.897923,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10458,BRONX; NEW YORK,111,41,64,6,2026-10-17,40.862486,-73.886448,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10459,BRONX; KINGS; RICHMOND,60,30,27,3,2026-10-17,40.825692,-73.892998,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10460,BRONX; NEW YORK; QUEENS,124,52,61,11,2026-10-17,40.842344,-73.879062,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10461,BRONX; NEW YORK,297,144,88,65,2026-10-17,40.846741,-73.840788,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10462,BRONX; NEW YORK,319,110,198,11,2026-10-17,40.843267,-73.860417,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10463,BRONX; NEW YORK,317,253,40,24,2026-10-17,40.886345,-73.901547,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10464,BRONX; KINGS,47,41,0,6,2026-10-17,40.869594,-73.795848,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10465,BRONX,290,203,60,27,2026-10-17,40.827329,-73.82217,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10466,BRONX; NEW YORK,189,126,46,17,2026-10-17,40.890964,-73.846239,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10467,BRONX; RICHMOND,235,103,117,15,2026-10-17,40.875262,-73.872027,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10468,BRONX; NEW YORK,139,56,77,6,2026-10-17,40.86894,-73.899995,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10469,BRONX; NEW YORK; QUEENS,270,196,53,21,2026-10-17,40.868509,-73.846691,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10470,BRONX,45,30,10,5,2026-10-17,40.889527,-73.872585,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10471,BRONX; KINGS; NEW YORK,284,255,5,24,2026-10-17,40.899984,-73.906751,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10472,BRONX,224,73,137,14,2026-10-17,40.829685,-73.869373,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10473,BRONX; RICHMOND,199,99,79,21,2026-10-17,40.81869,-73.858474,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10474,BRONX,26,11,4,11,2026-10-17,40.81134,-73.885173,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10475,BRONX; KINGS,114,86,17,11,2026-10-17,40.875635,-73.826934,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+10478,BRONX,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP; outside historical NYC ZIP lookup: review before locating demand,False
+10506,NEW YORK,1,1,0,0,2026-10-17,41.189652,-73.638509,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10509,QUEENS,1,1,0,0,2026-10-17,41.410855,-73.59434,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10512,KINGS; NEW YORK,4,4,0,0,2026-10-17,41.447747,-73.709884,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10514,BRONX,1,1,0,0,2026-10-17,41.172119,-73.769217,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10522,BRONX; QUEENS,2,2,0,0,2026-10-17,41.009696,-73.863304,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10523,QUEENS,1,1,0,0,2026-10-17,41.059498,-73.819254,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10526,NEW YORK,1,1,0,0,2026-10-17,41.294095,-73.6594,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10533,KINGS,1,1,0,0,2026-10-17,41.036927,-73.854864,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10549,NEW YORK,1,1,0,0,2026-10-17,41.200584,-73.723498,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10550,BRONX; NEW YORK,3,3,0,0,2026-10-17,40.905448,-73.835253,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10552,KINGS; NEW YORK,2,2,0,0,2026-10-17,40.923972,-73.825555,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10553,BRONX,1,1,0,0,2026-10-17,40.908607,-73.821566,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10562,NEW YORK,1,1,0,0,2026-10-17,41.194423,-73.825285,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10567,NEW YORK,1,1,0,0,2026-10-17,41.288405,-73.895008,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10570,NEW YORK,2,2,0,0,2026-10-17,41.128068,-73.78922,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10573,BRONX,1,1,0,0,2026-10-17,41.015742,-73.677303,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10575,BRONX,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP; outside historical NYC ZIP lookup: review before locating demand,False
+10583,QUEENS,1,1,0,0,2026-10-17,40.988647,-73.788879,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10589,NEW YORK,1,1,0,0,2026-10-17,41.332433,-73.692669,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10591,QUEENS,1,1,0,0,2026-10-17,41.082659,-73.848578,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10598,NEW YORK; QUEENS,2,1,1,0,2026-10-17,41.282372,-73.796206,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10601,QUEENS,1,1,0,0,2026-10-17,41.03289,-73.764783,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10604,NEW YORK,1,1,0,0,2026-10-17,41.071512,-73.747093,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10605,BRONX; NEW YORK,2,2,0,0,2026-10-17,41.010566,-73.745129,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10606,QUEENS,1,1,0,0,2026-10-17,41.020695,-73.775877,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10607,QUEENS,2,2,0,0,2026-10-17,41.039089,-73.811368,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10701,BRONX; NEW YORK,4,4,0,0,2026-10-17,40.946966,-73.88042,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10703,BRONX,2,1,0,1,2026-10-17,40.957649,-73.881135,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10704,BRONX; NEW YORK,2,1,0,1,2026-10-17,40.919729,-73.862651,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10705,BRONX; NEW YORK,3,1,2,0,2026-10-17,40.919339,-73.889335,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10706,NEW YORK,2,2,0,0,2026-10-17,40.990503,-73.869502,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10708,BRONX; NEW YORK,4,3,1,0,2026-10-17,40.938267,-73.829922,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10710,NEW YORK,4,4,0,0,2026-10-17,40.969635,-73.845691,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10801,BRONX; NEW YORK,3,2,1,0,2026-10-17,40.91757,-73.784858,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10803,BRONX,1,1,0,0,2026-10-17,40.899532,-73.805883,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10804,NEW YORK,2,2,0,0,2026-10-17,40.946859,-73.788035,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10901,RICHMOND,1,1,0,0,2026-10-17,41.155398,-74.129008,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10916,BRONX,1,1,0,0,2026-10-17,41.449335,-74.244749,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10940,NEW YORK; QUEENS,4,3,0,1,2026-10-17,41.446544,-74.478741,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10941,NEW YORK,2,1,0,1,2026-10-17,41.490413,-74.345272,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10950,NEW YORK; RICHMOND,2,0,2,0,2026-10-17,41.317346,-74.199881,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10952,NEW YORK; QUEENS,3,2,0,1,2026-10-17,41.111118,-74.07854,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10954,RICHMOND,1,1,0,0,2026-10-17,41.099198,-74.013021,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10956,NEW YORK,1,1,0,0,2026-10-17,41.154436,-73.994072,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10960,NEW YORK,1,1,0,0,2026-10-17,41.088841,-73.926471,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10970,KINGS,1,1,0,0,2026-10-17,41.18436,-74.062727,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10974,QUEENS,1,1,0,0,2026-10-17,41.159484,-74.189903,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10977,NEW YORK; QUEENS; RICHMOND,3,3,0,0,2026-10-17,41.118914,-74.048154,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10990,NEW YORK,1,1,0,0,2026-10-17,41.267448,-74.364011,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+10998,NEW YORK,1,1,0,0,2026-10-17,41.324076,-74.541179,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11001,BRONX; QUEENS; RICHMOND,75,44,27,4,2026-10-17,40.723317,-73.704949,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11003,QUEENS; RICHMOND,18,6,11,1,2026-10-17,40.699176,-73.706166,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11004,NEW YORK; QUEENS,223,174,32,17,2026-10-17,40.746191,-73.711507,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11005,QUEENS,15,13,0,2,2026-10-17,40.756643,-73.71424,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11010,KINGS; NEW YORK; QUEENS,6,4,2,0,2026-10-17,40.700653,-73.675133,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11020,QUEENS,1,1,0,0,2026-10-17,40.771442,-73.714819,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11021,NEW YORK; QUEENS,4,3,0,1,2026-10-17,40.784319,-73.731488,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11023,NEW YORK; QUEENS,4,3,0,1,2026-10-17,40.798909,-73.733653,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11024,NEW YORK; QUEENS,4,4,0,0,2026-10-17,40.816251,-73.742872,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11030,NEW YORK,1,0,0,1,2026-10-17,40.793409,-73.688549,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11040,NEW YORK; QUEENS,40,29,8,3,2026-10-17,40.745347,-73.680292,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11050,NEW YORK,1,1,0,0,2026-10-17,40.839895,-73.693123,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11096,QUEENS,1,1,0,0,2026-10-17,40.621346,-73.75699,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11101,KINGS; NEW YORK; QUEENS; RICHMOND,892,381,455,56,2026-10-17,40.747113,-73.939708,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11102,NEW YORK; QUEENS,174,125,38,11,2026-10-17,40.7716,-73.925603,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11103,QUEENS,146,92,42,12,2026-10-17,40.762596,-73.913282,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11104,NEW YORK; QUEENS,113,63,44,6,2026-10-17,40.744845,-73.920468,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11105,KINGS; NEW YORK; QUEENS,373,255,51,67,2026-10-17,40.779087,-73.906522,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11106,QUEENS,202,133,53,16,2026-10-17,40.762211,-73.931528,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11109,QUEENS,62,54,1,7,2026-10-17,40.746616,-73.957009,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11201,KINGS; NEW YORK,565,520,7,38,2026-10-17,40.6937,-73.989859,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11202,KINGS,3,3,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+11203,KINGS; QUEENS,147,111,19,17,2026-10-17,40.649569,-73.934327,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11204,KINGS; NEW YORK; QUEENS; RICHMOND,376,260,88,28,2026-10-17,40.618815,-73.984942,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11205,KINGS; NEW YORK,161,119,11,31,2026-10-17,40.696891,-73.968074,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11206,KINGS; NEW YORK; QUEENS,166,115,23,28,2026-10-17,40.70187,-73.942552,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11207,KINGS; NEW YORK; QUEENS,213,100,60,53,2026-10-17,40.670157,-73.893835,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11208,KINGS; NEW YORK; QUEENS,3236,97,3112,27,2026-10-17,40.674847,-73.87248,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11209,KINGS; NEW YORK,382,274,60,48,2026-10-17,40.621803,-74.03015,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11210,KINGS,391,308,37,46,2026-10-17,40.62806,-73.946309,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11211,KINGS,393,191,177,25,2026-10-17,40.714084,-73.945168,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11212,KINGS,94,60,23,11,2026-10-17,40.662905,-73.913071,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11213,KINGS,131,108,15,8,2026-10-17,40.671155,-73.936266,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11214,KINGS; NEW YORK; QUEENS; RICHMOND,610,369,201,40,2026-10-17,40.59969,-73.996372,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11215,KINGS,448,407,5,36,2026-10-17,40.662688,-73.98674,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11216,KINGS,151,105,28,18,2026-10-17,40.680844,-73.949222,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11217,KINGS; NEW YORK,283,261,2,20,2026-10-17,40.681671,-73.978529,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11218,KINGS; NEW YORK,508,219,264,25,2026-10-17,40.64312,-73.976446,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11219,BRONX; KINGS; NEW YORK,238,126,61,51,2026-10-17,40.63262,-73.99677,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11220,KINGS; NEW YORK; RICHMOND,295,158,54,83,2026-10-17,40.641026,-74.016688,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11221,KINGS; NEW YORK; QUEENS,172,129,29,14,2026-10-17,40.691426,-73.927626,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11222,KINGS; NEW YORK; QUEENS,285,224,3,58,2026-10-17,40.72779,-73.947605,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11223,KINGS; NEW YORK; RICHMOND,704,522,140,42,2026-10-17,40.597091,-73.973469,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11224,KINGS; NEW YORK; RICHMOND,204,150,38,16,2026-10-17,40.577372,-73.988706,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11225,KINGS,143,103,32,8,2026-10-17,40.663119,-73.953867,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11226,KINGS,221,149,52,20,2026-10-17,40.646409,-73.956663,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11228,KINGS; RICHMOND,295,219,37,39,2026-10-17,40.616725,-74.013432,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11229,KINGS; NEW YORK; QUEENS; RICHMOND,691,504,138,49,2026-10-17,40.601293,-73.944493,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11230,BRONX; KINGS; RICHMOND,727,468,216,43,2026-10-17,40.622089,-73.96519,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11231,KINGS; NEW YORK,306,272,4,30,2026-10-17,40.677916,-74.005154,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11232,KINGS,102,67,10,25,2026-10-17,40.656541,-74.005182,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11233,KINGS,156,127,14,15,2026-10-17,40.678301,-73.919932,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11234,KINGS; NEW YORK,681,521,97,63,2026-10-17,40.607723,-73.910649,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11235,KINGS; NEW YORK,580,342,193,45,2026-10-17,40.58422,-73.943167,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11236,KINGS; NEW YORK,289,229,31,29,2026-10-17,40.639413,-73.900664,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11237,BRONX; KINGS,135,89,20,26,2026-10-17,40.70416,-73.921139,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11238,KINGS; NEW YORK; QUEENS,241,206,19,16,2026-10-17,40.671331,-73.965937,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11239,KINGS,48,41,2,5,2026-10-17,40.64689,-73.864014,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11242,KINGS,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+11243,KINGS,3,3,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+11247,KINGS,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+11249,KINGS; NEW YORK,241,212,6,23,2026-10-17,40.704501,-73.966002,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11261,KINGS,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP; outside historical NYC ZIP lookup: review before locating demand,False
+11307,QUEENS,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP; outside historical NYC ZIP lookup: review before locating demand,False
+11347,QUEENS,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP; outside historical NYC ZIP lookup: review before locating demand,False
+11354,NEW YORK; QUEENS,455,364,63,28,2026-10-17,40.768213,-73.827392,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11355,NEW YORK; QUEENS; RICHMOND,641,436,166,39,2026-10-17,40.751435,-73.821227,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11356,QUEENS,270,206,41,23,2026-10-17,40.784871,-73.841528,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11357,KINGS; NEW YORK; QUEENS,667,583,40,44,2026-10-17,40.785129,-73.810037,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11358,QUEENS,524,442,54,28,2026-10-17,40.760363,-73.796525,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11360,NEW YORK; QUEENS,300,264,12,24,2026-10-17,40.780419,-73.781838,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11361,QUEENS,432,377,25,30,2026-10-17,40.764191,-73.772775,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11362,KINGS; NEW YORK; QUEENS,484,446,12,26,2026-10-17,40.760204,-73.732417,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11363,NEW YORK; QUEENS,180,167,2,11,2026-10-17,40.772348,-73.746292,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11364,NEW YORK; QUEENS,679,589,45,45,2026-10-17,40.746251,-73.756062,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11365,NEW YORK; QUEENS,647,526,69,52,2026-10-17,40.739634,-73.79449,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11366,QUEENS,240,205,21,14,2026-10-17,40.731121,-73.780458,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11367,KINGS; NEW YORK; QUEENS,374,299,43,32,2026-10-17,40.730474,-73.822749,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11368,NEW YORK; QUEENS,267,133,105,29,2026-10-17,40.749737,-73.853045,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11369,NEW YORK; QUEENS,842,127,97,618,2026-10-17,40.763491,-73.87222,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11370,QUEENS,257,117,123,17,2026-10-17,40.765393,-73.894216,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11371,QUEENS,1,0,0,1,2026-10-17,40.774411,-73.873272,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11372,KINGS; QUEENS,310,118,178,14,2026-10-17,40.751719,-73.88367,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11373,QUEENS,682,266,385,31,2026-10-17,40.738945,-73.878561,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11374,KINGS; NEW YORK; QUEENS,360,269,70,21,2026-10-17,40.726457,-73.861459,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11375,KINGS; NEW YORK; QUEENS,666,573,35,58,2026-10-17,40.722975,-73.843179,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11377,NEW YORK; QUEENS; RICHMOND,842,399,414,29,2026-10-17,40.744775,-73.90516,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11378,QUEENS,271,180,61,30,2026-10-17,40.724744,-73.909639,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11379,NEW YORK; QUEENS,310,229,65,16,2026-10-17,40.717061,-73.880519,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11380,QUEENS,1,0,1,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+11385,BRONX; KINGS; NEW YORK; QUEENS,408,275,81,52,2026-10-17,40.700647,-73.889423,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11386,QUEENS,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+11388,QUEENS,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP; outside historical NYC ZIP lookup: review before locating demand,False
+11411,QUEENS,104,91,7,6,2026-10-17,40.694064,-73.736265,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11412,QUEENS,186,113,55,18,2026-10-17,40.69802,-73.759081,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11413,KINGS; QUEENS,200,164,19,17,2026-10-17,40.67117,-73.752063,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11414,QUEENS,179,133,29,17,2026-10-17,40.657604,-73.844804,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11415,KINGS; QUEENS,126,94,29,3,2026-10-17,40.708085,-73.828044,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11416,QUEENS; RICHMOND,192,51,131,10,2026-10-17,40.684586,-73.849713,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11417,QUEENS,223,116,93,14,2026-10-17,40.676406,-73.844595,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11418,QUEENS; RICHMOND,191,121,60,10,2026-10-17,40.700315,-73.836019,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11419,KINGS; QUEENS; RICHMOND,268,99,158,11,2026-10-17,40.688612,-73.823062,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11420,QUEENS,303,174,111,18,2026-10-17,40.673502,-73.817702,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11421,QUEENS,183,117,59,7,2026-10-17,40.694035,-73.858659,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11422,NEW YORK; QUEENS,184,147,26,11,2026-10-17,40.660787,-73.73757,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11423,QUEENS,271,162,87,22,2026-10-17,40.715669,-73.768299,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11426,KINGS; QUEENS,326,221,73,32,2026-10-17,40.736407,-73.722357,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11427,NEW YORK; QUEENS,307,226,58,23,2026-10-17,40.730942,-73.745716,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11428,KINGS; QUEENS,148,82,56,10,2026-10-17,40.720993,-73.742203,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11429,NEW YORK; QUEENS,160,89,51,20,2026-10-17,40.709556,-73.73848,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11430,QUEENS,22,8,0,14,2026-10-17,40.646965,-73.787295,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11431,QUEENS,1,1,0,0,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+11432,NEW YORK; QUEENS,580,321,229,30,2026-10-17,40.714934,-73.792955,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11433,NEW YORK; QUEENS,231,104,109,18,2026-10-17,40.69809,-73.786752,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11434,NEW YORK; QUEENS,275,183,65,27,2026-10-17,40.677857,-73.777073,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11435,QUEENS,334,171,138,25,2026-10-17,40.70108,-73.80964,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11436,QUEENS,108,48,53,7,2026-10-17,40.675864,-73.796647,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11439,QUEENS,1,0,1,0,2026-10-17,40.721935,-73.794587,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11501,NEW YORK,1,1,0,0,2026-10-17,40.74633,-73.639178,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11507,NEW YORK,1,1,0,0,2026-10-17,40.770829,-73.652103,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11509,KINGS; QUEENS,2,1,0,1,2026-10-17,40.587963,-73.728528,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11510,NEW YORK; QUEENS,4,1,2,1,2026-10-17,40.650127,-73.607709,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11514,NEW YORK; QUEENS,3,1,2,0,2026-10-17,40.749778,-73.61291,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11516,QUEENS,2,2,0,0,2026-10-17,40.626223,-73.726779,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11518,QUEENS,2,2,0,0,2026-10-17,40.637472,-73.666807,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11530,QUEENS,2,2,0,0,2026-10-17,40.726854,-73.637009,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11542,NEW YORK; QUEENS,2,1,1,0,2026-10-17,40.872605,-73.628622,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11548,QUEENS,1,1,0,0,2026-10-17,40.811078,-73.613879,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11550,QUEENS,1,0,1,0,2026-10-17,40.701475,-73.621108,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11552,NEW YORK; QUEENS,5,3,2,0,2026-10-17,40.691752,-73.654204,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11553,QUEENS,1,0,1,0,2026-10-17,40.705272,-73.592328,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11554,KINGS; NEW YORK; QUEENS,14,8,6,0,2026-10-17,40.720115,-73.558861,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11561,NEW YORK; QUEENS,2,1,0,1,2026-10-17,40.590904,-73.644668,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11563,NEW YORK; QUEENS,3,1,2,0,2026-10-17,40.657434,-73.674104,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11565,NEW YORK; QUEENS,2,1,1,0,2026-10-17,40.67502,-73.671722,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11569,NEW YORK,2,0,0,2,2026-10-17,40.590374,-73.580415,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11570,NEW YORK; QUEENS,2,2,0,0,2026-10-17,40.665341,-73.638921,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11572,QUEENS,2,2,0,0,2026-10-17,40.631772,-73.636624,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11575,QUEENS,2,1,1,0,2026-10-17,40.680422,-73.584877,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11576,NEW YORK; QUEENS,4,4,0,0,2026-10-17,40.796569,-73.646885,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11577,QUEENS,3,3,0,0,2026-10-17,40.782867,-73.639109,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11580,BRONX; NEW YORK; QUEENS,22,8,14,0,2026-10-17,40.6749,-73.702154,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11581,QUEENS,1,1,0,0,2026-10-17,40.651028,-73.715325,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11590,QUEENS,3,2,0,1,2026-10-17,40.755182,-73.574338,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11598,KINGS; NEW YORK; QUEENS,7,7,0,0,2026-10-17,40.630935,-73.712339,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11690,QUEENS,1,0,0,1,2026-10-17,,,No matching ZCTA; verify mailing ZIP,True
+11691,KINGS; QUEENS,256,226,15,15,2026-10-17,40.602096,-73.761794,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11692,KINGS; QUEENS,115,107,3,5,2026-10-17,40.594154,-73.791986,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11693,KINGS; NEW YORK; QUEENS,67,54,7,6,2026-10-17,40.591662,-73.809668,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11694,KINGS; QUEENS,172,153,0,19,2026-10-17,40.575314,-73.851235,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11697,QUEENS,15,14,0,1,2026-10-17,40.557132,-73.913722,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA,True
+11701,NEW YORK; QUEENS,2,2,0,0,2026-10-17,40.682451,-73.414382,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11702,NEW YORK,1,1,0,0,2026-10-17,40.636151,-73.383775,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11703,KINGS,2,1,1,0,2026-10-17,40.732676,-73.325003,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11706,NEW YORK; QUEENS,5,1,3,1,2026-10-17,40.710632,-73.242913,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11710,NEW YORK; QUEENS,4,2,2,0,2026-10-17,40.672203,-73.534825,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11713,KINGS,2,2,0,0,2026-10-17,40.778396,-72.942761,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11714,NEW YORK; QUEENS,5,2,3,0,2026-10-17,40.742649,-73.486164,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11717,QUEENS,1,0,1,0,2026-10-17,40.784072,-73.252235,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11720,NEW YORK; QUEENS,2,2,0,0,2026-10-17,40.87024,-73.082046,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11725,NEW YORK,1,1,0,0,2026-10-17,40.840584,-73.280817,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11727,QUEENS,1,0,1,0,2026-10-17,40.880174,-73.003691,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11729,QUEENS,1,0,1,0,2026-10-17,40.761136,-73.32526,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11732,NEW YORK,2,2,0,0,2026-10-17,40.842406,-73.539303,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11738,QUEENS,1,1,0,0,2026-10-17,40.837767,-73.037682,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11740,NEW YORK,2,2,0,0,2026-10-17,40.865347,-73.361205,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11741,NEW YORK,2,2,0,0,2026-10-17,40.794727,-73.070427,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11746,QUEENS,1,1,0,0,2026-10-17,40.814268,-73.362276,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11747,NEW YORK,1,1,0,0,2026-10-17,40.783762,-73.409295,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11753,NEW YORK; QUEENS,4,2,1,1,2026-10-17,40.789721,-73.541036,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11754,QUEENS,1,1,0,0,2026-10-17,40.885566,-73.249901,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11756,KINGS; NEW YORK; QUEENS,5,1,4,0,2026-10-17,40.724512,-73.516326,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11757,KINGS,2,2,0,0,2026-10-17,40.689009,-73.37335,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11758,QUEENS,1,0,1,0,2026-10-17,40.653822,-73.457076,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11766,KINGS; NEW YORK,2,2,0,0,2026-10-17,40.939219,-73.018666,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11768,NEW YORK,1,0,0,1,2026-10-17,40.923631,-73.339309,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11771,NEW YORK; QUEENS,2,2,0,0,2026-10-17,40.87373,-73.5253,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11779,NEW YORK,1,1,0,0,2026-10-17,40.812958,-73.11449,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11782,NEW YORK,2,2,0,0,2026-10-17,40.736729,-73.079999,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11787,QUEENS,1,1,0,0,2026-10-17,40.852924,-73.21126,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11788,NEW YORK; RICHMOND,2,1,1,0,2026-10-17,40.818085,-73.21319,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11790,NEW YORK,1,1,0,0,2026-10-17,40.907804,-73.127479,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11791,NEW YORK; QUEENS,2,2,0,0,2026-10-17,40.827771,-73.502767,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11793,QUEENS,2,1,1,0,2026-10-17,40.647228,-73.51146,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11801,NEW YORK; QUEENS,7,2,5,0,2026-10-17,40.762304,-73.524452,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11803,NEW YORK,2,1,1,0,2026-10-17,40.781771,-73.473118,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11930,NEW YORK,1,1,0,0,2026-10-17,40.991419,-72.114455,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11932,NEW YORK,1,1,0,0,2026-10-17,40.9265,-72.305037,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11933,NEW YORK,1,1,0,0,2026-10-17,40.942231,-72.765594,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11937,KINGS; NEW YORK,2,2,0,0,2026-10-17,40.994548,-72.198754,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11939,QUEENS,1,0,1,0,2026-10-17,41.138956,-72.318687,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11946,NEW YORK,1,1,0,0,2026-10-17,40.864652,-72.518104,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11950,QUEENS,1,0,1,0,2026-10-17,40.806142,-72.847182,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11951,KINGS,1,1,0,0,2026-10-17,40.765722,-72.836722,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11963,KINGS,1,1,0,0,2026-10-17,41.001696,-72.31962,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11964,NEW YORK,1,1,0,0,2026-10-17,41.049483,-72.302316,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11967,NEW YORK,1,1,0,0,2026-10-17,40.801566,-72.878028,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11968,NEW YORK,2,1,0,1,2026-10-17,40.900359,-72.428605,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11970,NEW YORK,1,1,0,0,2026-10-17,40.945144,-72.566319,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11976,NEW YORK,2,1,0,1,2026-10-17,40.929237,-72.34741,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+11978,NEW YORK,1,1,0,0,2026-10-17,40.825621,-72.637502,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12020,QUEENS,1,1,0,0,2026-10-17,43.001663,-73.870089,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12047,KINGS,1,1,0,0,2026-10-17,42.784054,-73.726219,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12065,NEW YORK,1,1,0,0,2026-10-17,42.852284,-73.785597,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12110,NEW YORK,1,1,0,0,2026-10-17,42.750565,-73.776095,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12136,NEW YORK,1,1,0,0,2026-10-17,42.420121,-73.565107,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12180,NEW YORK; QUEENS,2,2,0,0,2026-10-17,42.748588,-73.599536,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12401,QUEENS,1,1,0,0,2026-10-17,41.987541,-74.010273,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12407,QUEENS,1,1,0,0,2026-10-17,42.296731,-74.362067,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12420,NEW YORK,1,1,0,0,2026-10-17,41.67529,-74.393677,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12466,NEW YORK; QUEENS,2,1,0,1,2026-10-17,41.906849,-73.977827,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12528,BRONX,1,1,0,0,2026-10-17,41.713899,-73.99509,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12533,NEW YORK,2,1,0,1,2026-10-17,41.559772,-73.787099,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12534,NEW YORK; QUEENS,2,2,0,0,2026-10-17,42.226412,-73.753552,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12540,NEW YORK,1,1,0,0,2026-10-17,41.671202,-73.724891,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12542,NEW YORK,1,1,0,0,2026-10-17,41.613876,-74.015014,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12549,NEW YORK,1,1,0,0,2026-10-17,41.528031,-74.259365,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12571,NEW YORK,1,1,0,0,2026-10-17,42.003049,-73.809806,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12590,BRONX,1,1,0,0,2026-10-17,41.596424,-73.888844,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12603,NEW YORK,1,1,0,0,2026-10-17,41.675868,-73.864484,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12776,KINGS,1,1,0,0,2026-10-17,41.96339,-74.957793,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12804,NEW YORK,1,1,0,0,2026-10-17,43.337295,-73.682664,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12834,NEW YORK,1,1,0,0,2026-10-17,43.097971,-73.505306,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+12866,NEW YORK,1,0,0,1,2026-10-17,43.073715,-73.740236,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+13030,NEW YORK,1,1,0,0,2026-10-17,43.159236,-75.963913,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+13053,NEW YORK,1,1,0,0,2026-10-17,42.479575,-76.267918,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+13617,BRONX,1,1,0,0,2026-10-17,44.580531,-75.142767,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+13676,NEW YORK,1,1,0,0,2026-10-17,44.655468,-74.910189,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+13697,NEW YORK,2,2,0,0,2026-10-17,44.754714,-74.810347,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+13790,QUEENS,1,0,1,0,2026-10-17,42.165361,-76.001942,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+13830,NEW YORK,1,1,0,0,2026-10-17,42.442748,-75.644652,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+14120,NEW YORK,2,2,0,0,2026-10-17,43.079176,-78.842777,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+14218,NEW YORK,1,0,0,1,2026-10-17,42.818798,-78.82904,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+14221,NEW YORK,1,1,0,0,2026-10-17,42.984481,-78.722761,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+14224,NEW YORK,1,1,0,0,2026-10-17,42.837759,-78.747821,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+14226,QUEENS,1,1,0,0,2026-10-17,42.970345,-78.798005,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+14411,QUEENS,1,1,0,0,2026-10-17,43.235972,-78.216477,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+14504,NEW YORK,1,1,0,0,2026-10-17,42.968431,-77.232695,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+14513,NEW YORK,1,1,0,0,2026-10-17,43.075907,-77.100601,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+14534,NEW YORK,1,1,0,0,2026-10-17,43.05689,-77.521042,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+14580,NEW YORK,1,1,0,0,2026-10-17,43.217283,-77.444534,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+14586,QUEENS,1,1,0,0,2026-10-17,43.041675,-77.689904,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+14612,NEW YORK,1,1,0,0,2026-10-17,43.263641,-77.672599,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+14616,RICHMOND,1,1,0,0,2026-10-17,43.234333,-77.658213,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+14622,RICHMOND,1,1,0,0,2026-10-17,43.214044,-77.550946,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False
+14623,NEW YORK,1,1,0,0,2026-10-17,43.087349,-77.641862,2025 ZCTA internal point matched by code; USPS ZIP is not a ZCTA; outside historical NYC ZIP lookup: review before locating demand,False

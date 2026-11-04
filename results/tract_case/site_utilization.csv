@@ -1,0 +1,788 @@
+site_id,site_type,site_name,latitude,longitude,existing_ports,existing_capacity_kwh,added_port_capacity_kwh,additional_ports,available_capacity_kwh,served_kwh,utilization
+M:avenue,municipal,Avenue M Municipal Parking Field,40.61876507,-73.9586943,0,0.0,1088.64,3,3265.92,2301.1296837971045,0.7045885030242947
+M:bay,municipal,Bay Ridge Municipal Parking Garage,40.62188028,-74.02570166,5,5443.200000000001,1088.64,0,5443.200000000001,1914.5908130434887,0.3517399347890007
+M:bayside,municipal,Bayside Municipal Parking Field,40.76394227,-73.76615974,0,0.0,1088.64,4,4354.56,3503.1864921009096,0.8044869038665007
+M:belmont,municipal,Belmont Municipal Parking Field,40.85481492,-73.8891204,0,0.0,1088.64,1,1088.64,676.4266297495689,0.6213501522537926
+M:bensonhurst,municipal,Bensonhurst #1 Municipal Parking Field,40.60763673,-74.00314364,4,4354.56,1088.64,0,4354.56,4136.526702300252,0.9499298901152473
+M:bensonhurst2,municipal,Bensonhurst #2 Municipal Parking Field,40.60339031,-73.99677898,0,0.0,1088.64,2,2177.28,2177.28,1.0
+M:borough-municipal,municipal,Borough Hall Municipal Parking Garage,40.7149112,-73.8270025,31,33747.840000000004,1088.64,0,33747.840000000004,2553.930322999107,0.0756768528889288
+M:brighton,municipal,Brighton Beach Municipal Parking Field,40.57553014,-73.96307398,0,0.0,1088.64,2,2177.28,1485.613529173714,0.6823254377818718
+M:broadway,municipal,Broadway – 31st Street Municipal Parking Field,40.76144881,-73.92570613,0,0.0,1088.64,0,0.0,0.0,
+M:bronxdale,municipal,Bronxdale Municipal Parking Field,40.85157842,-73.86782231,0,0.0,1088.64,0,0.0,0.0,
+M:canarsie,municipal,Canarsie Municipal Parking Field,40.64590441,-73.90298146,0,0.0,1088.64,2,2177.28,1144.9066672491424,0.5258426418509068
+M:college,municipal,College Point Municipal Parking Field,40.78592305,-73.84642267,8,8709.12,1088.64,0,8709.12,1857.2616296938136,0.21325479838305286
+M:court,municipal,Court Square Municipal Parking Garage,40.74533222,-73.94266751,10,10886.400000000001,1088.64,0,10886.400000000001,3010.886884044032,0.27657323670304523
+M:delancey,municipal,Delancey and Essex Municipal Parking Garage,40.71964308,-73.98850742,9,9797.76,1088.64,0,9797.76,5332.673812624509,0.5442747947106796
+M:ditmars,municipal,Ditmars #1 Municipal Parking Field,40.774996,-73.91017973,0,0.0,1088.64,0,0.0,0.0,
+M:ditmars2,municipal,Ditmars #2 Municipal Parking Field,40.77445406,-73.91165942,0,0.0,1088.64,1,1088.64,794.4400694398519,0.7297546199293171
+M:ferry,municipal,Ferry Terminal South #1 Municipal Parking Field,40.64391107,-74.07282221,0,0.0,1088.64,0,0.0,0.0,
+M:flushing2,municipal,Flushing #2 Municipal Parking Field,40.7599355,-73.83173152,0,0.0,1088.64,0,0.0,0.0,
+M:flushing4,municipal,Flushing #4 Municipal Parking Field,40.76281543,-73.83447836,0,0.0,1088.64,1,1088.64,1059.0956216201378,0.9728612044570636
+M:gowanus,municipal,Gowanus Municipal Parking Field,40.65591582,-74.00628155,0,0.0,1088.64,0,0.0,0.0,
+M:grant,municipal,Grant Avenue West Municipal Parking Field,40.67692979,-73.86568472,0,0.0,1088.64,5,5443.200000000001,5443.200000000001,1.0
+M:greatkills,municipal,Great Kills Municipal Parking Field,40.55140773,-74.14927295,0,0.0,1088.64,2,2177.28,1543.91223677959,0.7091013727125541
+M:gunhill,municipal,Jerome-Gun Hill Road Municipal Parking Garage,40.88303495,-73.88075961,4,4354.56,1088.64,0,4354.56,296.90785374995545,0.06818320421580032
+M:hunts,municipal,Hunts Point Municipal Parking Field,40.82148022,-73.88927018,20,21772.800000000003,1088.64,0,21772.800000000003,745.4233329064284,0.034236447903183254
+M:jerome190,municipal,Jerome – 190th Street Municipal Parking Garage,40.86348001,-73.90028702,5,5443.200000000001,1088.64,0,5443.200000000001,1838.0592721480223,0.33767990743460136
+M:meeker,municipal,Meeker Avenue Municipal Parking Field,40.7186492,-73.94636118,0,0.0,1088.64,0,0.0,0.0,
+M:newDorp,municipal,New Dorp Municipal Parking Field,40.57431215,-74.11710143,0,0.0,1088.64,3,3265.92,2195.3702787683433,0.6722057731874459
+M:queens-court-municipal,municipal,Queens Family Court Municipal Parking Garage,40.70167973,-73.80386839,3,3265.92,1088.64,0,3265.92,1540.301273775153,0.47162859891704423
+M:queensboro,municipal,Queensboro Hall Municipal Parking Field,40.71491891,-73.82690689,31,33747.840000000004,1088.64,0,33747.840000000004,663.2845757464776,0.01965413418300186
+M:queensvillage,municipal,Queens Village Municipal Parking Field,40.7177598,-73.7372452,0,0.0,1088.64,3,3265.92,2437.777608631435,0.7464290639793489
+M:rockaway,municipal,Rockaway Park Municipal Parking Field,40.58113799,-73.83701404,0,0.0,1088.64,1,1088.64,648.4016631012399,0.5956070538481407
+M:rosedale,municipal,Rosedale Municipal Parking Field,40.669908,-73.74002796,0,0.0,1088.64,1,1088.64,961.1537255600249,0.882894001286031
+M:sheepshead,municipal,Sheepshead Bay #1 Municipal Parking Field,40.58776564,-73.95269797,12,13063.68,1088.64,0,13063.68,2513.8880335171834,0.19243337509164213
+M:sheepshead2,municipal,Sheepshead Bay #2 Municipal Parking Field,40.58579289,-73.95270393,0,0.0,1088.64,0,0.0,0.0,
+M:steinway,municipal,Steinway #1 Municipal Parking Field,40.76393934,-73.91524042,0,0.0,1088.64,0,0.0,0.0,
+M:steinway2,municipal,Steinway #2 Municipal Parking Field,40.76926268,-73.91050171,10,10886.400000000001,1088.64,0,10886.400000000001,2345.088997687948,0.2154145537264796
+M:stgeorge,municipal,Staten Island Courthouse Garage and Outdoor Lot,40.64000456,-74.07669959,5,5443.200000000001,1088.64,0,5443.200000000001,0.0,0.0
+M:sunnyside,municipal,Sunnyside Municipal Parking Field,40.74401178,-73.92469067,4,4354.56,1088.64,0,4354.56,2819.032489307552,0.647374818421965
+M:west-brighton,municipal,West Brighton Avenue Municipal Parking Field,40.576515,-73.97172648,0,0.0,1088.64,0,0.0,0.0,
+M:white,municipal,White Plains Road Municipal Parking Field,40.85313175,-73.8681399,4,4354.56,1088.64,0,4354.56,1287.1082958698505,0.29557711820938287
+O:104341,other,WCS NS1 BOSTON RD,40.846205,-73.876513,1,1088.64,0.0,0,1088.64,787.8282647980504,0.7236811662239586
+O:114881,other,Astoria Central Parking - Tesla Destination,40.762502,-73.924507,4,4354.56,0.0,0,4354.56,768.4365374146869,0.1764670913742575
+O:114888,other,Century Parking Corp - Tesla Destination,40.87830439,-73.91522653,4,4354.56,0.0,0,4354.56,515.6283123456786,0.11841111670195809
+O:114891,other,Quik Park Armory Parking Inc. - Tesla Destination,40.692635,-73.969935,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:114894,other,iPark 247 N 7th Street - Tesla Destination,40.715954,-73.954681,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114898,other,iPark NYC 2234 North 6th - Tesla Destination,40.71949,-73.963312,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114900,other,Standard Parking 1 Metrotech - Tesla Destination,40.69306,-73.987222,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114901,other,GGMC Belltel Car Park - Tesla Destination,40.692579,-73.985252,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114903,other,GMC 388 Bridge Street - Tesla Destination,40.691469,-73.985446,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114904,other,Quik Park Brooklyn Bridge LLC - Tesla Destination,40.692941,-74.000298,3,3265.92,0.0,0,3265.92,511.75245302013184,0.15669473012815127
+O:114905,other,Rapidpark 44 State Street - Tesla Destination,40.692062,-73.99816,3,3265.92,0.0,0,3265.92,1496.061273710966,0.4580826455366224
+O:114906,other,Park Kwik LLC 50 Washington St. - Tesla Destination,40.702882,-73.990594,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114908,other,1 Hotel Brooklyn Bridge - Tesla Destination,40.701461,-73.995566,7,7620.4800000000005,0.0,0,7620.4800000000005,1437.1813875374025,0.18859460132923417
+O:114910,other,"Littleman Driggs Parking, LLC - Tesla Destination",40.715033,-73.958595,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114911,other,GGMC Parking 66 Rockwell Pl Garage - Tesla Destination,40.688086,-73.979234,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114912,other,Standard Parking 200 Cadman Plaza West - Tesla Destination,40.698707,-73.992365,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114913,other,GGMC Parking 75 Smith St Garage - Tesla Destination,40.689016,-73.988672,3,3265.92,0.0,0,3265.92,379.4083560372068,0.11617196870627779
+O:114914,other,Standard Parking 2 Metrotech - Tesla Destination,40.693122,-73.985696,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114915,other,Quik Park 81 Fleet Place LLC - Tesla Destination,40.693248,-73.981744,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114916,other,Rapidpark 906 Union Street - Tesla Destination,40.672884,-73.971541,3,3265.92,0.0,0,3265.92,574.2598826639559,0.17583403226777014
+O:114917,other,MPG 100 Jay Street - Tesla Destination,40.702194,-73.98672,3,3265.92,0.0,0,3265.92,595.0322160483025,0.18219436362443125
+O:114918,other,imPark 101 Bedford Ave - Tesla Destination,40.719751,-73.954866,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114919,other,The William Vale Hotel - Tesla Destination,40.722137,-73.956583,4,4354.56,0.0,0,4354.56,182.550474476836,0.04192168083040215
+O:114937,other,Hampton Inn LaGuardia Airport - Tesla Destination,40.767948,-73.867784,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:114939,other,MPG The Shops at Skyview - Tesla Destination,40.75674,-73.836223,3,3265.92,0.0,0,3265.92,0.4116705720462692,0.00012605041521111026
+O:114940,other,Sylvan Pinnacle Garage - Tesla Destination,40.718526,-73.83648,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:114968,other,MPG 1-50 51st Ave - Tesla Destination,40.743049,-73.959245,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:114969,other,iPark 43-25 Hunter Street - Tesla Destination,40.747589,-73.942612,8,8709.12,0.0,0,8709.12,0.0,0.0
+O:114970,other,Little Man Parking (Queens West) - Tesla Destination,40.745627,-73.955638,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114974,other,Icon Parking 205 E 63rd St - Tesla Destination,40.763981,-73.964368,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:114983,other,MPG 10 E 102nd Street - Tesla Destination,40.79136,-73.952155,3,3265.92,0.0,0,3265.92,737.7898429442122,0.22590566913586743
+O:114984,other,Rapidpark 10 E 30th Street - Tesla Destination,40.74556,-73.985539,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114985,other,Icon Parking 1056 5th Avenue - Tesla Destination,40.782031,-73.959484,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114986,other,iPark 10 West 15th - Tesla Destination,40.737171,-73.994331,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114987,other,GGMC Parking 10 W 66th St Garage - Tesla Destination,40.772742,-73.979503,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:114988,other,GGMC Parking Union Square Parking Garage - Tesla Destination,40.734939,-73.989409,6,6531.84,0.0,0,6531.84,294.9537810932767,0.045156308343939335
+O:114990,other,Rapidpark 600 Columbus Ave-QBDestinationSiteID52405 - Tesla Destination,40.788614,-73.97118,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114991,other,Champion Parking E 16th Street - Tesla Destination,40.735736,-73.988745,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114992,other,Icon Parking 101 W 15th - Tesla Destination,40.738371,-73.99688,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:114995,other,ABM Parking 475 Park Ave South LLC - Tesla Destination,40.745603,-73.98185,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:114996,other,Rapidpark 99 Park Ave - Tesla Destination,40.750013,-73.978525,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114997,other,iPark 107 West 13th Street - Tesla Destination,40.736973,-73.99787,3,3265.92,0.0,0,3265.92,617.9154260123498,0.18920102942275066
+O:114998,other,Icon Parking 11 5th Ave - Tesla Destination,40.732085,-73.995829,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:114999,other,iPark NYC 1025 83rd - Tesla Destination,40.779211,-73.960949,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115000,other,GMC 111 E 82nd St - Tesla Destination,40.77735,-73.958352,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115001,other,iPark 112 E 65th Street - Tesla Destination,40.766495,-73.9667,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115002,other,Quik Park 1133 Garage LLC - Tesla Destination,40.755856,-73.984313,3,3265.92,0.0,0,3265.92,279.39726651834144,0.08554932959727778
+O:115003,other,iPark 1510 Lex Garage Corp. - Tesla Destination,40.787402,-73.950546,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115004,other,ABM Parking 750 Lexington Ave LLC - Tesla Destination,40.76306,-73.968409,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115005,other,Icon Parking 12 East 9th Street - Tesla Destination,40.732519,-73.995135,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115006,other,MPG 121 Reade Street - Tesla Destination,40.716268,-74.009491,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115007,other,GMC Parking Narragansett - Tesla Destination,40.7758,-73.95087,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115008,other,Rapidpark 124 W 20th Street - Tesla Destination,40.741554,-73.995403,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115009,other,Quik Park Garden Lots LLC - Tesla Destination,40.749073,-73.990032,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115010,other,ABM Parking 13 East 54th Street LLC - Tesla Destination,40.760648,-73.974193,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:115011,other,New York Hilton Midtown - Tesla Destination,40.762234,-73.979036,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:115012,other,1345 Parking Garage - Tesla Destination,40.76351,-73.979364,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115015,other,Icon Parking OMNI - Tesla Destination,40.77592,-73.98313,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115016,other,Rapidpark 148 E 33rd Street - Tesla Destination,40.745432,-73.97956,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115017,other,Rapidpark 15 W 72nd Street - Tesla Destination,40.776813,-73.977083,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115018,other,Icon Parking 150 Charles Street - Tesla Destination,40.734006,-74.009079,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115019,other,Icon Parking 150 E 58th Street - Tesla Destination,40.76139,-73.968269,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115021,other,Standard Parking 151 W 17th Street - Tesla Destination,40.740243,-73.997591,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115022,other,Icon Parking 155 E 29th Street - Tesla Destination,40.742821,-73.980913,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115023,other,City Parking Garment One Garage - Tesla Destination,40.746022,-73.978693,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115024,other,Prime Parking Systems - 155 E 68th Street - Tesla Destination,40.767743,-73.963665,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115025,other,Champion Parking W 53rd Street - Tesla Destination,40.763279,-73.98086,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115026,other,Icon Parking 16 W 16th Street - Tesla Destination,40.737891,-73.994058,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115027,other,GGMC Parking Alfred - Tesla Destination,40.771555,-73.986428,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115028,other,iPark NYC E 77th Street - Tesla Destination,40.773415,-73.959234,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115029,other,Parkright 169 Ludlow Street - Tesla Destination,40.721713,-73.987533,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115030,other,169 West 95th St - Tesla Destination,40.7932339,-73.9702356,2,2177.28,0.0,0,2177.28,666.7107863482726,0.3062126994912333
+O:115033,other,Quik Park Hudson 180 LLC - Tesla Destination,40.778412,-73.988294,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115034,other,iPark NYC 183 E 73rd Street - Tesla Destination,40.770601,-73.960531,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115035,other,Icon Parking 240 East Broadway - Tesla Destination,40.714821,-73.987138,3,3265.92,0.0,0,3265.92,828.2205169320969,0.2535948574772489
+O:115036,other,Glenwood Grand Tier Parking - Tesla Destination,40.772574,-73.981951,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:115037,other,Standard Parking 20 W 13th Street - Tesla Destination,40.735706,-73.995058,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115038,other,Central Parking 200 Chambers - Tesla Destination,40.716256,-74.012543,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115039,other,Icon Parking 200 E 32nd Street - Tesla Destination,40.744916,-73.980228,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115041,other,Enterprise Parking 200 E 69th St - Tesla Destination,40.767615,-73.961509,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:115042,other,iPark 200 E 70th Street - Tesla Destination,40.768283,-73.961149,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115043,other,iPark NYC The Carnegie Garage - Tesla Destination,40.783536,-73.949507,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115044,other,GMC Copley Parking - Tesla Destination,40.775283,-73.981627,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115045,other,MPG 201 E 56th - Tesla Destination,40.759437,-73.96767,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115046,other,Icon Parking 203 E 61 Street - Tesla Destination,40.762678,-73.965447,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115047,other,Rapidpark 204 W 101st Street - Tesla Destination,40.797359,-73.968718,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115048,other,Champion Parking W 76th Street - Tesla Destination,40.781547,-73.980475,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115050,other,Standard Parking 21 East 15th Street - Tesla Destination,40.736293,-73.991939,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115051,other,Rapidpark 210 W 102nd Street - Tesla Destination,40.798108,-73.968204,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115052,other,Champion Parking 74 LLC - Tesla Destination,40.780027,-73.982823,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115053,other,GGMC Parking Seven Eleven (Located at 217 E 44th St) - Tesla Destination,40.751867,-73.972873,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115055,other,iPark 200 West Garage Corp. - Tesla Destination,40.746304,-73.995064,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115056,other,Parkit 221 Thompson Street - Tesla Destination,40.729234,-73.999013,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115058,other,Icon Parking 225 W 83 Street - Tesla Destination,40.786099,-73.977303,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115059,other,Quik Park Broadway Garage LLC - Tesla Destination,40.765844,-73.982481,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115060,other,GGMC Yorkville Car Park - Tesla Destination,40.782212,-73.95023,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115061,other,Champion Parking 230 W 55th Street - Tesla Destination,40.764748,-73.982676,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115062,other,Icon Parking 237 West Thames - Tesla Destination,40.708165,-74.016641,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115065,other,iPark 245 East 63rd Street - Tesla Destination,40.76332,-73.962938,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115066,other,GGMC Ruppert Car Park - Tesla Destination,40.78098,-73.951145,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115067,other,iPark NYC 246 E 45 Street - Tesla Destination,40.751847,-73.971348,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115068,other,iPark NYC 250 West Parking - Tesla Destination,40.742407,-73.999351,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115069,other,Quik Park Columbia Garage LLC - Tesla Destination,40.795624,-73.971961,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115070,other,Quik Park 40 Riverside Blvd - Tesla Destination,40.77373,-73.989713,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115071,other,Rapidpark 25-27 Beekman Street - Tesla Destination,40.710786,-74.006017,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115072,other,Rapidpark 254 W 79th Street - Tesla Destination,40.78411,-73.980641,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115073,other,MPG 266 E 97 St - Tesla Destination,40.785296,-73.947487,3,3265.92,0.0,0,3265.92,237.0149227425276,0.07257217652071318
+O:115074,other,Parkit 27 N Moore Street - Tesla Destination,40.719869,-74.007447,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115075,other,iPark NYC 455 Central Park West - Tesla Destination,40.797771,-73.96142,3,3265.92,0.0,0,3265.92,2970.651043703224,0.909590879048851
+O:115076,other,Standard Parking 270 Greenwich - Tesla Destination,40.715071,-74.012203,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115077,other,Icon Parking 279 East 65th Street - Tesla Destination,40.764552,-73.962034,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115078,other,ABM Parking Services 285 W 50th Street LLC - Tesla Destination,40.762411,-73.984495,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115079,other,Parkright 39 E 29th Street - Tesla Destination,40.744244,-73.984116,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115080,other,iPark 3 E 67th Street - Tesla Destination,40.769061,-73.96876,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115081,other,Icon Parking 30 W 63rd St - Tesla Destination,40.770772,-73.981795,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:115082,other,GGMC Parking Connaught - Tesla Destination,40.757146,-73.966135,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115083,other,Icon Parking 300 E 59th Street - Tesla Destination,40.760462,-73.964086,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115084,other,GGMC Parking E 74th Street - Tesla Destination,40.769947,-73.956989,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115085,other,Parkright 300 E 77th St - Tesla Destination,40.771794,-73.955624,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115086,other,Icon Parking 301 E 57 Street - Tesla Destination,40.759127,-73.964684,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115087,other,Parkit 301 E 64th - Tesla Destination,40.763488,-73.961323,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115089,other,Parkit 310 E 11th Street - Tesla Destination,40.730017,-73.985512,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115091,other,Quik Park 311 West Broadway LLC - Tesla Destination,40.721801,-74.004237,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:115093,other,Quik Park 32 Debrosses LLC - Tesla Destination,40.723617,-74.010915,3,3265.92,0.0,0,3265.92,800.9878167003794,0.24525641065928724
+O:115095,other,Champion Parking W 57th Street - Tesla Destination,40.76696,-73.983569,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115096,other,GGMC Parking 8 E 33rd St Garage - Tesla Destination,40.747478,-73.98504,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115097,other,Icon Parking E 48th Street - Tesla Destination,40.753079,-73.968032,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115098,other,Icon Parking 330 E 39th Street - Tesla Destination,40.746851,-73.972901,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115099,other,Dock Parking 330 W 58th Street - Tesla Destination,40.767879,-73.983656,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115103,other,MPG 340 East 93rd - Tesla Destination,40.781413,-73.946377,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115104,other,Rapidpark 340 94th Street - Tesla Destination,40.782091,-73.946029,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115105,other,iPark NYC E 80th Street - Tesla Destination,40.77331,-73.952621,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115106,other,Rapidpark 35 E 75th Street - Tesla Destination,40.77364,-73.963722,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115108,other,Quik Park 82nd Street LLC - Tesla Destination,40.774511,-73.952039,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115109,other,GGMC Parking 350 W 43rd Street Garage - Tesla Destination,40.758586,-73.991341,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115110,other,Rapidpark 351 East 83rd - Tesla Destination,40.775123,-73.951193,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115111,other,Icon Parking 35-39 East 61st Street - Tesla Destination,40.764617,-73.969764,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115113,other,iPark NYU 377 E 33rd Street - Tesla Destination,40.743405,-73.974735,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115115,other,iPark 386 E 48th Street - Tesla Destination,40.7529,-73.967723,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115116,other,Icon Parking Wall Park - Tesla Destination,40.705922,-74.010175,3,3265.92,0.0,0,3265.92,866.3219551968864,0.2652612296678689
+O:115117,other,GGMC Parking Carnegie Garage - Tesla Destination,40.78567,-73.954593,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115118,other,City Parking RL Mercer Street - Tesla Destination,40.721437,-74.001238,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115119,other,Icon Parking 40 W 26th Street - Tesla Destination,40.744467,-73.990662,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115120,other,iPark NYC 400 E 35th NYU - Tesla Destination,40.743971,-73.971882,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115123,other,Propark 401 W 110th Street - Tesla Destination,40.802151,-73.961705,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115124,other,Parkit 403 Lafayette St. - Tesla Destination,40.728287,-73.992746,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:115125,other,iPark 41 E 85th Street - Tesla Destination,40.779876,-73.958579,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:115127,other,GGMC Parking 415 E 79th - Tesla Destination,40.771918,-73.951679,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115128,other,Icon Parking Sutton 53 - Tesla Destination,40.755363,-73.963841,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115129,other,Icon Parking Independent - Tesla Destination,40.766708,-73.955483,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115130,other,GMC Parking 420 E 53rd - Tesla Destination,40.755289,-73.963804,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:115131,other,Sutton Place North Garage - Tesla Destination,40.75552,-73.962734,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:115132,other,imPark 422 E 79th Street - Tesla Destination,40.771879,-73.951627,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115134,other,iPark NYC 425 E 58th Street - Tesla Destination,40.758519,-73.961272,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115135,other,City Parking E 61st Street - Tesla Destination,40.760289,-73.959501,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115136,other,ABM Parking 866 UN Plaza - Tesla Destination,40.752641,-73.965187,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115137,other,Quikpark 43-08 Crescent Street - Tesla Destination,40.748757,-73.943417,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115138,other,iPark NYC 44 Elizabeth Street - Tesla Destination,40.716966,-73.996707,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115139,other,Quik Park 86th St. LLC - Tesla Destination,40.775968,-73.947846,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115142,other,Icon Parking 5 E 22nd Street - Tesla Destination,40.740458,-73.989037,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115143,other,GGMC Parking Battery Place - Tesla Destination,40.706965,-74.017971,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115144,other,GGMC Parking 50 E 79th St Garage - Tesla Destination,40.776006,-73.961627,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:115145,other,MPG 500 West 30th - Tesla Destination,40.752205,-74.001493,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115147,other,Icon Parking 51 W 22nd - Tesla Destination,40.742059,-73.992694,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115149,other,Icon Parking 524 East 73rd - Tesla Destination,40.766736,-73.951891,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115150,other,GGMC Parking 51-53 E 76th St Carlyle Hotel - Tesla Destination,40.774207,-73.96282,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:115151,other,iPark 530 E 80th Street - Tesla Destination,40.771382,-73.948344,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115152,other,MPG 530 West 30th - Tesla Destination,40.75277,-74.00265,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115153,other,Icon Parking E 88th Street - Tesla Destination,40.776461,-73.944363,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115154,other,Icon Parking 54 Murray Street - Tesla Destination,40.714266,-74.009921,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115155,other,Standard Parking 800 6th Ave - Tesla Destination,40.745842,-73.990103,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115156,other,Loews Regency New York - Tesla Destination,40.764423,-73.968865,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115157,other,MPG 543 W 110th Street Garage - Tesla Destination,40.803963,-73.966032,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115158,other,iPark NYC 549 W 23rd Street - Tesla Destination,40.749255,-74.005914,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115159,other,Icon Parking 55 W 14th Street - Tesla Destination,40.737122,-73.996119,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115160,other,GGMC Parking - 550 W 25th - Tesla Destination,40.74979,-74.005335,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:115161,other,iPark Eleventh Avenue Garage Corp. - Tesla Destination,40.753049,-74.003333,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115162,other,Icon Parking 560 Third Ave - Tesla Destination,40.747962,-73.976569,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115165,other,Standard Parking 58 W 58th Street - Tesla Destination,40.76476,-73.976153,3,3265.92,0.0,0,3265.92,180.5346480536257,0.05527834363781896
+O:115167,other,Champion Parking 90 LLC - Tesla Destination,40.783085,-73.956304,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115168,other,Champion Parking 60 East End Avenue - Tesla Destination,40.772712,-73.947045,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115170,other,Quik Park 600 West 42nd Street (Silver Towers) LLC - Tesla Destination,40.761018,-73.99878,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115171,other,"MTP Parking, The Helena - Tesla Destination",40.770709,-73.991725,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:115172,other,Champion Parking 60 E 8th - Tesla Destination,40.730487,-73.993569,3,3265.92,0.0,0,3265.92,421.62955884647613,0.1290997816377854
+O:115173,other,iPark NYC 61 Jane Street - Tesla Destination,40.738733,-74.006009,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115175,other,imPark 611 E 83rd Street - Tesla Destination,40.772681,-73.945488,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115176,other,MTP 625 W 57th Street - Tesla Destination,40.77108,-73.993142,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115177,other,Icon Parking University 10 Parking - Tesla Destination,40.731887,-73.991906,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115178,other,Parkright 670 W 43rd Street - Tesla Destination,40.762189,-73.999714,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115179,other,Quik Park Little West LLC - Tesla Destination,40.70663,-74.016916,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115180,other,Rapidpark 70 Riverside Dr - Tesla Destination,40.784831,-73.982085,2,2177.28,0.0,0,2177.28,881.5214898893108,0.40487281832805644
+O:115185,other,iPark 650 Parking Corp - Tesla Destination,40.768144,-73.966736,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115186,other,Icon Parking 70 Gold Street - Tesla Destination,40.710019,-74.004385,3,3265.92,0.0,0,3265.92,308.6600963553628,0.09450938674412196
+O:115187,other,Icon 80 Riverside Blvd - Tesla Destination,40.775374,-73.989687,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115189,other,"The Standard, High Line - Tesla Destination",40.740939,-74.00824,3,3265.92,0.0,0,3265.92,1500.9762126373714,0.4595875626584152
+O:115190,other,Chelnik Parking NYC 880 5th - Tesla Destination,40.770292,-73.967735,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:115193,other,Quik Park West 57 LLC - Tesla Destination,40.764259,-73.974972,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115194,other,GGMC Parking Stewart House Garage - Tesla Destination,40.731257,-73.992101,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115195,other,Rapidpark 920 Park Avenue - Tesla Destination,40.776574,-73.96047,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115196,other,MPG 923 5th Ave - Tesla Destination,40.773004,-73.966152,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115197,other,GGMC The Cove - Tesla Destination,40.707738,-74.016845,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115240,other,Angelina's Ristorante - Tesla Destination,40.513465,-74.251418,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:115251,other,PV Parking 40-07 73rd St - Tesla Destination,40.7464805,-73.8922584,4,4354.56,0.0,0,4354.56,971.4795456312568,0.2230947663211109
+O:122470,other,Austin Nichols House - Tesla Destination,40.718954,-73.9644059,6,6531.84,0.0,0,6531.84,0.0,0.0
+O:122471,other,ImPark 500 4th Ave - Tesla Destination,40.6685202,-73.9904888,4,4354.56,0.0,0,4354.56,1991.509176189152,0.45733878421451346
+O:122472,other,Sherman Parking - Tesla Destination,40.71102287,-73.96813376,4,4354.56,0.0,0,4354.56,1645.0034622293267,0.3777657127767964
+O:122473,other,iPark 34 N 7th Street - Tesla Destination,40.72054,-73.962249,8,8709.12,0.0,0,8709.12,1737.588461889545,0.19951366635085346
+O:122475,other,IMPark 353 4th Ave - Tesla Destination,40.6732353,-73.9862323,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:122476,other,MTP Parking 363 Bond Street - Tesla Destination,40.6781552,-73.9904425,4,4354.56,0.0,0,4354.56,2515.6823385601065,0.5777121772487016
+O:122477,other,MTP Parking 568 Union Ave - Tesla Destination,40.718054,-73.951847,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:122478,other,ImPark Atlantic Terrace - Tesla Destination,40.6832871,-73.9735893,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:122481,other,Sylvan Kissena Garage LLC - Tesla Destination,40.7538611,-73.823669,4,4354.56,0.0,0,4354.56,1862.1352555311216,0.42762879729091374
+O:122482,other,Excel Parking 87-10 Northern Blvd - Tesla Destination,40.755839,-73.8806563,4,4354.56,0.0,0,4354.56,4354.56,1.0
+O:122483,other,125-10 Queens Blvd Garage - Tesla Destination,40.7119045,-73.8267727,4,4354.56,0.0,0,4354.56,1294.133529477232,0.2971904232522303
+O:122488,other,MTP Parking 41-42 24th Street - Tesla Destination,40.7515557,-73.9414058,4,4354.56,0.0,0,4354.56,837.0953739277736,0.19223420366874575
+O:122489,other,iPark 400 E 85th St - Tesla Destination,40.7759529,-73.949738,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:122491,other,Andaz Wall Street - Tesla Destination,40.705115,-74.008089,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:122592,other,INDUSTRY CITY LOT B WEST,40.659333,-74.006419,2,2177.28,0.0,0,2177.28,136.90200651664404,0.06287753826638927
+O:124140,other,The Veneto,40.756766,-73.967481,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:124141,other,Coliseum Park Apts - Central Parking,40.768432,-73.984033,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:124144,other,Astor Place,40.7297,-73.991565,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:124147,other,Superior Ink,40.737537,-74.00983,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:144109,other,CITYLIGHTS QUEENS LANDING,40.744385,-73.956593,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:146876,other,"Shopcore Skyview Mall (Flushing, NY)",40.75619,-73.8363,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:147204,other,"Queens Center Mall (Elmhurst, NY)",40.73487,-73.87038,1,1088.64,0.0,0,1088.64,184.01342355613508,0.1690305551478313
+O:147469,other,PANYNJ JFK Y GARAGE 2,40.64572,-73.779384,2,2177.28,0.0,0,2177.28,421.17291562500014,0.19343994140625004
+O:147470,other,PANYNJ JFK Y GARAGE 4,40.645841,-73.779222,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:150520,other,Icon Parking 245 E 19th St. - Tesla Destination,40.735608,-73.983111,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:150532,other,333 Schermerhorn Garage - The Hub - Tesla Destination,40.686983,-73.980498,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:150534,other,4320 Broadway-PARK-it - Tesla Destination,40.852461,-73.934084,4,4354.56,0.0,0,4354.56,1232.1878642289398,0.28296495265398564
+O:150535,other,506 W 181 St Garage-PARK-it - Tesla Destination,40.848358,-73.931743,4,4354.56,0.0,0,4354.56,1001.7192649152701,0.23003914630072153
+O:150540,other,One Blue Slip-Greenpoint - Tesla Destination,40.736562,-73.959195,5,5443.200000000001,0.0,0,5443.200000000001,1871.5698477807432,0.3438363183018708
+O:150571,other,CenterPark 4172 Broadway - Tesla Destination,40.847422,-73.937922,4,4354.56,0.0,0,4354.56,1053.0275064634873,0.24182179289376818
+O:150572,other,Icon Parking 175 W 90th Street - Tesla Destination,40.790046,-73.972531,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:150574,other,Center Park 250 Albany - Tesla Destination,40.709803,-74.015771,4,4354.56,0.0,0,4354.56,902.218027641556,0.2071892516446107
+O:150575,other,Enterprise Parking 150 Myrtle Ave - Tesla Destination,40.693476,-73.982605,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:150576,other,Enterprise Parking 147 Flatbush Avenue Extension - Tesla Destination,40.695154,-73.983861,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:150578,other,LAZ Parking 133-59 Roosevelt Ave - Tesla Destination,40.758956,-73.832331,4,4354.56,0.0,0,4354.56,443.6942122468418,0.10189185870600974
+O:150579,other,LAZ Parking 136-20 38th Ave - Tesla Destination,40.760965,-73.829807,4,4354.56,0.0,0,4354.56,2570.9023337536373,0.5903931358744942
+O:150580,other,IMPark 188 E 78th St - Tesla Destination,40.773665,-73.958333,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:150581,other,IMPark 302 2nd St - Tesla Destination,40.674312,-73.98488,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:150582,other,IPark 255 Schermerhorn - Tesla Destination,40.687913,-73.983039,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:150583,other,IPark 99 3rd Avenue - Tesla Destination,40.683126,-73.982088,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:150584,other,PV Parking 34-11 Steinway - Tesla Destination,40.7560685,-73.9204663,4,4354.56,0.0,0,4354.56,575.8550332540292,0.13224184148433576
+O:150585,other,"Sylvan Parking 23-25 31st St, Astoria - Tesla Destination",40.77364,-73.91352,4,4354.56,0.0,0,4354.56,1053.702557265238,0.24197681448073696
+O:150587,other,IMPark 92-77 Queens Blvd - Tesla Destination,40.732255,-73.866674,4,4354.56,0.0,0,4354.56,282.87166280088616,0.06495987259353095
+O:150596,other,300 W 135 St - Little Man Parking - Tesla Destination,40.816777,-73.947435,4,4354.56,0.0,0,4354.56,1499.4999630313962,0.3443516596467602
+O:150600,other,4545 Center Blvd-TF Cornerstone LIC - Tesla Destination,40.747676,-73.956012,8,8709.12,0.0,0,8709.12,2103.204064664621,0.24149444084644842
+O:150614,other,ProPark 110-45 Queens Blvd - Tesla Destination,40.719885,-73.83857,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:150616,other,ProPark 29-10 Broadway - Tesla Destination,40.7623317,-73.9269683,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:150624,other,3050 Corlear Ave - Nagle Parking Inc. - Tesla Destination,40.880142,-73.907385,4,4354.56,0.0,0,4354.56,1301.0720340898058,0.29878381147344524
+O:150649,other,19-80 Steinway - Tesla Destination,40.776957,-73.90115,4,4354.56,0.0,0,4354.56,2796.652562564049,0.6422353952096305
+O:150660,other,Icon Parking E 72nd Street - Tesla Destination,40.766554,-73.952905,5,5443.200000000001,0.0,0,5443.200000000001,0.0,0.0
+O:150686,other,GGMC Parking MODA - Tesla Destination,40.705133,-73.801443,7,7620.4800000000005,0.0,0,7620.4800000000005,3046.30453516654,0.399752316805049
+O:150697,other,Bruno's Bakery and Restaurant Hylan Blvd - Tesla Destination,40.588091,-74.089936,2,2177.28,0.0,0,2177.28,1590.4141164700463,0.7304591584316423
+O:162156,other,WCS NS1 SOUTHERN,40.851134,-73.881092,2,2177.28,0.0,0,2177.28,708.3436865192338,0.32533421816175856
+O:162165,other,MASPETH FEDERAL MASPETH 1,40.726232,-73.895705,2,2177.28,0.0,0,2177.28,2177.28,1.0
+O:162285,other,PANYNJ LGA WEST 1,40.773116,-73.874977,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:162407,other,PANYNJ LGA E GARAGE C1,40.769506,-73.864979,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:163485,other,Apple West Parking,40.795783,-73.973678,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:164713,other,Tribeca Green,40.71695,-74.014948,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:164738,other,I Park - 145 W 56th St,40.764609,-73.979517,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:164751,other,Carnegie Hill,40.784865,-73.948526,2,2177.28,0.0,0,2177.28,239.1311274098716,0.10983021357375788
+O:168146,other,HAMPTON INN STATION 1,40.612696,-74.179012,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:168414,other,532 W 122nd St,40.811446,-73.960477,4,4354.56,0.0,0,4354.56,2315.1181541126934,0.5316537501177371
+O:168524,other,STATION 4TH FL MOTORGATE 3,40.764464,-73.946924,2,2177.28,0.0,0,2177.28,101.97861672437531,0.04683762158490194
+O:168525,other,STATION 4TH FL MOTORGATE #2,40.764208,-73.947198,2,2177.28,0.0,0,2177.28,85.29809736831851,0.039176448306289725
+O:168556,other,551W21 SR Capital - Tesla Destination,40.747437,-74.007111,6,6531.84,0.0,0,6531.84,0.0,0.0
+O:168558,other,610 Warren Street - Tesla Destination,40.681263,-73.981155,6,6531.84,0.0,0,6531.84,2442.9702605309067,0.3740095073564121
+O:168757,other,Enterprise Parking 219 E 69th St - Tesla Destination,40.767342,-73.960835,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:168885,other,iPark 314 W 120th Street - Tesla Destination,40.807356,-73.954354,3,3265.92,0.0,0,3265.92,1236.7642689974227,0.37868786406201704
+O:169008,other,Park Kwik - 110 Livingston - Tesla Destination,40.6909872,-73.9901305,4,4354.56,0.0,0,4354.56,816.1533140464593,0.18742497842410236
+O:169010,other,Park Kwik-300 Ashland - Tesla Destination,40.68608,-73.978252,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:169011,other,Park N Go - E 121 St - Tesla Destination,40.800793,-73.9371,4,4354.56,0.0,0,4354.56,710.0781777846263,0.16306542515997627
+O:169014,other,Parkit 200 West End Ave - Tesla Destination,40.778221,-73.985072,5,5443.200000000001,0.0,0,5443.200000000001,0.0,0.0
+O:169060,other,Rapidpark 205 W 101st Street - Tesla Destination,40.797603,-73.968503,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:169201,other,"The Standard, East Village - Tesla Destination",40.727797,-73.990746,3,3265.92,0.0,0,3265.92,646.3631812714333,0.1979115168991994
+O:169223,other,"Trump Golf Links, Ferry Point - Tesla Destination",40.8124589,-73.83447,8,8709.12,0.0,0,8709.12,0.0,0.0
+O:169851,other,"Imperial Parking- 332-342 E 34th St New York, New York 10016",40.7440113,-73.9741155,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:169880,other,STATION 4TH FL MOTORGATE #1,40.764429,-73.946793,2,2177.28,0.0,0,2177.28,75.9685261122346,0.03489148208417594
+O:171342,other,SKYVIEW APTS SKYVIEW ST2,40.908654,-73.905897,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:171476,other,SKYVIEW APTS SKYVIEW ST1,40.90872,-73.905883,2,2177.28,0.0,0,2177.28,3.321294719761761,0.0015254329804902265
+O:173506,other,WCS NS1 ASIA,40.846612,-73.876323,2,2177.28,0.0,0,2177.28,89.7080805622634,0.04120190355042227
+O:174641,other,PANYNJ JFK Y GARAGE 1,40.64592,-73.779641,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:174642,other,PANYNJ JFK Y GARAGE 5,40.646587,-73.780259,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:174643,other,PANYNJ JFK Y GARAGE 3,40.645758,-73.779314,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:180139,other,PANYNJ LGA WEST 2,40.773069,-73.875169,1,1088.64,0.0,0,1088.64,1088.64,1.0
+O:180140,other,PANYNJ LGA WEST 5,40.772972,-73.875608,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:180141,other,PANYNJ LGA WEST 4,40.772977,-73.875474,1,1088.64,0.0,0,1088.64,869.3986641288329,0.7986098840101713
+O:180166,other,PANYNJ LGA E GARAGE W1,40.770752,-73.866327,2,2177.28,0.0,0,2177.28,637.6577973396631,0.2928689912825466
+O:181661,other,HAMPTON INN STATION 4,40.612678,-74.178885,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:181662,other,HAMPTON INN STATION 2,40.612688,-74.178948,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:181663,other,HAMPTON INN STATION 3,40.612671,-74.17882,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:181664,other,HAMPTON INN STATION 5,40.612706,-74.179076,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:189112,other,Manhattan Parking Group,40.768721,-73.983487,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:189363,other,Laureate Garage,40.78131,-73.980834,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:189547,other,Kew Garage,40.713705,-73.831217,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:191469,other,Hunters Point South Crossing,40.742397,-73.959225,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:191505,other,5935 Broadway,40.888461,-73.899119,4,4354.56,0.0,0,4354.56,862.6518716721209,0.1981031083903129
+O:191506,other,3474 Putnam Place,40.879413,-73.875485,2,2177.28,0.0,0,2177.28,1033.8258685547294,0.4748244913629525
+O:192949,other,4 W 93rd St,40.789958,-73.966488,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:193535,other,MASPETH FEDERAL STATION 1,40.710752,-73.851417,2,2177.28,0.0,0,2177.28,575.0517380865405,0.26411473861264534
+O:193838,other,NYC FLEET DPR_VCP-S1,40.887487,-73.895341,1,1088.64,0.0,0,1088.64,518.1817704787869,0.4759900155044706
+O:193926,other,31-99 33rd St,40.761412,-73.923755,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:193979,other,"NYC Parking Kent-  444 Kent Avenue Brooklyn, NY 11211",40.709168,-73.968491,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:194168,other,170 E End Ave,40.775792,-73.944015,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:194170,other,101 E 78th St,40.774878,-73.960671,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:194647,other,99 Prospect Park W,40.66696,-73.975032,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:195054,other,iPark - 59 Allen Street Garage,40.717195,-73.991658,2,2177.28,0.0,0,2177.28,539.2928705217466,0.247691096469791
+O:195667,other,33 Norman Ave,40.724591,-73.954512,4,4354.56,0.0,0,4354.56,1117.5756270895117,0.2566449026054324
+O:195668,other,1235 Linden Blvd,40.654381,-73.913436,4,4354.56,0.0,0,4354.56,1121.947692556824,0.2576489226366898
+O:196329,other,1065 Elton St,40.657441,-73.874619,4,4354.56,0.0,0,4354.56,2969.1713355798975,0.681853352710698
+O:197548,other,626 Sheepshead Bay Rd - Parking,40.57897316619045,-73.97511250278187,5,5443.200000000001,0.0,0,5443.200000000001,375.03903502675627,0.06890046939791965
+O:197855,other,597 Clarkson Ave,40.656102,-73.940436,4,4354.56,0.0,0,4354.56,690.0636254140746,0.15846919675330562
+O:198016,other,277 Park Avenue,40.75519,-73.974142,20,21772.800000000003,0.0,0,21772.800000000003,192.1593451878827,0.008825660695357633
+O:198164,other,134-10 225th St,40.6774125,-73.7450622,2,2177.28,0.0,0,2177.28,1772.2775544168585,0.8139869720095065
+O:199108,other,167-149 Meeker Ave,40.714318,-73.953186,6,6531.84,0.0,0,6531.84,2367.586827576902,0.36246858887800404
+O:199508,other,831 3rd Ave,40.6567662,-74.0048017,6,6531.84,0.0,0,6531.84,1076.31914858583,0.1647803909137134
+O:200474,other,115 Fort Washington Ave,40.839756,-73.943345,2,2177.28,0.0,0,2177.28,1119.8534132872655,0.514335966567123
+O:200599,other,2 Bedford Park Blvd W,40.8754215,-73.8939407,4,4354.56,0.0,0,4354.56,1098.8433212756972,0.2523431348461606
+O:200987,other,NYU NYU # 2,40.728283,-73.997251,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:200988,other,NYU NYU # 1,40.72808,-73.99724,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:201636,other,3500 Dekalb Ave,40.882337,-73.880265,2,2177.28,0.0,0,2177.28,391.09635818397146,0.1796261198302338
+O:202055,other,7 Marcus Garvey Blvd,40.700039,-73.941261,2,2177.28,0.0,0,2177.28,643.0459048690168,0.2953436879358726
+O:202163,other,145 Brooklyn Ave,40.674612,-73.944569,2,2177.28,0.0,0,2177.28,127.31875752190594,0.05847606073720694
+O:202164,other,484 43rd St,40.649116,-74.006479,2,2177.28,0.0,0,2177.28,1445.1366090667602,0.6637348476386868
+O:202165,other,352 8th St,40.668517,-73.983283,2,2177.28,0.0,0,2177.28,384.03137686129816,0.1763812540698937
+O:202766,other,395 Lenox Rd,40.654476,-73.946741,4,4354.56,0.0,0,4354.56,1204.3860353639332,0.2765804203786222
+O:202930,other,419 Stuyvesant Ave,40.679727,-73.931347,2,2177.28,0.0,0,2177.28,1240.0495355168391,0.5695406817298827
+O:202931,other,134 N 4th St,40.716441,-73.960043,4,4354.56,0.0,0,4354.56,583.5352299523539,0.13400555508532525
+O:204691,other,33-10 Queens Blvd,40.7443625,-73.9311201,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:205826,other,Northeast Bronx YMCA,40.8827858370269,-73.8419855959349,4,4354.56,0.0,0,4354.56,1085.7776764186835,0.2493426836278943
+O:207729,other,1 WATERLINE STATION#8,40.772871,-73.992514,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:207730,other,1 WATERLINE STATION#3,40.773005,-73.992868,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:207731,other,1 WATERLINE STATION#2,40.772952,-73.992622,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:207795,other,1 WATERLINE STATION#1,40.772896,-73.992536,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:207796,other,1 WATERLINE STATION#5,40.772904,-73.992514,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:207888,other,1 WATERLINE STATION#4,40.77292,-73.992546,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:207889,other,1 WATERLINE STATION#6,40.772912,-73.992589,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:216618,other,125 W 76th Street,40.7803975,-73.9777289,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:217408,other,35-58 72nd St,40.74894,-73.893721,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:219453,other,Energy Plus Site 8,40.781104,-73.984478,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:220960,other,BRT STATION 1,40.63557,-74.01628,2,2177.28,0.0,0,2177.28,2177.2799999999997,0.9999999999999998
+O:221322,other,Prestige Parking Corp,40.7565187377,-73.9610743999,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:221326,other,"First Avenue Parking- 630 1st Avenue NY, NY 10016",40.745096,-73.971921,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:222574,other,266 13th St,40.667017,-73.988698,2,2177.28,0.0,0,2177.28,260.6307128283048,0.11970472921640983
+O:222579,other,160 W 84th St,40.786312,-73.97569,2,2177.28,0.0,0,2177.28,893.9218749353333,0.41056817448161614
+O:223088,other,Rapid Park - 204 W 101st 2nd Floor,40.79743,-73.9687,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:223089,other,Rapid Park - 205 W 101st 2nd Floor,40.79766,-73.96838,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:223240,other,301 E. 79th St.,40.76939,-73.96546,4,4354.56,0.0,0,4354.56,283.4902034968635,0.06510191695529824
+O:223241,other,550 W. 45th St.,40.7624,-73.99635,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:223256,other,435 E. 55th St.,40.75657,-73.96226,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:223258,other,449 East 49th Street,40.75267,-73.96482,6,6531.84,0.0,0,6531.84,556.0271790173219,0.08512565816329272
+O:223265,other,4 W 21st St.,40.74057,-73.99147,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:223266,other,210 W 76th St.,40.78126,-73.98044,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:223267,other,142 E 31st St.,40.74415,-73.98046,4,4354.56,0.0,0,4354.56,736.0590867719322,0.1690317935157472
+O:223268,other,44 W 62nd St.,40.7708,-73.98323,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:223269,other,333 E 75th St.,40.7702,-73.95525,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:223273,other,225 W 49th St,40.76154,-73.98518,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:223278,other,11 East 86th Street,40.78147,-73.95986,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:223282,other,200 East End Ave,40.77729,-73.94355,4,4354.56,0.0,0,4354.56,613.1724304767766,0.14081157004996522
+O:223283,other,55 East End Ave,40.772,-73.94639,6,6531.84,0.0,0,6531.84,0.0,0.0
+O:223292,other,305 East 80th Street,40.77397,-73.9539,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:223297,other,231 E 94th Street,40.78351,-73.94888,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:223298,other,203 E 71st St.,40.76894,-73.96047,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:223299,other,181 E 73rd Street,40.77082,-73.96068,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:223300,other,191 East 71st Street,40.76945,-73.96154,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:223392,other,Lincoln Square Garage,40.776152,-73.98282,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:223833,other,G & M REALTY 2 STATION 2,40.745401,-73.946148,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:223834,other,G & M REALTY 2 STATION 3,40.745399,-73.946226,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:223835,other,G & M REALTY 2 STATION 4,40.745344,-73.94618,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:223836,other,G & M REALTY 2 STATION 5,40.745355,-73.94625,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:224248,other,G & M REALTY 2 STATION 1,40.745393,-73.946234,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:224507,other,QT STATION 1,40.753602,-73.899789,2,2177.28,0.0,0,2177.28,1116.0719050033333,0.5125991627183152
+O:224508,other,QT STATION 3,40.753601,-73.899806,2,2177.28,0.0,0,2177.28,1116.0719050033333,0.5125991627183152
+O:224509,other,QT STATION 2,40.753602,-73.899825,2,2177.28,0.0,0,2177.28,1116.0719050033333,0.5125991627183152
+O:225118,other,535 Carlton Ave,40.68092,-73.97076,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:225478,other,ARCHER GREEN MI STATION 1,40.70522,-73.79147,1,1088.64,0.0,0,1088.64,311.66503312904536,0.28628842696304135
+O:225479,other,ARCHER GREEN MI STATION 4,40.70525,-73.791534,1,1088.64,0.0,0,1088.64,311.66503312904536,0.28628842696304135
+O:225480,other,ARCHER GREEN MI STATION 2,40.70524,-73.791466,1,1088.64,0.0,0,1088.64,311.66503312904536,0.28628842696304135
+O:225481,other,ARCHER GREEN MI STATION 3,40.705254,-73.7915,1,1088.64,0.0,0,1088.64,311.66503312904536,0.28628842696304135
+O:225482,other,ARCHER GREEN MI STATION 5,40.70568,-73.791504,1,1088.64,0.0,0,1088.64,311.66503312904536,0.28628842696304135
+O:225576,other,30-10 35th Street,40.7652332,-73.9184356,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:225676,other,92746 CHARGEPOINT 1,40.764935,-73.96063,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:225677,other,92746 CHARGEPOINT 2,40.764945,-73.960624,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:225691,other,81-09 41st Ave,40.745853,-73.884134,2,2177.28,0.0,0,2177.28,2177.28,1.0
+O:226845,other,46-71 30th Place,40.743643,-73.936591,6,6531.84,0.0,0,6531.84,69.14955523163329,0.010586535376193123
+O:226846,other,35 Red Cross Pl,40.6994875,-73.9895156,6,6531.84,0.0,0,6531.84,4328.299354680556,0.6626462611883567
+O:229902,other,200 Liberty,40.710179,-74.013169,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:229903,other,250 Vesey,40.714113,-74.01581,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:229921,other,DSL Marketing and Energy Icon Parking,40.761698,-73.978338,4,4354.56,0.0,0,4354.56,285.01754448978045,0.06545266214951233
+O:229922,other,King's County Parking,40.656148,-73.940355,4,4354.56,0.0,0,4354.56,330.58794041092267,0.07591764504586516
+O:230188,other,Riverdale Fast Parking,40.879501,-73.903603,8,8709.12,0.0,0,8709.12,1722.4795315777062,0.19777882628528554
+O:230231,other,New Tech Energy,40.628872,-73.971992,1,1088.64,0.0,0,1088.64,1088.64,1.0
+O:230783,other,Brooklyn Renaissance Plaza,40.693463,-73.988245,6,6531.84,0.0,0,6531.84,0.0,0.0
+O:230791,other,Flushing Plaza,40.757772,-73.826935,6,6531.84,0.0,0,6531.84,1807.4847603321073,0.27671908073867507
+O:230846,other,GMC 127 East 83rd,40.777932,-73.957152,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:233084,other,LGA Airpark,40.77049,-73.87014,20,21772.800000000003,0.0,0,21772.800000000003,1747.0786805159871,0.08024134151399852
+O:233092,other,575 1st Ave,40.74282,-73.97438,4,4354.56,0.0,0,4354.56,487.03752922437684,0.11184540555747924
+O:233094,other,171 E 84th St.,40.77798,-73.95555,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:235400,other,The Rockaway Hotel,40.581587,-73.830086,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:237081,other,1 WATERLINE STATION#7,40.772839,-73.992493,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:241192,other,The Forge,40.74679,-73.94111,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:241222,other,Parkash 4769 LLC - 4769 White Plains,40.905461,-73.849791,7,7620.4800000000005,0.0,0,7620.4800000000005,349.7617266083421,0.04589759786894553
+O:250759,other,Popeyes,40.876952,-73.845534,6,6531.84,0.0,0,6531.84,1189.7979566670479,0.18215356724399984
+O:250845,other,iPark NYC 75 Wall Street - Tesla Destination,40.704776,-74.008276,3,3265.92,0.0,0,3265.92,608.0359331517876,0.1861760034390884
+O:250852,other,GGMC 91 E 9th Street - Tesla Destination,40.730723,-73.990854,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:251159,other,MPG Parking,40.758967,-73.995189,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:252135,other,CORP COMM 3 STATION 3 CC3,40.604086,-74.179358,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:252136,other,CORP COMM 3 STATION 8 CC3,40.604324,-74.179675,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:252137,other,CORP COMM 3 STATION 10 CC3,40.60429,-74.17979,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:252138,other,CORP COMM 3 STATION 7 CC3,40.604252,-74.179682,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:252139,other,CORP COMM 3 STATION 1 CC3,40.604213,-74.179561,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:252140,other,CORP COMM 3 STATION 9 CC3,40.604082,-74.179499,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:252141,other,CORP COMM 3 STATION 6 CC3,40.603961,-74.179472,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:252142,other,CORP COMM 3 STATION 4 CC3,40.60401,-74.179524,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:252143,other,CORP COMM 3 STATION 5 CC3,40.604322,-74.179683,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:252144,other,CORP COMM 3 STATION 2 CC3,40.604154,-74.179546,2,2177.28,0.0,0,2177.28,1090.274358825996,0.5007506424649084
+O:252551,other,AKAM Associates,40.748547,-73.941626,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:252884,other,IKEA USA BROOKLYN 1,40.671397,-74.011643,1,1088.64,0.0,0,1088.64,368.1943612426218,0.33821498497448355
+O:252885,other,IKEA USA BROOKLYN 2,40.671379,-74.011649,1,1088.64,0.0,0,1088.64,368.1943612426218,0.33821498497448355
+O:252886,other,IKEA USA BROOKLYN 3,40.671393,-74.011584,1,1088.64,0.0,0,1088.64,368.1943612426218,0.33821498497448355
+O:252887,other,IKEA USA BROOKLYN 4,40.671432,-74.010889,1,1088.64,0.0,0,1088.64,368.1943612426218,0.33821498497448355
+O:255093,other,"iPark - Paradise Garage-  62-60 99th Street Rego Park, NY 11374",40.733347,-73.858012,2,2177.28,0.0,0,2177.28,616.8865747660792,0.2833290044303347
+O:256128,other,EVPassport - 200 E 24th St Garage,40.7392528900457,-73.9823287610015,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:257489,other,550 Prospect Place,40.675159,-73.958501,7,7620.4800000000005,0.0,0,7620.4800000000005,2443.1794502751845,0.32060702872721725
+O:257491,other,26-19 2nd Street,40.7732937,-73.934466,2,2177.28,0.0,0,2177.28,198.63095969480264,0.09122894606793919
+O:257757,other,The Westport,40.768211,-73.989479,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:257758,other,Superior Realty Group,40.61517985216326,-74.0319846196921,4,4354.56,0.0,0,4354.56,1893.5178487453759,0.4348356317849279
+O:259812,other,The Caledonia,40.743832,-74.006578,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:259868,other,Gramercy Plaza  - Parking Garage,40.7362174,-73.98666508,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:260005,other,Central Parking - Tower 31,40.74709,-73.98667,2,2177.28,0.0,0,2177.28,781.4439279037235,0.3589083296148054
+O:260075,other,Central Parking - 350 E 30th Street,40.741065,-73.975788,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:260377,other,NYC FLEET DPRWFMARINA-S2,40.761212,-73.857765,1,1088.64,0.0,0,1088.64,1088.64,1.0
+O:277635,other,NYC FLEET DPRROCKAWAY30B,40.592562,-73.762059,1,1088.64,0.0,0,1088.64,304.4230513487933,0.27963610683861817
+O:298593,other,123 Leonard St,40.7160793,-74.0021648,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:307006,other,DEEPDALE MANAGEMENT,40.757564,-73.728618,2,2177.28,0.0,0,2177.28,2177.28,1.0
+O:309419,other,430809  Avalon Riverview North,40.7449626,-73.9568845,5,5443.200000000001,0.0,0,5443.200000000001,1043.386791185415,0.19168628585857855
+O:309670,other,NYC Parking 155 East 76th Street Garage Corp.,40.77292688873804,-73.95955810985014,6,6531.84,0.0,0,6531.84,0.0,0.0
+O:310515,other,Jeffrey Gardens Public Access,40.75717,-73.76397,1,1088.64,0.0,0,1088.64,1088.64,1.0
+O:310610,other,CITYLIGHTS 5TH FLOOR 1,40.744127,-73.95684,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:310611,other,CITYLIGHTS 5TH FLOOR 2,40.744152,-73.956666,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:316933,other,1 WATERLINE STATION#10,40.772896,-73.992546,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:316934,other,1 WATERLINE STATION#9,40.772916,-73.99263,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:320967,other,Ravel Hotel,40.75402,-73.9493,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:323904,other,540 WAVERLY 1,40.682176,-73.96585,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:323912,other,540 WAVERLY 2,40.681764,-73.965799,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:323913,other,540 WAVERLY 4,40.682163,-73.966003,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:323914,other,540 WAVERLY 5,40.682187,-73.965853,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:324267,other,540 WAVERLY 3,40.682187,-73.965917,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:324766,other,351 E 83rd Street,40.77533,-73.95108,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:325993,other,SWTCH Energy Inc.,40.7012,-73.9357,10,10886.400000000001,0.0,0,10886.400000000001,420.1233430401959,0.03859157692535602
+O:326286,other,(SP+) - Third at Bankside Garage,40.80837381919788,-73.93106281757356,14,15240.960000000001,0.0,0,15240.960000000001,683.3555072967008,0.04483677585248572
+O:326605,other,10 Reade St,40.7138982,-74.00434,2,2177.28,0.0,0,2177.28,774.5203254665466,0.3557283975724512
+O:327938,other,Fifth Street Lofts,40.74481291896706,-73.95564723245457,15,16329.600000000002,0.0,0,16329.600000000002,0.0,0.0
+O:328293,other,CENTERS HEALTHC EV-5,40.673563,-73.926284,2,2177.28,0.0,0,2177.28,98.71963001908657,0.04534080596849581
+O:328306,other,CENTERS HEALTHC EV-2,40.673561,-73.926135,2,2177.28,0.0,0,2177.28,75.4574230071108,0.03465673822710483
+O:328307,other,CENTERS HEALTHC EV-3,40.673561,-73.926143,2,2177.28,0.0,0,2177.28,223.40645456646087,0.10260804975311437
+O:328308,other,CENTERS HEALTHC EV-4,40.673237,-73.925718,2,2177.28,0.0,0,2177.28,328.94066354799827,0.15107871451903213
+O:328311,other,CENTERS HEALTHC EV-6,40.673186,-73.925637,2,2177.28,0.0,0,2177.28,80.09239985029942,0.03678553050149701
+O:328312,other,CENTERS HEALTHC EV-7,40.673563,-73.926362,2,2177.28,0.0,0,2177.28,187.76977664352918,0.08624052792637105
+O:328313,other,CENTERS HEALTHC EV-8,40.673181,-73.926415,2,2177.28,0.0,0,2177.28,636.7497340415794,0.29245192811286524
+O:328314,other,CENTERS HEALTHC EV-9,40.673233,-73.925648,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:328315,other,CENTERS HEALTHC EV-10,40.6732,-73.925696,2,2177.28,0.0,0,2177.28,138.58580761133987,0.06365088900432643
+O:328533,other,165 E 77 ST Garage,40.773528,-73.959538,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:328784,other,254 E 203 St,40.8732909,-73.884626,1,1088.64,0.0,0,1088.64,696.5395283414394,0.6398254044876538
+O:329611,other,C W TOYOTA SERVICE DEPT,40.874265,-73.852887,1,1088.64,0.0,0,1088.64,1088.64,1.0
+O:329797,other,CENTERS HEALTHC EV-1,40.673435,-73.926002,2,2177.28,0.0,0,2177.28,110.13607858392615,0.05058425126025414
+O:331697,other,2 Lincoln Square,40.773497588162286,-73.98137367362845,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:331864,other,PANYNJ LGATCGARAGE 5-1,40.769469,-73.865366,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:331865,other,PANYNJ LGATCGARAGE 5-3,40.769509,-73.865421,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:331866,other,PANYNJ LGATCGARAGE 5-4,40.76947,-73.865591,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:331867,other,PANYNJ LGATCGARAGE 5-5,40.769452,-73.8655,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:331868,other,PANYNJ LGATCGARAGE 5-2,40.769481,-73.865372,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:333406,other,L&L HOLDING CO. STATION 3,40.760378,-73.971062,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:333413,other,L&L HOLDING CO. NUGGET L2,40.760403,-73.97105,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:333482,other,Parking Systems at 343 E 74th,40.76957,-73.95589,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:333718,other,25 Broadway,40.70568,-74.0136,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:333819,other,391 Weirfield St,40.69604,-73.90662,6,6531.84,0.0,0,6531.84,1880.633202072994,0.2879178305152903
+O:333857,other,101-19 Rockaway Beach Blvd,40.5830768,-73.8221052,8,8709.12,0.0,0,8709.12,1520.382222324372,0.17457357601277418
+O:333883,other,Bronx Honda Service,40.83174,-73.84485,2,2177.28,0.0,0,2177.28,628.1250605421363,0.28849071343241856
+O:334018,other,Manhattan Beer Distributors,40.8077514,-73.9012635,6,6531.84,0.0,0,6531.84,484.48564004001486,0.07417291912233227
+O:334200,other,532 Neptune Avenue,40.57978,-73.97439,8,8709.12,0.0,0,8709.12,0.0,0.0
+O:334464,other,118 E 86th Street,40.77968,-73.95657,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:334487,other,300 East 34th,40.74437,-73.97561,4,4354.56,0.0,0,4354.56,1240.7257116909886,0.2849256208872971
+O:334488,other,Rapid Park - 205 W 101st 1st Floor,40.79766,-73.96838,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:334499,other,Rapid Park - 204 W 101st 1st Floor,40.79743,-73.9687,4,4354.56,0.0,0,4354.56,2374.005160482752,0.5451768170567755
+O:334518,other,113 East 84th Street,40.77866,-73.95739,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:341717,other,Brooklyn Steiner,40.7000999451,-73.9677963257,3,3265.92,0.0,0,3265.92,1381.1132774353168,0.42288643856411573
+O:341872,other,Honda of Staten Island,40.597510679991466,-74.0836837458115,1,1088.64,0.0,0,1088.64,1088.64,1.0
+O:346620,other,Matcha Electric,40.646,-74.024806,2,2177.28,0.0,0,2177.28,1003.299782025818,0.46080420617734874
+O:348896,other,2244 Westchester Ave,40.8341168690169,-73.8506345161602,4,4354.56,0.0,0,4354.56,1649.5309504054765,0.37880542475140455
+O:348990,other,Skyline Tower Garage,40.74848,-73.9445,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:350370,other,iPark - The Tapestry,40.80239,-73.93438,20,21772.800000000003,0.0,0,21772.800000000003,1022.4966892630223,0.04696211278581635
+O:350371,other,Lindenwood Village,40.66713,-73.84565,2,2177.28,0.0,0,2177.28,2177.2799999999997,0.9999999999999998
+O:350373,other,210 Central Park,40.767,-73.97989,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:355464,other,Waterside Plaza Garage,40.7372102921242,-73.97408545017244,24,26127.36,0.0,0,26127.36,510.3636490082475,0.01953368610560912
+O:355995,other,Bay Street Landing Home Owners Association (BSL HOA),40.63865301141443,-74.0749707323156,6,6531.84,0.0,0,6531.84,3911.580676810044,0.5988482076734953
+O:356876,other,One West St Garage,40.705242,-74.016123,20,21772.800000000003,0.0,0,21772.800000000003,968.3758955284543,0.0444764061364847
+O:356878,other,Garage,40.712224,-74.009106,17,18506.88,0.0,0,18506.88,4012.057220539276,0.21678733641431056
+O:356879,other,100 E 15th St,40.7350042,-73.989356,10,10886.400000000001,0.0,0,10886.400000000001,3306.82508384629,0.3037574481781204
+O:356884,other,Garage 20,40.7239402,-73.8502296,10,10886.400000000001,0.0,0,10886.400000000001,1479.1096493816567,0.13586765591762717
+O:356885,other,Garage 40,40.7232,-73.8505,20,21772.800000000003,0.0,0,21772.800000000003,1028.4892202873023,0.047237342936475885
+O:356886,other,Garage 60,40.7233,-73.8491,20,21772.800000000003,0.0,0,21772.800000000003,2184.403685998314,0.10032718281517827
+O:356887,other,Garage 70,40.7231,-73.8483,10,10886.400000000001,0.0,0,10886.400000000001,0.0,0.0
+O:356889,other,Basement,40.7808776,-73.9563026,10,10886.400000000001,0.0,0,10886.400000000001,0.0,0.0
+O:356901,other,3rd Floor,40.67374,-73.832676,44,47900.16,0.0,0,47900.16,1213.7213781535652,0.02533856626269234
+O:356902,other,1st Floor,40.72033,-73.9614909,5,5443.200000000001,0.0,0,5443.200000000001,1132.3463070762632,0.2080295243746809
+O:356905,other,Balfour Garage,40.7199679,-73.8373279,20,21772.800000000003,0.0,0,21772.800000000003,982.0550644264595,0.04510467484321995
+O:356906,other,Parking,40.739489,-73.961655,10,10886.400000000001,0.0,0,10886.400000000001,543.4548607988564,0.049920530276203
+O:356910,other,Garage,40.633787,-73.9584837,8,8709.12,0.0,0,8709.12,3239.3828695014913,0.37195294926485006
+O:356915,other,1st Floor Garage,40.65261,-73.954377,7,7620.4800000000005,0.0,0,7620.4800000000005,521.7615459458948,0.06846833085919715
+O:356916,other,Parking Lot,40.8830939,-73.8425036,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:356918,other,Garage Upper Level,40.760139,-73.970051,5,5443.200000000001,0.0,0,5443.200000000001,1022.599103121408,0.18786726615252203
+O:356920,other,Basement,40.7700131,-73.9629538,10,10886.400000000001,0.0,0,10886.400000000001,667.3151786251315,0.06129805800127971
+O:356922,other,Garage 1st Floor,40.767348,-73.953832,10,10886.400000000001,0.0,0,10886.400000000001,0.0,0.0
+O:356924,other,Garage 1st Floor,40.76953,-73.9519,10,10886.400000000001,0.0,0,10886.400000000001,0.0,0.0
+O:356927,other,Garage,40.776897,-73.948795,6,6531.84,0.0,0,6531.84,0.0,0.0
+O:356928,other,Garage,40.7886376,-73.9524223,32,34836.48,0.0,0,34836.48,0.0,0.0
+O:356931,other,Garage,40.6984,-73.9129,4,4354.56,0.0,0,4354.56,1581.211088226448,0.3631161559896862
+O:356932,other,Cellar North,40.6914041,-73.9790341,9,9797.76,0.0,0,9797.76,3995.711300237562,0.40781885862049716
+O:356933,other,Basement 1,40.611982,-73.959622,9,9797.76,0.0,0,9797.76,4069.481231488466,0.415348123600544
+O:356938,other,Parking Garage,40.771538,-73.985872,10,10886.400000000001,0.0,0,10886.400000000001,0.0,0.0
+O:356942,other,Garage,40.7778558,-73.9463148,20,21772.800000000003,0.0,0,21772.800000000003,2832.4914858403176,0.13009312012420624
+O:356947,other,Garage,40.7841804,-73.9503093,8,8709.12,0.0,0,8709.12,0.0,0.0
+O:356949,other,Bay Club Bldg 1,40.7789,-73.7805,10,10886.400000000001,0.0,0,10886.400000000001,3927.1731443957947,0.3607412132932645
+O:356950,other,Parking Lot,40.81267,-73.846049,10,10886.400000000001,0.0,0,10886.400000000001,606.7267573743376,0.05573254311566151
+O:356952,other,Garage,40.764955,-73.963483,8,8709.12,0.0,0,8709.12,1075.0359683342579,0.1234379556527247
+O:356958,other,Garage,40.770958,-73.958625,20,21772.800000000003,0.0,0,21772.800000000003,828.13116757188,0.038035124906850744
+O:356966,other,Garage,40.7819192,-73.9505085,10,10886.400000000001,0.0,0,10886.400000000001,147.29420866993735,0.01353011176053951
+O:356967,other,Garage,40.7685022,-73.9264999,4,4354.56,0.0,0,4354.56,3547.201346012115,0.814594665365069
+O:356970,other,Parking Lot,40.7329,-73.7277,5,5443.200000000001,0.0,0,5443.200000000001,2369.419410810793,0.43529898052814386
+O:356971,other,Garage,40.7480664,-73.9744436,15,16329.600000000002,0.0,0,16329.600000000002,291.1239366416388,0.017827989457282405
+O:356972,other,Lower Level,40.7817853,-73.9496422,10,10886.400000000001,0.0,0,10886.400000000001,246.1021545493577,0.022606385448757867
+O:356977,other,Garage,40.7437248,-73.9770521,5,5443.200000000001,0.0,0,5443.200000000001,0.0,0.0
+O:356980,other,Garage,40.76536,-73.96128,12,13063.68,0.0,0,13063.68,938.274955491315,0.07182317352318145
+O:356981,other,Underground garage,40.724324,-73.994201,4,4354.56,0.0,0,4354.56,1292.393655059853,0.296790870962819
+O:356986,other,Garage,40.7706,-73.9817,9,9797.76,0.0,0,9797.76,0.0,0.0
+O:356987,other,Parking Garage,40.757093,-73.966349,10,10886.400000000001,0.0,0,10886.400000000001,1149.5113354197288,0.1055915027391726
+O:356990,other,Basement Garage,40.781139,-73.983118,14,15240.960000000001,0.0,0,15240.960000000001,1984.1758767403674,0.130187066742539
+O:356991,other,Outdoor Lot,40.776554,-73.9876401,11,11975.04,0.0,0,11975.04,5750.105369216036,0.480174209791035
+O:356994,other,Parking Lot,40.677252,-73.9632133,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:356997,other,Garage 1st Floor,40.736983,-73.984881,10,10886.400000000001,0.0,0,10886.400000000001,265.7251720348788,0.024408911305379078
+O:357000,other,Parking Lot,40.74554,-73.9314,10,10886.400000000001,0.0,0,10886.400000000001,4939.715265880277,0.45375103485819707
+O:357008,other,Garage,40.763,-73.9602,10,10886.400000000001,0.0,0,10886.400000000001,1203.2385113229407,0.11052675919706612
+O:357010,other,Garage 1st Floor,40.7723564,-73.9533198,6,6531.84,0.0,0,6531.84,0.0,0.0
+O:357012,other,Garage 1st Floor,40.7548258,-73.966124,10,10886.400000000001,0.0,0,10886.400000000001,220.12371881193332,0.02022006529357118
+O:357020,other,Lower Level,40.770724,-73.953327,10,10886.400000000001,0.0,0,10886.400000000001,434.2608743569225,0.0398902184704698
+O:357023,other,Garage,40.777035,-73.948773,12,13063.68,0.0,0,13063.68,491.9228703972464,0.037655765480878775
+O:357030,other,Garage 2nd Floor,40.7601207,-73.9598596,10,10886.400000000001,0.0,0,10886.400000000001,323.33201912362244,0.02970054555441858
+O:357034,other,Garage,40.609178,-73.971448,21,22861.440000000002,0.0,0,22861.440000000002,5355.2455107067035,0.2342479524783523
+O:357037,other,Basement,40.7447167,-74.00505,6,6531.84,0.0,0,6531.84,2571.1091266904705,0.39362708313284933
+O:357041,other,Garage,40.6854775,-73.9824979,17,18506.88,0.0,0,18506.88,1727.1869495200744,0.0933267492694649
+O:357046,other,Garage Ground Floor,40.7607828,-73.9575253,25,27216.000000000004,0.0,0,27216.000000000004,1207.0451099653244,0.044350569884087455
+O:357047,other,Parking Garage,40.769563,-73.9508,19,20684.160000000003,0.0,0,20684.160000000003,0.0,0.0
+O:357049,other,Garage,40.7571,-73.998,4,4354.56,0.0,0,4354.56,426.3849390118895,0.09791688230541995
+O:357050,other,Garage,40.7634345,-73.9767827,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:357051,other,Garage 1st Floor,40.741944,-73.95585,16,17418.24,0.0,0,17418.24,0.0,0.0
+O:357064,other,Parking Lot,40.68505,-73.88217,4,4354.56,0.0,0,4354.56,4354.56,1.0
+O:357073,other,Garage 1st Floor,40.770708,-73.99193,24,26127.36,0.0,0,26127.36,2979.1783078797653,0.11402523285474557
+O:357074,other,Basement Level 1,40.77245,-73.945767,7,7620.4800000000005,0.0,0,7620.4800000000005,280.06621019511573,0.036751780753327315
+O:357075,other,Garage 1st Floor,40.761949,-73.99888,20,21772.800000000003,0.0,0,21772.800000000003,2473.3607777295874,0.11359865417996708
+O:357078,other,Garage,40.6807,-73.9805,5,5443.200000000001,0.0,0,5443.200000000001,620.7756553208691,0.11404608600104148
+O:357086,other,Garage Floor A,40.7286337,-73.8495325,19,20684.160000000003,0.0,0,20684.160000000003,672.5481795007197,0.03251513136142437
+O:357093,other,Parking Lot,40.7019,-73.9266,4,4354.56,0.0,0,4354.56,878.9778687710021,0.2018522810045107
+O:357096,other,Garage,40.824642,-73.923013,10,10886.400000000001,0.0,0,10886.400000000001,1494.7465655563642,0.13730402755331092
+O:357097,other,Garage,40.6914,-73.9411,20,21772.800000000003,0.0,0,21772.800000000003,1637.1749260824897,0.07519358677260111
+O:357116,other,Garage,40.7636214,-73.9750381,13,14152.320000000002,0.0,0,14152.320000000002,445.99701428956763,0.031514056655697974
+O:357118,other,Garage 1st Floor,40.7642241,-73.9843648,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:357262,other,AMNH-PARKING STATION 1,40.781454,-73.973835,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:357263,other,AMNH-PARKING STATION 2,40.781414,-73.973682,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:357264,other,AMNH-PARKING STATION 3,40.781511,-73.973807,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:357265,other,AMNH-PARKING STATION 4,40.781478,-73.974009,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:358500,other,(Stations Removed),40.714318,-73.953186,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:358717,other,169 Ludlow St - Tesla Destination,40.721713,-73.98778,3,3265.92,0.0,0,3265.92,650.3365515493522,0.19912813282301836
+O:358788,other,Chelsea29 - Tesla Destination,40.7483946,-73.9937004,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:358813,other,10 Hudson Yards - Tesla Destination,40.7526559,-74.0010744,16,17418.24,0.0,0,17418.24,3707.7546431898063,0.2128662048054112
+O:358856,other,Standard Parking 910 5th Avenue - Tesla Destination,40.772175,-73.96637,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:358900,other,Wingate by Wyndham Haven Park - Tesla Destination,40.8128505,-73.9283126,4,4354.56,0.0,0,4354.56,718.5235413111582,0.16500485498217
+O:359123,other,270 Greenwich - Tesla Destination,40.7155341,-74.0120518,2,2177.28,0.0,0,2177.28,1214.4832720414038,0.5577983869972644
+O:359128,other,"Brooklyn, NY - 625 Atlantic Avenue - Tesla Destination",40.68484,-73.97566,10,10886.400000000001,0.0,0,10886.400000000001,946.7186965017479,0.08696343111604826
+O:359403,other,The State-Whitehall Co - Tesla Destination,40.7061028,-74.007398,2,2177.28,0.0,0,2177.28,687.1874393275984,0.31561739387106774
+O:359545,other,Park Towers South - Tesla Destination,40.7677499,-73.9837835,6,6531.84,0.0,0,6531.84,2682.091415234676,0.41061805176407806
+O:371507,other,Parkpro - Lafayette Avenue,40.68886,-73.96266,4,4354.56,0.0,0,4354.56,2956.852998064853,0.6790245163839407
+O:375726,other,EVCS-01 BUILDING 129,40.608875,-74.025917,2,2177.28,0.0,0,2177.28,684.6473750991236,0.3144507711911759
+O:376451,other,532 Neptune Avenue,40.57886583436617,-73.97256106492748,6,6531.84,0.0,0,6531.84,3085.0035404298346,0.47230237428195343
+O:383550,other,2750 East 12th St Series,40.58429054995201,-73.95775203231837,2,2177.28,0.0,0,2177.28,888.5661979267338,0.4081083727985072
+O:384145,other,CLAREMONT GRG STATION 1,40.811834,-73.962234,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:384770,other,CLAREMONT GRG STATION 7,40.811821,-73.962209,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:384771,other,CLAREMONT GRG STATION 5,40.811692,-73.96224,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:384787,other,CLAREMONT GRG STATION 2,40.811845,-73.962249,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:384788,other,CLAREMONT GRG STATION 3,40.811826,-73.962202,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:384789,other,CLAREMONT GRG STATION 4,40.811638,-73.962233,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:384790,other,CLAREMONT GRG STATION 6,40.811645,-73.962116,1,1088.64,0.0,0,1088.64,603.931739826654,0.5547579914633433
+O:387610,other,RUDIN 136E55TH EV 3,40.759363,-73.969787,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:388568,other,The Rogers Residences,40.6563307,-73.9528428,6,6531.84,0.0,0,6531.84,908.4217431394193,0.13907593314279273
+O:389418,other,Re-Action Auto Service Center,40.79043599999999,-73.812125,3,3265.92,0.0,0,3265.92,799.7244111083481,0.24486956542363197
+O:389545,other,SP+MASTER STATION 1,40.760786,-73.982337,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:389546,other,SP+MASTER STATION 2,40.760734,-73.982296,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:389957,other,540 WAVERLY 6,40.682127,-73.961375,2,2177.28,0.0,0,2177.28,203.8170025875889,0.09361083672636908
+O:390628,other,MCDONALD'S WILLIAMSBRDG 02,40.844331,-73.846809,2,2177.28,0.0,0,2177.28,1631.7407497589809,0.7494400121982385
+O:390629,other,MCDONALD'S LINDEN 02,40.670074,-73.86088,2,2177.28,0.0,0,2177.28,2177.28,1.0
+O:390634,other,MCDONALD'S WILLIAMSBRDG 01,40.84435,-73.84685,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:395815,other,LGP L.G.P EV SPACE1,40.706059,-73.93281,2,2177.28,0.0,0,2177.28,110.40695252019296,0.05070866058577351
+O:395816,other,LGP L.G.P EV SPACE3,40.706018,-73.932885,2,2177.28,0.0,0,2177.28,499.109156126391,0.2292351723831528
+O:395817,other,LGP L.G.P EV SPACE5,40.705861,-73.932943,2,2177.28,0.0,0,2177.28,633.5004606268105,0.29095957370058534
+O:395839,other,Mobil Gas Station,40.8953723,-73.8970269,2,2177.28,0.0,0,2177.28,645.018268046862,0.29624957196449786
+O:399675,other,25 Park Row,40.71145,-74.00745,1,1088.64,0.0,0,1088.64,104.00329861689744,0.09553507001111243
+O:399676,other,28-06 120th St,40.7728,-73.84801,2,2177.28,0.0,0,2177.28,994.8647089663468,0.4569300728277239
+O:399678,other,Quality Lofts,40.69373,-73.90585,21,22861.440000000002,0.0,0,22861.440000000002,1013.5144313786448,0.0443329217835204
+O:399679,other,375 Lefferts Ave,40.66251,-73.94886,5,5443.200000000001,0.0,0,5443.200000000001,1434.9845651782375,0.26362885162739513
+O:399680,other,552 Prospect Pl.,40.67516,-73.95827,10,10886.400000000001,0.0,0,10886.400000000001,744.9897542900442,0.06843306825856518
+O:399681,other,581 Ocean Parkway,40.6342434,-73.9717521,13,14152.320000000002,0.0,0,14152.320000000002,6116.527568831951,0.43219257117080095
+O:399682,other,824 Lexington Ave,40.69045,-73.92594,4,4354.56,0.0,0,4354.56,1451.6038834308374,0.33335259668734324
+O:399683,other,Citizen 360 Condominium,40.77873,-73.94838,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:399684,other,Leonard Pointe,40.718151,-73.948502,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:399686,other,The88,40.706223,-73.803482,3,3265.92,0.0,0,3265.92,479.11066606621233,0.14670006187114576
+O:400184,other,967 Kelly,40.821863,-73.89612869999999,10,10886.400000000001,0.0,0,10886.400000000001,795.3287157336822,0.07305709102491936
+O:417255,other,170 FREEMAN 5,40.734245,-73.95467,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:417256,other,170 FREEMAN 6,40.734311,-73.954732,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:417257,other,170 FREEMAN 9,40.734278,-73.95463,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:417258,other,170 FREEMAN 14,40.734305,-73.954683,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:417259,other,170 FREEMAN 15,40.734221,-73.954615,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:417260,other,170 FREEMAN 16,40.734276,-73.954696,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:417630,other,170 FREEMAN 13,40.734317,-73.95471,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:417631,other,170 FREEMAN 19,40.734166,-73.954508,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:417632,other,170 FREEMAN 20,40.734121,-73.95451,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:420055,other,SWTCH Energy,40.732666,-73.9607066,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:421023,other,101 W 90th,40.7893651,-73.9705104,5,5443.200000000001,0.0,0,5443.200000000001,2663.0231034990475,0.48923851842648575
+O:421034,other,Outdoor Parking,40.610999,-74.0603285,2,2177.28,0.0,0,2177.28,2177.28,1.0
+O:421050,other,Lower Level,40.7478959,-73.8922904,10,10886.400000000001,0.0,0,10886.400000000001,7854.794246504413,0.7215235749654993
+O:421056,other,Upper Floor,40.776086,-73.9621192,7,7620.4800000000005,0.0,0,7620.4800000000005,830.7620029559088,0.10901701768863756
+O:421059,other,Indoor,40.745825,-73.953794,10,10886.400000000001,0.0,0,10886.400000000001,1835.3444451062664,0.16859057586587542
+O:421062,other,Parking Garage,40.722253,-73.855654,29,31570.56,0.0,0,31570.56,1643.3519649954546,0.0520533042491313
+O:421063,other,Indoor Garage,40.7220791,-73.8436959,12,13063.68,0.0,0,13063.68,703.0379757247903,0.05381622756564691
+O:421066,other,Lower Floor,40.7473686,-73.9848497,4,4354.56,0.0,0,4354.56,1516.8371370629357,0.34833304330700127
+O:421068,other,Outdoor Parking,40.8164415,-73.8917943,12,13063.68,0.0,0,13063.68,591.7120544691833,0.045294438815799476
+O:434731,other,170 FREEMAN 1,40.734358,-73.954634,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:434732,other,170 FREEMAN 2,40.734295,-73.95466,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:434733,other,170 FREEMAN 3,40.734222,-73.954601,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:434734,other,170 FREEMAN 4,40.734228,-73.954672,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:434735,other,170 FREEMAN 7,40.734252,-73.954668,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:434736,other,170 FREEMAN 8,40.734265,-73.954661,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:434737,other,170 FREEMAN 10,40.7343,-73.954637,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:434738,other,170 FREEMAN 11,40.734354,-73.954664,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:434739,other,170 FREEMAN 17,40.734135,-73.954657,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:434740,other,170 FREEMAN 18,40.734204,-73.954562,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:443025,other,WASO: USPP New York Field Office (NYFO),40.6032,-74.0587,2,2177.28,0.0,0,2177.28,411.09823408359523,0.18881275448430848
+O:44323,other,Star Nissan,40.758245,-73.776954,1,1088.64,0.0,0,1088.64,1088.64,1.0
+O:44329,other,Kings Nissan,40.589167,-73.960707,1,1088.64,0.0,0,1088.64,1088.64,1.0
+O:446285,other,Center for Community Health,40.668478,-73.97864,8,8709.12,0.0,0,8709.12,3880.20622465813,0.445533673282505
+O:448717,other,The Monarch parking garage,40.7042151013714,-73.7965074154469,60,65318.40000000001,0.0,0,65318.40000000001,3593.088547783341,0.05500882672850744
+O:448718,other,Icon Parking,40.6726868293104,-73.9467645134533,21,22861.440000000002,0.0,0,22861.440000000002,1673.1442256417681,0.07318630084726806
+O:449139,other,170 FREEMAN 12,40.734242,-73.954566,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:449204,other,Loews Regency Hotel,40.76489344296292,-73.9696994032134,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:450048,other,Sheepshead Bay,40.5859085,-73.9537896,6,6531.84,0.0,0,6531.84,2899.6886861560774,0.443931370969907
+O:450166,other,PANYNJ LGA E GARAGE E1,40.76941,-73.864157,2,2177.28,0.0,0,2177.28,1028.201597336313,0.47224132740681624
+O:451557,other,ENG-000035,40.76447,-73.8863,3,3265.92,0.0,0,3265.92,2444.0825722331524,0.7483595961423282
+O:451565,other,ENG-000048,40.73687,-73.89355,2,2177.28,0.0,0,2177.28,2138.125158739206,0.9820166256701968
+O:453137,other,462 Keap St,40.71308,-73.95194,6,6531.84,0.0,0,6531.84,2665.556710138871,0.4080866509496361
+O:453512,other,SMJ WOODHAVEN SMJ WOODHAVE 17,40.715441,-73.859112,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:453513,other,SMJ WOODHAVEN SMJ WOODHAVE 18,40.715293,-73.859381,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:453514,other,SMJ WOODHAVEN SMJ WOODHAVE 20,40.715273,-73.859372,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:453515,other,SMJ WOODHAVEN SMJ WOODHAVE 19,40.715296,-73.859311,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:453516,other,SMJ WOODHAVEN SMJ WOODHAVE 21,40.715211,-73.859613,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:453517,other,SMJ WOODHAVEN SMJ WOODHAVEN 7,40.715282,-73.859309,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:453518,other,SMJ WOODHAVEN SMJ WOODHAVE 16,40.715292,-73.859295,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:453519,other,SMJ WOODHAVEN SMJ WOODHAVE 14,40.715461,-73.859201,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:453520,other,SMJ WOODHAVEN SMJ WOODHAVE 13,40.715359,-73.8592,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:453521,other,SMJ WOODHAVEN SMJ WOODHAVE 10,40.715438,-73.859393,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:453522,other,SMJ WOODHAVEN SMJ WOODHAVEN 1,40.715236,-73.859501,1,1088.64,0.0,0,1088.64,263.83505858971523,0.24235289773452676
+O:453523,other,SMJ WOODHAVEN SMJ WOODHAVEN 2,40.715214,-73.859497,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:453524,other,SMJ WOODHAVEN SMJ WOODHAVE 11,40.715364,-73.859529,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:453525,other,SMJ WOODHAVEN SMJ WOODHAVE 12,40.715367,-73.859489,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:454047,other,SMJ WOODHAVEN SMJ WOODHAVE 22,40.715222,-73.859487,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:454048,other,SMJ WOODHAVEN SMJ WOODHAVEN 9,40.71546,-73.859351,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:454049,other,SMJ WOODHAVEN SMJ WOODHAVEN 8,40.715474,-73.859302,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:454050,other,SMJ WOODHAVEN SMJ WOODHAVE 15,40.715396,-73.859251,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:454051,other,SMJ WOODHAVEN SMJ WOODHAVEN 6,40.715286,-73.859372,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:454052,other,SMJ WOODHAVEN SMJ WOODHAVEN 5,40.71524,-73.859443,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:454053,other,SMJ WOODHAVEN SMJ WOODHAVEN 4,40.71523,-73.859462,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:454054,other,SMJ WOODHAVEN SMJ WOODHAVEN 3,40.715225,-73.859524,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:455404,other,"Ravel Hotel, Trademark Collection by Wyndham",40.753871,-73.949378,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:455661,other,20 41st Ave,40.760528,-73.820645,39,42456.96000000001,0.0,0,42456.96000000001,8154.063185215603,0.1920548052713996
+O:455673,other,Popeye's,40.734125,-73.873486,4,4354.56,0.0,0,4354.56,1825.6593803612932,0.41925231949067027
+O:455711,other,1493 Shore Pkwy,40.597584,-74.003485,2,2177.28,0.0,0,2177.28,2177.28,1.0
+O:456215,other,KWEV - 1 Edgewater St,40.61934,-74.06861,10,10886.400000000001,0.0,0,10886.400000000001,467.45556465182364,0.04293940739379626
+O:456227,other,KWEV - 139 Charles Street,40.73428,-74.00803,2,2177.28,0.0,0,2177.28,1648.2452664843936,0.7570203494655687
+O:457452,other,Wavecrest Gardens Inside EV 20 55,40.59478,-73.75692,6,6531.84,0.0,0,6531.84,0.0,0.0
+O:457453,other,Wavecrest Gardens Inside EV 20 25,40.59442,-73.75503,6,6531.84,0.0,0,6531.84,0.0,0.0
+O:457454,other,Wavecrest Gardens Outside EV 20 31,40.59394,-73.75526,6,6531.84,0.0,0,6531.84,0.0,0.0
+O:457455,other,Wavecrest Gardens Inside EV 20 33,40.59353,-73.75526,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:457456,other,Wavecrest Gardens Inside EV 20 26,40.59723,-73.756,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:457457,other,Wavecrest Gardens Inside EV 20 38,40.59629,-73.75689,4,4354.56,0.0,0,4354.56,292.63269824893524,0.0672014390085187
+O:457458,other,Wavecrest Gardens Outside EV 20 50,40.59567,-73.75679,4,4354.56,0.0,0,4354.56,464.2693138665407,0.10661681406767633
+O:457459,other,Wavecrest Gardens Inside EV 20 12,40.59589,-73.75546,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:457460,other,Wavecrest Gardens Outside EV 20 02,40.59561,-73.75471,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:457724,other,Wavecrest Gardens Outside EV 20 49,40.594,-73.75671,6,6531.84,0.0,0,6531.84,0.0,0.0
+O:459318,other,CCNY NAC Parking Lot,40.8187291,-73.9510026,20,21772.800000000003,0.0,0,21772.800000000003,741.8526027947229,0.0340724483205983
+O:459329,other,Garage,40.781023,-73.9509164,10,10886.400000000001,0.0,0,10886.400000000001,0.0,0.0
+O:459332,other,Crescent St,40.749177,-73.942084,10,10886.400000000001,0.0,0,10886.400000000001,1769.8993303334707,0.16257893613439434
+O:459338,other,Section B2,40.7698891,-73.9571715,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:459358,other,Garage,40.7354709,-73.9918791,8,8709.12,0.0,0,8709.12,2061.9043687106946,0.23675232040788213
+O:459359,other,Upper Floor,40.7856432,-73.9549331,10,10886.400000000001,0.0,0,10886.400000000001,4294.756061296562,0.39450654590099216
+O:460331,other,Wavecrest Gardens Outside EV 20 33,40.59298,-73.75536,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:460332,other,Wavecrest Gardens Outside EV 20 12,40.59592,-73.75567,4,4354.56,0.0,0,4354.56,1306.7963493137722,0.3000983679898249
+O:462025,other,GBL - Braun Management,40.90678,-73.90483,65,70761.6,0.0,0,70761.6,3301.841422117441,0.046661486203215315
+O:462026,other,GBL - Marino Marble & Tile Corp,40.71842,-73.94486,12,13063.68,0.0,0,13063.68,2307.436593109388,0.1766299077372829
+O:462027,other,GBL - Noll St Realty,40.70295,-73.93073,10,10886.400000000001,0.0,0,10886.400000000001,459.84759694499064,0.04224055674465301
+O:462215,other,STW - Steinway #2 Municipal Parking Field,40.760717,-73.917409,10,10886.400000000001,0.0,0,10886.400000000001,5273.096561151353,0.4843746841151668
+O:462431,other,CPO - College Point Municipal Parking Field,40.784958,-73.84567,8,8709.12,0.0,0,8709.12,1112.2012878579926,0.12770535804512884
+O:463519,other,Center 15 LLC,40.63086,-73.98899,6,6531.84,0.0,0,6531.84,2437.7229180436148,0.3732061590675238
+O:465777,other,WPL - White Plains Road Municipal Parking Field,40.853224,-73.868094,18,19595.52,0.0,0,19595.52,761.2571671488988,0.038848531049387756
+O:466991,other,BPMT EV Chargers - Tesla Destination,40.7323003,-73.73899399,11,11975.04,0.0,0,11975.04,638.248063850241,0.05329819890791521
+O:466992,other,BPMT EV - Tesla Destination,40.73171377,-73.7428426,3,3265.92,0.0,0,3265.92,2234.945642437183,0.684323450187752
+O:467090,other,BFPL 200 Liberty - Tesla Destination,40.71082208,-74.01556692,2,2177.28,0.0,0,2177.28,0.0,0.0
+O:467463,other,Dunkin' - Bronx - Tesla Destination,40.86161016,-73.91241473,4,4354.56,0.0,0,4354.56,1072.8032046894762,0.2463631698011914
+O:467770,other,KWEV - 492 Thomas Boyland St,40.66853,-73.91355,5,5443.200000000001,0.0,0,5443.200000000001,736.2164877837604,0.13525435181212528
+O:467772,other,KWEV - 1730 E 14th St,40.60716,-73.95907,20,21772.800000000003,0.0,0,21772.800000000003,4281.247317734109,0.19663283168605364
+O:467773,other,KWEV - 2181 Starling Ave,40.83646,-73.85276,9,9797.76,0.0,0,9797.76,2192.46550245068,0.22377211755040743
+O:467774,other,KWEV - 3780 Bronx Blvd,40.88435,-73.86566,5,5443.200000000001,0.0,0,5443.200000000001,1285.1363677026616,0.23609942087423968
+O:467844,other,Cellar East,40.691407,-73.9790368,10,10886.400000000001,0.0,0,10886.400000000001,1920.8407371067376,0.17644407123628908
+O:467845,other,1st Floor,40.691407,-73.9790368,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:467852,other,LSS Garage,40.73491,-73.86467,35,38102.4,0.0,0,38102.4,7103.489905641184,0.18643156088963383
+O:467859,other,Garage 2nd Floor,40.767335,-73.953825,10,10886.400000000001,0.0,0,10886.400000000001,560.4342158753554,0.0514802153030713
+O:467860,other,Garage 2nd Floor,40.7681405,-73.9533174,10,10886.400000000001,0.0,0,10886.400000000001,1183.1500057206058,0.10868147465834488
+O:467861,other,Basement Level 2,40.772468,-73.945785,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:467862,other,Garage Floor B,40.7286337,-73.8495325,19,20684.160000000003,0.0,0,20684.160000000003,1764.4787017644176,0.08530579447095832
+O:467863,other,Garage Floor C,40.7286337,-73.8495325,17,18506.88,0.0,0,18506.88,1832.7431820556576,0.09903037043821851
+O:467864,other,Garage Floor D,40.7286337,-73.8495325,16,17418.24,0.0,0,17418.24,1074.5880506413714,0.06169326238709372
+O:467867,other,Garage 2nd Floor,40.741944,-73.95585,22,23950.08,0.0,0,23950.08,2076.54467942613,0.08670303729365957
+O:467868,other,Section T3,40.7699168,-73.9570786,4,4354.56,0.0,0,4354.56,0.0,0.0
+O:467869,other,Main Floor,40.7696406,-73.9573575,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:467870,other,Section T2,40.7697514,-73.9574911,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:467874,other,Garage 2nd Floor,40.7723564,-73.9533198,14,15240.960000000001,0.0,0,15240.960000000001,7222.876032369541,0.4739121441411525
+O:467881,other,Garage Lower Level,40.760139,-73.970051,5,5443.200000000001,0.0,0,5443.200000000001,1573.9768285568891,0.289163879437994
+O:467885,other,2nd Floor Garage,40.6528,-73.95439,13,14152.320000000002,0.0,0,14152.320000000002,585.0160387491142,0.041337112130669325
+O:467904,other,Garage2,40.878087,-73.917051,6,6531.84,0.0,0,6531.84,192.28807078942205,0.029438576387269443
+O:467905,other,Garage3,40.878087,-73.917051,6,6531.84,0.0,0,6531.84,778.7917730174414,0.11923007498919774
+O:467940,other,Upper Floor,40.7473686,-73.9848497,6,6531.84,0.0,0,6531.84,1915.0162118157855,0.2931817392673099
+O:467952,other,Lower Floor,40.776086,-73.9621192,3,3265.92,0.0,0,3265.92,0.0,0.0
+O:468020,other,Interior Garage,40.763032,-73.9790641,9,9797.76,0.0,0,9797.76,2520.331891630547,0.25723552032613034
+O:470401,other,Parking Lot,40.6357487,-73.9230769,10,10886.400000000001,0.0,0,10886.400000000001,2507.5982262916036,0.23034228269139506
+O:49938,other,Nissan of Queens,40.68106,-73.84554,1,1088.64,0.0,0,1088.64,1088.64,1.0
+O:64140,other,Dana Ford Lincoln,40.587162,-74.194747,1,1088.64,0.0,0,1088.64,0.0,0.0
+O:85969,other,Koeppel Nissan,40.755072,-73.892094,2,2177.28,0.0,0,2177.28,1590.1244002422088,0.7303260950553941
+O:99500,other,Nissan of Staten Island,40.581432,-74.097694,1,1088.64,0.0,0,1088.64,1088.64,1.0
