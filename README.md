@@ -6,18 +6,26 @@ The current Milestone 4 working model represents demand at the Census-tract leve
 
 > **Writing the report?** Start with [Milestone 4 Report Context and Reminders](MILESTONE4_REPORT_REMINDERS.md). It records the frozen formulation, assumptions requiring team confirmation, verified result terminology, limitations, and wording cautions.
 
-## Current verified result
 
-Using `config/tract_case.json`, Gurobi returned an optimal candidate solution with:
+## Current checked-in tract result
 
-- 2,285 Census-tract demand points and 7,185 accessible demand-site pairs.
+The current checked-in tract-level solution is recorded in `results/geography_comparison/tract/summary.json`.
+
+Using `config/tract_case.json`, the saved Gurobi output reports:
+
+- 2,285 Census-tract demand points.
+- 40 municipal investment candidates and 787 modeled supply sites.
+- 7,195 accessible demand-site pairs.
 - 14 selected municipal facilities and 31 additional Level 2 ports.
 - $472,727 in modeled investment cost.
-- 493,415.12 kWh/week served out of 982,519.84 kWh/week projected demand, or approximately 50.2%.
+- 493,731.29 kWh/week served out of 982,519.84 kWh/week projected demand, approximately 50.25%.
+- An equity-weighted objective value of 519,455.69.
+- Approximately $3,277,273 of unused budget.
 - A maximum positive-flow distance of approximately 0.4998 mile.
-- A final MIP gap of 0.0% and all automated feasibility checks passing.
+- All saved automated feasibility checks passing.
 
-These values are a first working candidate solution under the stated data and scenario assumptions, not a final construction plan or an exact forecast.
+These are the currently checked-in results, not an independently rerun verification. They represent a candidate solution under the specified scenario assumptions, not a final construction plan or an exact forecast.
+
 
 ## Start here
 
@@ -107,12 +115,13 @@ The checked-in 2026 Q2 comparison shows:
 | Metric | ZIP baseline | Current tract model |
 | --- | ---: | ---: |
 | Demand points | 193 | 2,285 |
-| Accessible pairs | 1,109 | 7,185 |
+| Accessible pairs | 1,110 | 7,195 |
 | Selected municipal sites | 9 | 14 |
 | Additional ports | 44 | 31 |
 | Investment cost | $453,548 | $472,727 |
-| Served demand | 418,368.39 kWh/week | 493,415.12 kWh/week |
-| Projected-demand service rate | 42.6% | 50.2% |
+| Served demand | 418,368.39 kWh/week | 493,731.29 kWh/week |
+| Projected demand | 982,462.40 kWh/week | 982,519.84 kWh/week |
+| Projected-demand service rate | 42.6% | 50.25% |
 
 Projected total demand is nearly unchanged. The change in service is primarily a spatial-resolution effect. Do not compare the two equity-weighted objective values as if their shortage weights were identical, because the equity score is recomputed at each demand geography.
 
