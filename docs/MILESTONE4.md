@@ -153,6 +153,38 @@ All reported scenarios passed the implemented feasibility checks. The one-mile r
 
 These ZIP-level sensitivity results are separate from the Census-tract equity sensitivity experiments with lambda = 0, 1, 2, 4, and 10.
 
+## Census-tract equity sensitivity analysis
+
+To evaluate the effect of equity weighting, we tested five values of lambda: 0, 1, 2, 4, and 10. All scenarios used the same Census-tract demand data, 0.5-mile service radius, 20% municipal installation limit, facility-specific municipal operating hours, budget, and demand-growth assumptions.
+
+| Equity weight | Selected sites | Additional ports | Investment cost | Served demand (kWh/week) |
+| --- | ---: | ---: | ---: | ---: |
+| 0 | 14 | 55 | $601,935 | 490,980.66 |
+| 1 | 14 | 55 | $601,935 | 490,980.68 |
+| 2 | 14 | 55 | $601,935 | 490,980.69 |
+| 4 | 14 | 55 | $601,935 | 490,980.70 |
+| 10 | 14 | 55 | $601,935 | 490,980.70 |
+
+All five scenarios returned OPTIMAL with a 0.0% final MIP gap.
+
+The number of selected facilities, number of additional ports, and total investment cost remained unchanged. Aggregate served demand also remained nearly constant across the tested equity weights.
+
+However, the allocation of charging service across individual Census tracts changed.
+
+Comparing lambda = 0 with lambda = 1:
+
+- High-shortage tracts (g = 1): the aggregate service rate remained approximately 5.14%.
+- Low-shortage tracts (g = 0): the aggregate service rate decreased from approximately 93.60% to 93.38%.
+- Partial-shortage tracts (0 < g < 1): the aggregate service rate increased from approximately 24.43% to 30.54%.
+
+These findings indicate that equity weighting can change how charging service is allocated without materially changing total service or modeled investment cost.
+
+The improvement was concentrated in the small partial-shortage group, while the high-shortage group's aggregate service rate remained nearly unchanged. Therefore, the experiments do not establish that increasing lambda substantially improves access for the most underserved tracts.
+
+The equity-weighted objective values should not be directly compared across lambda scenarios as a measure of equity improvement because changing lambda also changes the objective function itself.
+
+Detailed results are saved in `results/tract_equity/`, including the five scenario summaries and `results/tract_equity/equity_five_scenario_comparison.csv`.
+
 ## Reproduction
 
 From the repository root:
