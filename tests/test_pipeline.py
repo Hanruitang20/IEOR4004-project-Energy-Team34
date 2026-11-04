@@ -48,6 +48,13 @@ class DataPreparationTests(unittest.TestCase):
         self.assertTrue(limits.ge(0).all())
         self.assertTrue((limits == limits.astype(int)).all())
 
+    def test_uniform_twenty_percent_installation_limits(self) -> None:
+        m = self.data.municipal
+        self.assertEqual(self.data.config["max_new_port_share_of_remaining_spaces"], 0.2)
+        remaining = (m["Parking spaces"].astype(int) - m["existing_ports"]).clip(lower=0)
+        expected = np.minimum(20, np.floor(remaining * 0.2).astype(int))
+        np.testing.assert_array_equal(m["max_additional_ports"], expected)
+
     def test_hours_scale_existing_and_added_capacity(self) -> None:
         m = self.data.municipal.set_index("facility_id")
         self.assertAlmostEqual(m.at["belmont", "added_port_capacity_kwh"], 7.2 * 90 * .9)

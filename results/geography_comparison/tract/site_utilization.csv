@@ -4,7 +4,7 @@ M:bay,municipal,Bay Ridge Municipal Parking Garage,40.62188028,-74.02570166,5,98
 M:bayside,municipal,Bayside Municipal Parking Field,40.76394227,-73.76615974,0,90.0,Schedule available,0.0,583.2,7,4082.4000000000005,3503.1864921009096,0.8581193641242674
 M:belmont,municipal,Belmont Municipal Parking Field,40.85481492,-73.8891204,0,90.0,Schedule available,0.0,583.2,2,1166.4,676.4266297495689,0.5799268087702064
 M:bensonhurst,municipal,Bensonhurst #1 Municipal Parking Field,40.60763673,-74.00314364,4,90.0,Schedule available,2332.8,583.2,4,4665.6,4136.526702300252,0.8866012307742308
-M:bensonhurst2,municipal,Bensonhurst #2 Municipal Parking Field,40.60339031,-73.99677898,0,90.0,Schedule available,0.0,583.2,2,1166.4,1166.4,1.0
+M:bensonhurst2,municipal,Bensonhurst #2 Municipal Parking Field,40.60339031,-73.99677898,0,90.0,Schedule available,0.0,583.2,4,2332.8,2332.8,1.0
 M:borough-municipal,municipal,Borough Hall Municipal Parking Garage,40.7149112,-73.8270025,31,168.0,Schedule available,33747.840000000004,1088.64,0,33747.840000000004,1119.8071717357452,0.03318159537723733
 M:brighton,municipal,Brighton Beach Municipal Parking Field,40.57553014,-73.96307398,0,102.0,Schedule available,0.0,660.96,3,1982.88,1485.613529173714,0.7492200885448004
 M:broadway,municipal,Broadway – 31st Street Municipal Parking Field,40.76144881,-73.92570613,0,90.0,Schedule available,0.0,583.2,0,0.0,0.0,
@@ -14,12 +14,12 @@ M:college,municipal,College Point Municipal Parking Field,40.78592305,-73.846422
 M:court,municipal,Court Square Municipal Parking Garage,40.74533222,-73.94266751,10,168.0,Schedule available,10886.400000000001,1088.64,0,10886.400000000001,4836.764425755491,0.4442942043058762
 M:delancey,municipal,Delancey and Essex Municipal Parking Garage,40.71964308,-73.98850742,9,168.0,Schedule available,9797.76,1088.64,0,9797.76,5332.673812624509,0.5442747947106796
 M:ditmars,municipal,Ditmars #1 Municipal Parking Field,40.774996,-73.91017973,0,90.0,Schedule available,0.0,583.2,0,0.0,0.0,
-M:ditmars2,municipal,Ditmars #2 Municipal Parking Field,40.77445406,-73.91165942,0,90.0,Schedule available,0.0,583.2,2,1166.4,794.4406701089848,0.6811048269109952
+M:ditmars2,municipal,Ditmars #2 Municipal Parking Field,40.77445406,-73.91165942,0,90.0,Schedule available,0.0,583.2,2,1166.4,794.4402035490311,0.6811044269110349
 M:ferry,municipal,Ferry Terminal South #1 Municipal Parking Field,40.64391107,-74.07282221,0,144.0,Verify overnight / Sunday,0.0,933.12,0,0.0,0.0,
 M:flushing2,municipal,Flushing #2 Municipal Parking Field,40.7599355,-73.83173152,0,90.0,Schedule available,0.0,583.2,0,0.0,0.0,
 M:flushing4,municipal,Flushing #4 Municipal Parking Field,40.7614453,-73.83170059,0,90.0,Schedule available,0.0,583.2,0,0.0,0.0,
 M:gowanus,municipal,Gowanus Municipal Parking Field,40.65505247,-74.00657615,0,90.0,Verify curbside charging access,0.0,583.2,0,0.0,0.0,
-M:grant,municipal,Grant Avenue West Municipal Parking Field,40.67692979,-73.86568472,0,90.0,Schedule available,0.0,583.2,5,2916.0,2916.0,1.0
+M:grant,municipal,Grant Avenue West Municipal Parking Field,40.67692979,-73.86568472,0,90.0,Schedule available,0.0,583.2,11,6415.200000000001,6415.200000000001,1.0
 M:greatkills,municipal,Great Kills Municipal Parking Field,40.55140773,-74.14927295,0,90.0,Schedule available,0.0,583.2,3,1749.6000000000001,1543.91223677959,0.8824372638200675
 M:gunhill,municipal,Jerome-Gun Hill Road Municipal Parking Garage,40.88303495,-73.88075961,4,112.0,Closure notice: 2026-12-01,2903.04,725.76,0,2903.04,519.6422602581231,0.17899934560258318
 M:hunts,municipal,Hunts Point Municipal Parking Field,40.82139263,-73.88878906,20,168.0,Schedule available,21772.800000000003,1088.64,0,21772.800000000003,316.1733004969261,0.014521480953158347
@@ -48,14 +48,14 @@ O:114898,other,iPark NYC 2234 North 6th - Tesla Destination,40.71949,-73.963312,
 O:114900,other,Standard Parking 1 Metrotech - Tesla Destination,40.69306,-73.987222,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:114901,other,GGMC Belltel Car Park - Tesla Destination,40.692579,-73.985252,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:114903,other,GMC 388 Bridge Street - Tesla Destination,40.691469,-73.985446,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
-O:114904,other,Quik Park Brooklyn Bridge LLC - Tesla Destination,40.692941,-74.000298,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,803.7794936563672,0.24611120102646947
-O:114905,other,Rapidpark 44 State Street - Tesla Destination,40.692062,-73.99816,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,1774.663963738698,0.5433886818227935
+O:114904,other,Quik Park Brooklyn Bridge LLC - Tesla Destination,40.692941,-74.000298,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,379.4083560372068,0.11617196870627779
+O:114905,other,Rapidpark 44 State Street - Tesla Destination,40.692062,-73.99816,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,729.63622516431,0.22340909304707707
 O:114906,other,Park Kwik LLC 50 Washington St. - Tesla Destination,40.702882,-73.990594,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:114908,other,1 Hotel Brooklyn Bridge - Tesla Destination,40.701461,-73.995566,7,168.0,Assumed nonmunicipal hours from config; not verified,7620.4800000000005,0.0,0,7620.4800000000005,2929.728578761186,0.38445459849788804
-O:114910,other,"Littleman Driggs Parking, LLC - Tesla Destination",40.715033,-73.958595,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
+O:114910,other,"Littleman Driggs Parking, LLC - Tesla Destination",40.715033,-73.958595,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,583.5352299523539,0.17867407344710032
 O:114911,other,GGMC Parking 66 Rockwell Pl Garage - Tesla Destination,40.688086,-73.979234,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:114912,other,Standard Parking 200 Cadman Plaza West - Tesla Destination,40.698707,-73.992365,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
-O:114913,other,GGMC Parking 75 Smith St Garage - Tesla Destination,40.689016,-73.988672,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,379.4083560372068,0.11617196870627779
+O:114913,other,GGMC Parking 75 Smith St Garage - Tesla Destination,40.689016,-73.988672,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:114914,other,Standard Parking 2 Metrotech - Tesla Destination,40.693122,-73.985696,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:114915,other,Quik Park 81 Fleet Place LLC - Tesla Destination,40.693248,-73.981744,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:114916,other,Rapidpark 906 Union Street - Tesla Destination,40.672884,-73.971541,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,574.2598826639559,0.17583403226777014
@@ -131,7 +131,7 @@ O:115051,other,Rapidpark 210 W 102nd Street - Tesla Destination,40.798108,-73.96
 O:115052,other,Champion Parking 74 LLC - Tesla Destination,40.780027,-73.982823,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:115053,other,GGMC Parking Seven Eleven (Located at 217 E 44th St) - Tesla Destination,40.751867,-73.972873,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:115055,other,iPark 200 West Garage Corp. - Tesla Destination,40.746304,-73.995064,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
-O:115056,other,Parkit 221 Thompson Street - Tesla Destination,40.729234,-73.999013,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,421.62955884647613,0.1290997816377854
+O:115056,other,Parkit 221 Thompson Street - Tesla Destination,40.729234,-73.999013,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:115058,other,Icon Parking 225 W 83 Street - Tesla Destination,40.786099,-73.977303,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:115059,other,Quik Park Broadway Garage LLC - Tesla Destination,40.765844,-73.982481,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:115060,other,GGMC Yorkville Car Park - Tesla Destination,40.782212,-73.95023,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
@@ -162,7 +162,7 @@ O:115086,other,Icon Parking 301 E 57 Street - Tesla Destination,40.759127,-73.96
 O:115087,other,Parkit 301 E 64th - Tesla Destination,40.763488,-73.961323,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:115089,other,Parkit 310 E 11th Street - Tesla Destination,40.730017,-73.985512,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:115091,other,Quik Park 311 West Broadway LLC - Tesla Destination,40.721801,-74.004237,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
-O:115093,other,Quik Park 32 Debrosses LLC - Tesla Destination,40.723617,-74.010915,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,800.9878167003794,0.24525641065928724
+O:115093,other,Quik Park 32 Debrosses LLC - Tesla Destination,40.723617,-74.010915,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,1354.5419868886283,0.4147505103886894
 O:115095,other,Champion Parking W 57th Street - Tesla Destination,40.76696,-73.983569,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:115096,other,GGMC Parking 8 E 33rd St Garage - Tesla Destination,40.747478,-73.98504,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:115097,other,Icon Parking E 48th Street - Tesla Destination,40.753079,-73.968032,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
@@ -202,7 +202,7 @@ O:115142,other,Icon Parking 5 E 22nd Street - Tesla Destination,40.740458,-73.98
 O:115143,other,GGMC Parking Battery Place - Tesla Destination,40.706965,-74.017971,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:115144,other,GGMC Parking 50 E 79th St Garage - Tesla Destination,40.776006,-73.961627,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:115145,other,MPG 500 West 30th - Tesla Destination,40.752205,-74.001493,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
-O:115147,other,Icon Parking 51 W 22nd - Tesla Destination,40.742059,-73.992694,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
+O:115147,other,Icon Parking 51 W 22nd - Tesla Destination,40.742059,-73.992694,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,781.4439279037235,0.23927221974320362
 O:115149,other,Icon Parking 524 East 73rd - Tesla Destination,40.766736,-73.951891,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:115150,other,GGMC Parking 51-53 E 76th St Carlyle Hotel - Tesla Destination,40.774207,-73.96282,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:115151,other,iPark 530 E 80th Street - Tesla Destination,40.771382,-73.948344,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
@@ -236,7 +236,7 @@ O:115187,other,Icon 80 Riverside Blvd - Tesla Destination,40.775374,-73.989687,3
 O:115189,other,"The Standard, High Line - Tesla Destination",40.740939,-74.00824,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,2176.755323463756,0.6665060146800155
 O:115190,other,Chelnik Parking NYC 880 5th - Tesla Destination,40.770292,-73.967735,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:115193,other,Quik Park West 57 LLC - Tesla Destination,40.764259,-73.974972,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,305.71076345060544,0.09360632331796413
-O:115194,other,GGMC Parking Stewart House Garage - Tesla Destination,40.731257,-73.992101,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
+O:115194,other,GGMC Parking Stewart House Garage - Tesla Destination,40.731257,-73.992101,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,641.8816710364546,0.19653931236418976
 O:115195,other,Rapidpark 920 Park Avenue - Tesla Destination,40.776574,-73.96047,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:115196,other,MPG 923 5th Ave - Tesla Destination,40.773004,-73.966152,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:115197,other,GGMC The Cove - Tesla Destination,40.707738,-74.016845,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
@@ -244,13 +244,13 @@ O:115240,other,Angelina's Ristorante - Tesla Destination,40.513465,-74.251418,3,
 O:115251,other,PV Parking 40-07 73rd St - Tesla Destination,40.7464805,-73.8922584,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,971.4795456312568,0.2230947663211109
 O:122470,other,Austin Nichols House - Tesla Destination,40.718954,-73.9644059,6,168.0,Assumed nonmunicipal hours from config; not verified,6531.84,0.0,0,6531.84,967.1606082200583,0.14806863123102498
 O:122471,other,ImPark 500 4th Ave - Tesla Destination,40.6685202,-73.9904888,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,2164.9083851320647,0.4971589288314008
-O:122472,other,Sherman Parking - Tesla Destination,40.71102287,-73.96813376,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,2228.5386921816807,0.5117712678621217
+O:122472,other,Sherman Parking - Tesla Destination,40.71102287,-73.96813376,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,1645.0034622293267,0.3777657127767964
 O:122473,other,iPark 34 N 7th Street - Tesla Destination,40.72054,-73.962249,8,168.0,Assumed nonmunicipal hours from config; not verified,8709.12,0.0,0,8709.12,524.7610818033185,0.06025420269824258
 O:122475,other,IMPark 353 4th Ave - Tesla Destination,40.6732353,-73.9862323,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,0.0,0.0
 O:122476,other,MTP Parking 363 Bond Street - Tesla Destination,40.6781552,-73.9904425,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,2515.6823385601065,0.5777121772487016
 O:122477,other,MTP Parking 568 Union Ave - Tesla Destination,40.718054,-73.951847,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,0.0,0.0
 O:122478,other,ImPark Atlantic Terrace - Tesla Destination,40.6832871,-73.9735893,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,0.0,0.0
-O:122481,other,Sylvan Kissena Garage LLC - Tesla Destination,40.7538611,-73.823669,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,3152.047678978446,0.7238498674902736
+O:122481,other,Sylvan Kissena Garage LLC - Tesla Destination,40.7538611,-73.823669,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,2402.210737497852,0.5516540678042906
 O:122482,other,Excel Parking 87-10 Northern Blvd - Tesla Destination,40.755839,-73.8806563,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,4354.56,1.0
 O:122483,other,125-10 Queens Blvd Garage - Tesla Destination,40.7119045,-73.8267727,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,1436.0981125594035,0.3297917843730258
 O:122488,other,MTP Parking 41-42 24th Street - Tesla Destination,40.7515557,-73.9414058,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,837.0953739277736,0.19223420366874575
@@ -274,10 +274,10 @@ O:150540,other,One Blue Slip-Greenpoint - Tesla Destination,40.736562,-73.959195
 O:150571,other,CenterPark 4172 Broadway - Tesla Destination,40.847422,-73.937922,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,630.0755124447026,0.14469326693045967
 O:150572,other,Icon Parking 175 W 90th Street - Tesla Destination,40.790046,-73.972531,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,0.0,0.0
 O:150574,other,Center Park 250 Albany - Tesla Destination,40.709803,-74.015771,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,1870.5939231700104,0.42957128232703423
-O:150575,other,Enterprise Parking 150 Myrtle Ave - Tesla Destination,40.693476,-73.982605,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,0.0,0.0
+O:150575,other,Enterprise Parking 150 Myrtle Ave - Tesla Destination,40.693476,-73.982605,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,766.4250485466561,0.17600516436715902
 O:150576,other,Enterprise Parking 147 Flatbush Avenue Extension - Tesla Destination,40.695154,-73.983861,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,0.0,0.0
-O:150578,other,LAZ Parking 133-59 Roosevelt Ave - Tesla Destination,40.758956,-73.832331,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,1245.424051086815,0.28600456787524225
-O:150579,other,LAZ Parking 136-20 38th Ave - Tesla Destination,40.760965,-73.829807,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,1019.3355534330694,0.23408462701927849
+O:150578,other,LAZ Parking 133-59 Roosevelt Ave - Tesla Destination,40.758956,-73.832331,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,1689.1182633336568,0.387896426581252
+O:150579,other,LAZ Parking 136-20 38th Ave - Tesla Destination,40.760965,-73.829807,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,1325.478282666822,0.3043885679992518
 O:150580,other,IMPark 188 E 78th St - Tesla Destination,40.773665,-73.958333,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:150581,other,IMPark 302 2nd St - Tesla Destination,40.674312,-73.98488,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,0.0,0.0
 O:150582,other,IPark 255 Schermerhorn - Tesla Destination,40.687913,-73.983039,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,0.0,0.0
@@ -296,21 +296,21 @@ O:150686,other,GGMC Parking MODA - Tesla Destination,40.705133,-73.801443,7,168.
 O:150697,other,Bruno's Bakery and Restaurant Hylan Blvd - Tesla Destination,40.588091,-74.089936,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,1590.4141164700463,0.7304591584316423
 O:162156,other,WCS NS1 SOUTHERN,40.851134,-73.881092,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,1013.0558572529698,0.4652850608341461
 O:162165,other,MASPETH FEDERAL MASPETH 1,40.726232,-73.895705,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,2177.28,1.0
-O:162285,other,PANYNJ LGA WEST 1,40.773116,-73.874977,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,869.3986641288329,0.7986098840101713
-O:162407,other,PANYNJ LGA E GARAGE C1,40.769506,-73.864979,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,1665.859394675976,0.7651103186893629
+O:162285,other,PANYNJ LGA WEST 1,40.773116,-73.874977,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
+O:162407,other,PANYNJ LGA E GARAGE C1,40.769506,-73.864979,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,1028.201597336313,0.47224132740681624
 O:163485,other,Apple West Parking,40.795783,-73.973678,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,666.7107863482726,0.15310634974561665
 O:164713,other,Tribeca Green,40.71695,-74.014948,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:164738,other,I Park - 145 W 56th St,40.764609,-73.979517,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:164751,other,Carnegie Hill,40.784865,-73.948526,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,239.1311274098716,0.10983021357375788
 O:168146,other,HAMPTON INN STATION 1,40.612696,-74.179012,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:168414,other,532 W 122nd St,40.811446,-73.960477,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,2025.6236211499847,0.46517297296396987
-O:168524,other,STATION 4TH FL MOTORGATE 3,40.764464,-73.946924,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,101.97861672437531,0.04683762158490194
-O:168525,other,STATION 4TH FL MOTORGATE #2,40.764208,-73.947198,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,75.9685261122346,0.03489148208417594
+O:168524,other,STATION 4TH FL MOTORGATE 3,40.764464,-73.946924,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,75.9685261122346,0.03489148208417594
+O:168525,other,STATION 4TH FL MOTORGATE #2,40.764208,-73.947198,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,85.29809736831851,0.039176448306289725
 O:168556,other,551W21 SR Capital - Tesla Destination,40.747437,-74.007111,6,168.0,Assumed nonmunicipal hours from config; not verified,6531.84,0.0,0,6531.84,0.0,0.0
 O:168558,other,610 Warren Street - Tesla Destination,40.681263,-73.981155,6,168.0,Assumed nonmunicipal hours from config; not verified,6531.84,0.0,0,6531.84,883.4445787287992,0.13525202373738476
 O:168757,other,Enterprise Parking 219 E 69th St - Tesla Destination,40.767342,-73.960835,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:168885,other,iPark 314 W 120th Street - Tesla Destination,40.807356,-73.954354,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,1236.7642689974227,0.37868786406201704
-O:169008,other,Park Kwik - 110 Livingston - Tesla Destination,40.6909872,-73.9901305,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,245.52358338249186,0.05638309803573538
+O:169008,other,Park Kwik - 110 Livingston - Tesla Destination,40.6909872,-73.9901305,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,1327.9057670665911,0.3049460260202158
 O:169010,other,Park Kwik-300 Ashland - Tesla Destination,40.68608,-73.978252,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,0.0,0.0
 O:169011,other,Park N Go - E 121 St - Tesla Destination,40.800793,-73.9371,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,1133.8829473067858,0.2603897861797256
 O:169014,other,Parkit 200 West End Ave - Tesla Destination,40.778221,-73.985072,5,168.0,Assumed nonmunicipal hours from config; not verified,5443.200000000001,0.0,0,5443.200000000001,0.0,0.0
@@ -318,17 +318,17 @@ O:169060,other,Rapidpark 205 W 101st Street - Tesla Destination,40.797603,-73.96
 O:169201,other,"The Standard, East Village - Tesla Destination",40.727797,-73.990746,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,426.1110690814549,0.13047198617279507
 O:169223,other,"Trump Golf Links, Ferry Point - Tesla Destination",40.8124589,-73.83447,8,168.0,Assumed nonmunicipal hours from config; not verified,8709.12,0.0,0,8709.12,0.0,0.0
 O:169851,other,"Imperial Parking- 332-342 E 34th St New York, New York 10016",40.7440113,-73.9741155,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
-O:169880,other,STATION 4TH FL MOTORGATE #1,40.764429,-73.946793,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,85.29809736831851,0.039176448306289725
-O:171342,other,SKYVIEW APTS SKYVIEW ST2,40.908654,-73.905897,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,3.321294719761761,0.0015254329804902265
-O:171476,other,SKYVIEW APTS SKYVIEW ST1,40.90872,-73.905883,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
+O:169880,other,STATION 4TH FL MOTORGATE #1,40.764429,-73.946793,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,101.97861672437531,0.04683762158490194
+O:171342,other,SKYVIEW APTS SKYVIEW ST2,40.908654,-73.905897,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
+O:171476,other,SKYVIEW APTS SKYVIEW ST1,40.90872,-73.905883,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,3.321294719761761,0.0015254329804902265
 O:173506,other,WCS NS1 ASIA,40.846612,-73.876323,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,278.07285552771236,0.1277157074550413
 O:174641,other,PANYNJ JFK Y GARAGE 1,40.64592,-73.779641,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:174642,other,PANYNJ JFK Y GARAGE 5,40.646587,-73.780259,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,421.17291562500014,0.19343994140625004
 O:174643,other,PANYNJ JFK Y GARAGE 3,40.645758,-73.779314,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:180139,other,PANYNJ LGA WEST 2,40.773069,-73.875169,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
-O:180140,other,PANYNJ LGA WEST 5,40.772972,-73.875608,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,1088.64,1.0
-O:180141,other,PANYNJ LGA WEST 4,40.772977,-73.875474,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
-O:180166,other,PANYNJ LGA E GARAGE W1,40.770752,-73.866327,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
+O:180140,other,PANYNJ LGA WEST 5,40.772972,-73.875608,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,869.3986641288329,0.7986098840101713
+O:180141,other,PANYNJ LGA WEST 4,40.772977,-73.875474,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,1088.64,1.0
+O:180166,other,PANYNJ LGA E GARAGE W1,40.770752,-73.866327,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,637.6577973396631,0.2928689912825466
 O:181661,other,HAMPTON INN STATION 4,40.612678,-74.178885,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:181662,other,HAMPTON INN STATION 2,40.612688,-74.178948,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:181663,other,HAMPTON INN STATION 3,40.612671,-74.17882,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
@@ -344,7 +344,7 @@ O:193535,other,MASPETH FEDERAL STATION 1,40.710752,-73.851417,2,168.0,Assumed no
 O:193838,other,NYC FLEET DPR_VCP-S1,40.887487,-73.895341,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,518.1817704787869,0.4759900155044706
 O:193926,other,31-99 33rd St,40.761412,-73.923755,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:193979,other,"NYC Parking Kent-  444 Kent Avenue Brooklyn, NY 11211",40.709168,-73.968491,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
-O:194168,other,170 E End Ave,40.775792,-73.944015,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,613.1724304767766,0.28162314009993045
+O:194168,other,170 E End Ave,40.775792,-73.944015,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:194170,other,101 E 78th St,40.774878,-73.960671,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:194647,other,99 Prospect Park W,40.66696,-73.975032,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:195054,other,iPark - 59 Allen Street Garage,40.717195,-73.991658,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,539.2928705217466,0.247691096469791
@@ -399,7 +399,7 @@ O:223268,other,44 W 62nd St.,40.7708,-73.98323,4,168.0,Assumed nonmunicipal hour
 O:223269,other,333 E 75th St.,40.7702,-73.95525,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,0.0,0.0
 O:223273,other,225 W 49th St,40.76154,-73.98518,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,0.0,0.0
 O:223278,other,11 East 86th Street,40.78147,-73.95986,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
-O:223282,other,200 East End Ave,40.77729,-73.94355,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,0.0,0.0
+O:223282,other,200 East End Ave,40.77729,-73.94355,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,613.1724304767766,0.14081157004996522
 O:223283,other,55 East End Ave,40.772,-73.94639,6,168.0,Assumed nonmunicipal hours from config; not verified,6531.84,0.0,0,6531.84,0.0,0.0
 O:223292,other,305 East 80th Street,40.77397,-73.9539,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,0.0,0.0
 O:223297,other,231 E 94th Street,40.78351,-73.94888,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,0.0,0.0
@@ -445,7 +445,7 @@ O:241192,other,The Forge,40.74679,-73.94111,1,168.0,Assumed nonmunicipal hours f
 O:241222,other,Parkash 4769 LLC - 4769 White Plains,40.905461,-73.849791,7,168.0,Assumed nonmunicipal hours from config; not verified,7620.4800000000005,0.0,0,7620.4800000000005,349.7617266083421,0.04589759786894553
 O:250759,other,Popeyes,40.876952,-73.845534,6,168.0,Assumed nonmunicipal hours from config; not verified,6531.84,0.0,0,6531.84,1189.7979566670479,0.18215356724399984
 O:250845,other,iPark NYC 75 Wall Street - Tesla Destination,40.704776,-74.008276,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,866.3219551968864,0.2652612296678689
-O:250852,other,GGMC 91 E 9th Street - Tesla Destination,40.730723,-73.990854,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,220.25211218997842,0.06743953072640432
+O:250852,other,GGMC 91 E 9th Street - Tesla Destination,40.730723,-73.990854,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,617.9154260123498,0.18920102942275066
 O:251159,other,MPG Parking,40.758967,-73.995189,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:252135,other,CORP COMM 3 STATION 3 CC3,40.604086,-74.179358,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:252136,other,CORP COMM 3 STATION 8 CC3,40.604324,-74.179675,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
@@ -575,7 +575,7 @@ O:356971,other,Garage,40.7480664,-73.9744436,15,168.0,Assumed nonmunicipal hours
 O:356972,other,Lower Level,40.7817853,-73.9496422,10,168.0,Assumed nonmunicipal hours from config; not verified,10886.400000000001,0.0,0,10886.400000000001,1011.6704478486433,0.09292975160279277
 O:356977,other,Garage,40.7437248,-73.9770521,5,168.0,Assumed nonmunicipal hours from config; not verified,5443.200000000001,0.0,0,5443.200000000001,1251.253778582117,0.22987466537737303
 O:356980,other,Garage,40.76536,-73.96128,12,168.0,Assumed nonmunicipal hours from config; not verified,13063.68,0.0,0,13063.68,0.0,0.0
-O:356981,other,Underground garage,40.724324,-73.994201,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,1910.3090810722028,0.43869164302988195
+O:356981,other,Underground garage,40.724324,-73.994201,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,738.8394848716041,0.1696702961657674
 O:356986,other,Garage,40.7706,-73.9817,9,168.0,Assumed nonmunicipal hours from config; not verified,9797.76,0.0,0,9797.76,1819.5247132681598,0.18570823466467434
 O:356987,other,Parking Garage,40.757093,-73.966349,10,168.0,Assumed nonmunicipal hours from config; not verified,10886.400000000001,0.0,0,10886.400000000001,488.61703722749445,0.0448832522438542
 O:356990,other,Basement Garage,40.781139,-73.983118,14,168.0,Assumed nonmunicipal hours from config; not verified,15240.960000000001,0.0,0,15240.960000000001,1984.1758767403674,0.130187066742539
@@ -614,7 +614,7 @@ O:357264,other,AMNH-PARKING STATION 3,40.781511,-73.973807,2,168.0,Assumed nonmu
 O:357265,other,AMNH-PARKING STATION 4,40.781478,-73.974009,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:358500,other,(Stations Removed),40.714318,-73.953186,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
 O:358717,other,169 Ludlow St - Tesla Destination,40.721713,-73.98778,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,650.3365515493522,0.19912813282301836
-O:358788,other,Chelsea29 - Tesla Destination,40.7483946,-73.9937004,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,781.4439279037235,0.23927221974320362
+O:358788,other,Chelsea29 - Tesla Destination,40.7483946,-73.9937004,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:358813,other,10 Hudson Yards - Tesla Destination,40.7526559,-74.0010744,16,168.0,Assumed nonmunicipal hours from config; not verified,17418.24,0.0,0,17418.24,1767.6707999116604,0.1014838927418419
 O:358856,other,Standard Parking 910 5th Avenue - Tesla Destination,40.772175,-73.96637,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,0.0,0.0
 O:358900,other,Wingate by Wyndham Haven Park - Tesla Destination,40.8128505,-73.9283126,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,1278.9237723174992,0.29369758880747976
@@ -697,7 +697,7 @@ O:449204,other,Loews Regency Hotel,40.76489344296292,-73.9696994032134,3,168.0,A
 O:450048,other,Sheepshead Bay,40.5859085,-73.9537896,6,168.0,Assumed nonmunicipal hours from config; not verified,6531.84,0.0,0,6531.84,2065.3724204744512,0.3162007061523937
 O:450166,other,PANYNJ LGA E GARAGE E1,40.76941,-73.864157,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
 O:451557,other,ENG-000035,40.76447,-73.8863,3,168.0,Assumed nonmunicipal hours from config; not verified,3265.92,0.0,0,3265.92,2444.0825722331524,0.7483595961423282
-O:451565,other,ENG-000048,40.73687,-73.89355,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,2138.1251587392067,0.982016625670197
+O:451565,other,ENG-000048,40.73687,-73.89355,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,2138.125158739206,0.9820166256701968
 O:453137,other,462 Keap St,40.71308,-73.95194,6,168.0,Assumed nonmunicipal hours from config; not verified,6531.84,0.0,0,6531.84,1443.1055048098933,0.2209339948329863
 O:453512,other,SMJ WOODHAVEN SMJ WOODHAVE 17,40.715441,-73.859112,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
 O:453513,other,SMJ WOODHAVEN SMJ WOODHAVE 18,40.715293,-73.859381,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
@@ -710,7 +710,7 @@ O:453519,other,SMJ WOODHAVEN SMJ WOODHAVE 14,40.715461,-73.859201,1,168.0,Assume
 O:453520,other,SMJ WOODHAVEN SMJ WOODHAVE 13,40.715359,-73.8592,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
 O:453521,other,SMJ WOODHAVEN SMJ WOODHAVE 10,40.715438,-73.859393,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
 O:453522,other,SMJ WOODHAVEN SMJ WOODHAVEN 1,40.715236,-73.859501,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
-O:453523,other,SMJ WOODHAVEN SMJ WOODHAVEN 2,40.715214,-73.859497,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,263.83505858971523,0.24235289773452676
+O:453523,other,SMJ WOODHAVEN SMJ WOODHAVEN 2,40.715214,-73.859497,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
 O:453524,other,SMJ WOODHAVEN SMJ WOODHAVE 11,40.715364,-73.859529,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
 O:453525,other,SMJ WOODHAVEN SMJ WOODHAVE 12,40.715367,-73.859489,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
 O:454047,other,SMJ WOODHAVEN SMJ WOODHAVE 22,40.715222,-73.859487,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
@@ -719,9 +719,9 @@ O:454049,other,SMJ WOODHAVEN SMJ WOODHAVEN 8,40.715474,-73.859302,1,168.0,Assume
 O:454050,other,SMJ WOODHAVEN SMJ WOODHAVE 15,40.715396,-73.859251,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
 O:454051,other,SMJ WOODHAVEN SMJ WOODHAVEN 6,40.715286,-73.859372,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
 O:454052,other,SMJ WOODHAVEN SMJ WOODHAVEN 5,40.71524,-73.859443,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
-O:454053,other,SMJ WOODHAVEN SMJ WOODHAVEN 4,40.71523,-73.859462,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
+O:454053,other,SMJ WOODHAVEN SMJ WOODHAVEN 4,40.71523,-73.859462,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,263.83505858971523,0.24235289773452676
 O:454054,other,SMJ WOODHAVEN SMJ WOODHAVEN 3,40.715225,-73.859524,1,168.0,Assumed nonmunicipal hours from config; not verified,1088.64,0.0,0,1088.64,0.0,0.0
-O:455404,other,"Ravel Hotel, Trademark Collection by Wyndham",40.753871,-73.949378,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,0.0,0.0
+O:455404,other,"Ravel Hotel, Trademark Collection by Wyndham",40.753871,-73.949378,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,1769.8993303334707,0.8128946806719717
 O:455661,other,20 41st Ave,40.760528,-73.820645,39,168.0,Assumed nonmunicipal hours from config; not verified,42456.96000000001,0.0,0,42456.96000000001,8154.063185215603,0.1920548052713996
 O:455673,other,Popeye's,40.734125,-73.873486,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,2879.2444119009056,0.6612021448552564
 O:455711,other,1493 Shore Pkwy,40.597584,-74.003485,2,168.0,Assumed nonmunicipal hours from config; not verified,2177.28,0.0,0,2177.28,2177.28,1.0
@@ -739,7 +739,7 @@ O:457460,other,Wavecrest Gardens Outside EV 20 02,40.59561,-73.75471,4,168.0,Ass
 O:457724,other,Wavecrest Gardens Outside EV 20 49,40.594,-73.75671,6,168.0,Assumed nonmunicipal hours from config; not verified,6531.84,0.0,0,6531.84,0.0,0.0
 O:459318,other,CCNY NAC Parking Lot,40.8187291,-73.9510026,20,168.0,Assumed nonmunicipal hours from config; not verified,21772.800000000003,0.0,0,21772.800000000003,1171.1180407717775,0.05378812283086132
 O:459329,other,Garage,40.781023,-73.9509164,10,168.0,Assumed nonmunicipal hours from config; not verified,10886.400000000001,0.0,0,10886.400000000001,847.9133243021739,0.07788739384022025
-O:459332,other,Crescent St,40.749177,-73.942084,10,168.0,Assumed nonmunicipal hours from config; not verified,10886.400000000001,0.0,0,10886.400000000001,1769.8993303334707,0.16257893613439434
+O:459332,other,Crescent St,40.749177,-73.942084,10,168.0,Assumed nonmunicipal hours from config; not verified,10886.400000000001,0.0,0,10886.400000000001,0.0,0.0
 O:459338,other,Section B2,40.7698891,-73.9571715,4,168.0,Assumed nonmunicipal hours from config; not verified,4354.56,0.0,0,4354.56,0.0,0.0
 O:459358,other,Garage,40.7354709,-73.9918791,8,168.0,Assumed nonmunicipal hours from config; not verified,8709.12,0.0,0,8709.12,3272.760193618192,0.37578540582954323
 O:459359,other,Upper Floor,40.7856432,-73.9549331,10,168.0,Assumed nonmunicipal hours from config; not verified,10886.400000000001,0.0,0,10886.400000000001,0.0,0.0

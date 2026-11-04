@@ -5,7 +5,7 @@
   "max_capacity_violation_kwh": 0.0,
   "activation_constraints_hold": true,
   "selected_sites_have_accessible_demand": true,
-  "maximum_flow_pair_distance_miles": 0.9925168350770995,
+  "maximum_flow_pair_distance_miles": 0.9963332527614348,
   "service_radius_miles": 1.0,
-  "weighted_objective_recomputed": 743627.557857441
+  "weighted_objective_recomputed": 777238.0858488828
 }

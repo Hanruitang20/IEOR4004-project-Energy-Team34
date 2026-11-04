@@ -13,7 +13,7 @@
   "availability_factor": 0.9,
   "fixed_first_time_install_cost_usd": 20000.0,
   "incremental_port_cost_usd": 6217.0,
-  "max_new_port_share_of_remaining_spaces": 0.1,
+  "max_new_port_share_of_remaining_spaces": 0.2,
   "max_additional_ports_per_site": 20,
   "municipal_station_match_radius_miles": 0.05,
   "minimum_geocode_score": 80.0,

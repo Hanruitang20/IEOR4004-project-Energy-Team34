@@ -1,11 +1,11 @@
 {
   "all_checks_pass": true,
   "budget_feasible": true,
-  "max_demand_violation_kwh": 3.410605131648481e-13,
+  "max_demand_violation_kwh": 2.2737367544323206e-13,
   "max_capacity_violation_kwh": 4.547473508864641e-13,
   "activation_constraints_hold": true,
   "selected_sites_have_accessible_demand": true,
   "maximum_flow_pair_distance_miles": 0.4997929759355834,
   "service_radius_miles": 0.5,
-  "weighted_objective_recomputed": 507442.3089143688
+  "weighted_objective_recomputed": 516773.5079812489
 }
