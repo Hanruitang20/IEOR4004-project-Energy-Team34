@@ -4,21 +4,20 @@
 
 All 40 municipal facilities now use the same planning rule: U_j = min(20, floor(0.20 × max(0, parking spaces_j − existing L2 ports_j))). This replaces the former 10% rule; no three-site exceptions are applied. Both tract and ZIP configurations use 20%. These are assumed space-allocation limits, not verified electrical or construction limits. Gun Hill remains included and its closure notice remains unresolved.
 
-The refreshed tract base case selects 14 facilities and 55 additional ports for $601,935, serving 490,980.68 kWh/week out of 982,519.84 (49.97%). Both solve stages are OPTIMAL with 0.0% gaps. The radius remains 0.5 mile, λ=1, and the operating-hours capacity rule is unchanged. Compared with the previous 10% base case: +8 ports, +$49,736, and +4,665.60 kWh/week. These figures supersede earlier base-case results below.
+The refreshed tract base case selects 14 facilities and 55 additional ports for $601,935, serving 490,980.68 kWh/week out of 982,519.84 (49.97%). Both solve stages are OPTIMAL with 0.0% gaps. The radius remains 0.5 mile, λ=1, and the operating-hours capacity rule is unchanged. Compared with the previous 10% base case: +8 ports, +$49,736, and +4,665.60 kWh/week. These are the current base-case results.
 
 The direct tract and ZIP cases, geography comparison, and five ZIP sensitivity cases were refreshed. All feasibility checks pass. The ZIP one-mile sensitivity cost solve retains a 0.393% gap under the configured 1% tolerance; do not label every sensitivity result an exact cost optimum. Nine pipeline tests pass. Earlier separately reported radius/growth experiments used the former 10% limits and are not current-base-case results.
 
 
 ## Operating-hours update — November 4, 2026
 
-This update supersedes earlier result figures and the uniform municipal 168-hour capacity assumption below. The working demand geography remains Census tract; ZIP runs are comparison cases. The objective, projected demand, radius, cost rules and inventory-matching algorithm are unchanged.
+This update replaces the former assumption of uniform 168-hour weekly operating time for municipal facilities with facility-specific operating hours. The working demand geography remains Census tract; ZIP runs are comparison cases. The objective, projected demand, radius, cost rules and inventory-matching algorithm are unchanged.
 
 - **H_j** is site operating hours in hours/week. Municipal values come from `data/NYC_Municipal_Parking_Locations.xlsx`, column `Scheduled hours/week`, joined by `Facility ID`. Excel is authoritative even if geocoded CSV metadata contains hours.
 - **q_j = P × H_j × α**, and **C_j^0 = n_j^0 × P × H_j × α**, with P = 7.2 kW and α = 0.90. For 90 hours/week, q_j = 583.2 kWh/(port·week). Both municipal existing and added-port capacity use this rule. No new decision variable or constraint is needed.
 - Missing, nonnumeric, infinite, negative or >168 municipal hours raise an error; zero is allowed. No municipal missing value silently becomes 168. Outputs expose `operating_hours_per_week` and its source/review status. Availability remains separate from scheduled hours.
 - Other public sites retain the config `weekly_operating_hours` value of 168 as an **unverified assumption**. Municipal schedules must not be applied to unrelated private/curbside sites.
-- Current rerun: **2,285 demand points; 787 supply sites; 7,191 accessible pairs; 14 selected facilities; 47 added ports; $552,199 investment; 486,315.08 kWh/week served**, out of 982,519.84 projected (49.50%). Both stages return OPTIMAL and 0.0% gap. All nine refreshed tract, ZIP, comparison and ZIP-sensitivity runs pass feasibility checks; eight pipeline tests pass.
-- These results use the cleaned workbook and revised coordinates. Changes from earlier outputs cannot be attributed to hours alone. The cloned repository uses its existing nearest-station-per-facility matching; the station-centric reconciliation described in earlier chat is not present in this checkout. This change does not silently replace that algorithm. Earlier notebooks are not revalidated by these pipeline runs.
+- The operating-hours update used the cleaned workbook and revised coordinates. Its earlier results have been superseded by the current 20% installation-limit base case reported above. The implementation retains the nearest-station-per-facility matching algorithm. The older Gurobi notebook has not yet been updated to reflect the current model.
 - **Unresolved inputs:** Bronxdale's 168 hours is labeled an assumption. Hunts Point's user-entered 168 hours is retained, although DOT's published Mon–Sat 6am–10pm totals 96. Gun Hill remains included at 112 hours, with a December 1, 2026 closure notice; this is not a claim of future access. Ferry overnight/Sunday access, courthouse garage versus outdoor-lot access, and Gowanus/Sunnyside curbside access need review. Do not describe these schedules as verified charging-access hours or model the announced closure as already applied.
 - Equity scores are recalculated from existing hours-adjusted capacity before optimization. The five demand/policy inputs remain 60 kWh/EV/week, 25% public L2 share, 5% annual growth, five years and λ=1. Costs remain assumptions/historical benchmarks, distances remain point-based Haversine without barrier screening, and estimated tract locations do not locate individual EVs.
 
@@ -42,7 +41,7 @@ The tie-break removes unnecessary sites or ports among solutions with the same p
 | Milestone 3 item | Current implementation |
 | --- | --- |
 | Demand points `I` | NYC Census tracts receiving allocated DMV electric-registration records through the HUD-USPS crosswalk |
-| Municipal sites `M` | 39 NYC DOT parking facilities after geocode-quality checks |
+| Municipal sites `M` | 40 eligible NYC DOT municipal parking facilities after geocode-quality checks |
 | Other sites `O` | Public operational Level 2 station records after matching and removing municipal duplicates |
 | Accessible pairs `A` | Tract-site pairs with Haversine distance no greater than 0.5 mile |
 | `y_j`, `x_j`, `f_ij` | Gurobi binary, integer, and nonnegative continuous variables |
@@ -79,70 +78,80 @@ These are selected inputs, not estimates calculated from the cross-sectional dat
 - Annual demand growth: 5% over five years.
 - Equity-policy weight: `lambda = 1.0`.
 - Service radius: 0.5 mile.
-- Effective port capacity: 7.2 kW times 168 hours times 90% availability, or 1,088.64 kWh/week.
+- Municipal port capacity: 7.2 kW multiplied by facility-specific weekly operating hours and 90% availability. Capacity varies across municipal facilities.
+- Other public Level 2 sites: 168 weekly operating hours are assumed, equivalent to 1,088.64 kWh/week per existing port.
 - First-time site cost: $20,000.
 - Per-port cost: $6,217, equal to the documented $3,127 hardware and $3,090 installation benchmarks.
-- Maximum additional ports: the smaller of 20 and 10% of remaining parking spaces after existing ports.
+- Maximum additional ports per municipal facility: the smaller of 20 ports and 20% of remaining parking spaces after existing Level 2 ports.
 - Municipal/public-station match radius for deduplication: 0.05 mile.
 
 The group must confirm the 5% growth rate, five-year horizon, equity weight of 1.0, 60 kWh/EV/week, and 25% public-L2 share before final submission. If any value changes, the model and all affected results must be rerun.
 
 ## Current tract result
 
-For the assumptions above, Gurobi returned an optimal candidate solution with:
+Under the current base-case assumptions, Gurobi returned the following optimal candidate solution:
 
-- 2,285 tract demand points.
-- 786 modeled supply sites after municipal/public deduplication.
-- 39 municipal investment candidates.
-- 7,185 accessible tract-site pairs.
+- 2,285 Census tract demand points.
+- 40 municipal investment candidates.
+- 787 modeled supply sites.
+- 7,191 accessible demand-site pairs.
 - 14 selected municipal facilities.
-- 31 additional public Level 2 ports.
-- $472,727 in modeled investment cost.
-- 493,415.12 kWh/week of served demand.
+- 55 additional public Level 2 charging ports.
+- $601,935 in modeled investment cost.
+- 490,980.68 kWh/week of served demand.
 - 982,519.84 kWh/week of projected demand.
-- A projected-demand service rate of approximately 50.2%.
-- An equity-weighted primary objective of approximately 519,139.52 weighted kWh/week.
+- A projected-demand service rate of approximately 49.97%.
+- A Stage 1 equity-weighted objective value of approximately 516,773.56.
+- $3,148,065 of unused investment budget.
 - A maximum positive-flow distance of approximately 0.4998 mile.
-- A final MIP gap of 0.0%.
+- Both optimization stages returned OPTIMAL with a 0.0% MIP gap.
 
-All automated checks passed for the budget, projected-demand upper bounds, municipal and other-site capacities, activation and installation limits, accessibility, and maximum positive-flow distance.
+All automated feasibility checks passed for the budget, projected-demand upper bounds, site capacities, activation and installation limits, and accessibility requirements.
 
-`OPTIMAL` and a 0.0% MIP gap mean that Gurobi proved optimality for the implemented objective, constraints, data, and assumptions. They do not prove that the model perfectly represents future charging behavior or real-world construction feasibility.
+The result uses facility-specific municipal operating hours, a 20% installation limit, a 0.5-mile service radius, and an equity weight of lambda = 1.
+
+The reported investment cost is based on the model's planning assumptions. Solver optimality confirms the best solution under the implemented model and assumptions, but does not guarantee real-world construction feasibility or future charging demand.
 
 ## ZIP comparison and sanity check
 
-The earlier ZIP-point version remains reproducible through `config/base_case.json`. It is a spatial baseline, not the current report result.
+The ZIP-level model is retained as a spatial baseline for comparison with the current Census-tract model. Both scenarios use the same budget, demand assumptions, 0.5-mile radius, equity weight of lambda = 1, and 20% municipal installation limit.
 
 | Metric | ZIP baseline | Current tract model |
 | --- | ---: | ---: |
 | Demand points | 193 | 2,285 |
-| Accessible pairs | 1,109 | 7,185 |
-| Selected municipal sites | 9 | 14 |
-| Additional ports | 44 | 31 |
-| Investment cost | $453,548 | $472,727 |
-| Served demand | 418,368.39 kWh/week | 493,415.12 kWh/week |
+| Accessible pairs | 1,110 | 7,191 |
+| Selected municipal sites | 10 | 14 |
+| Additional ports | 88 | 55 |
+| Investment cost | $727,096 | $601,935 |
+| Served demand | 419,315.49 kWh/week | 490,980.68 kWh/week |
 | Projected demand | 982,462.40 kWh/week | 982,519.84 kWh/week |
-| Service rate | 42.6% | 50.2% |
+| Service rate | 42.68% | 49.97% |
 
-The refined result is directionally plausible:
+The tract-level model achieves a higher modeled service rate while requiring less investment than the ZIP-level baseline.
 
-- Projected total demand remains nearly unchanged, so the tract allocation does not duplicate demand.
-- Tract points spread demand within ZIP areas, allowing the model to use a wider set of nearby facilities.
-- The tract solution selects more locations but fewer added ports per selected site, consistent with a less concentrated spatial representation.
-- Both solutions respect the 0.5-mile base-case radius and pass the automated feasibility checks.
+Projected total demand remains nearly unchanged, suggesting that the difference is mainly associated with the spatial representation of demand and the resulting accessibility relationships.
 
-Do not compare the ZIP and tract equity-weighted objective values as if the weights were identical. The shortage score `g_i` is recomputed at the selected demand geography. Served energy, service rate, sites, ports, and cost are the more directly comparable metrics.
+Both scenarios satisfy the implemented feasibility checks. However, the results remain dependent on the model assumptions and geographic approximations.
 
-## Earlier sensitivity findings
+The equity shortage scores are recalculated for each demand geography. Therefore, equity-weighted objective values should not be directly compared across the ZIP and tract models.
 
-The legacy ZIP sensitivity suite remains useful for diagnosing model behavior:
+## ZIP-level sensitivity findings
 
-- Increasing the budget from $2.25 million to $5.25 million did not change the primary objective, showing that the budget was not binding in the 0.5-mile ZIP-point case.
-- Increasing the radius to one mile raised served demand from about 418,368 to 709,156 kWh/week without a material spending increase, indicating that spatial accessibility mattered more than capital in that case.
-- Setting `lambda = 0` preserved total served demand and selected investments but changed the allocation of 1,088.64 kWh/week from ZIP 11417 to ZIP 11416. The positive equity weight favored the ZIP with the higher baseline shortage score.
-- Zero demand growth reduced added ports from 44 to 39, which is directionally consistent with lower projected demand.
+The ZIP-level sensitivity scenarios were rerun using the current 20% municipal installation limit. These experiments are diagnostic comparisons and should not be confused with the Census-tract base-case results.
 
-These are diagnostic results from the ZIP representation. They should not be presented as reruns of the current tract model.
+The main findings are:
+
+- Budget sensitivity: Increasing the budget from $2.25 million to $5.25 million did not change the selected investment plan or total served demand. Both scenarios selected 10 sites and 88 additional ports, with $727,096 in modeled investment cost and approximately 419,315.49 kWh/week served. This indicates that the budget is not binding over the tested range.
+
+- Service radius: Increasing the service radius from 0.5 mile to 1.0 mile increased served demand from approximately 419,315.49 to 712,538.78 kWh/week. The modeled investment cost increased from $727,096 to $769,266. This suggests that geographic accessibility is a major limitation under the original 0.5-mile radius.
+
+- Equity weighting: Setting lambda = 0 produced nearly the same total served demand and investment plan as lambda = 1 in the ZIP-level model. This does not imply that equity weighting has no effect on tract-level service allocation.
+
+- Demand growth: Removing projected demand growth reduced the selected municipal facilities from 10 to 9 and additional ports from 88 to 76. Served demand decreased to approximately 342,748.53 kWh/week, consistent with lower projected demand.
+
+All reported scenarios passed the implemented feasibility checks. The one-mile radius scenario's Stage 2 cost-minimization solve had a final MIP gap of approximately 0.393%, within the configured 1% tolerance, rather than an exact 0% gap.
+
+These ZIP-level sensitivity results are separate from the Census-tract equity sensitivity experiments with lambda = 0, 1, 2, 4, and 10.
 
 ## Reproduction
 
