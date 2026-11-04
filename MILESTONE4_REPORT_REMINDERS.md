@@ -233,6 +233,42 @@ These findings support the internal consistency of the implementation but do not
 
 Equity-weighted objective values should not be directly compared between the ZIP and tract models because the shortage scores are recalculated for each demand geography.
 
+### Census-tract equity sensitivity findings
+
+The team also tested five equity-policy weights (lambda = 0, 1, 2, 4, and 10) using the current Census-tract model.
+
+All five scenarios used the same demand data, 0.5-mile service radius, 20% municipal installation limit, facility-specific municipal operating hours, and $3.75 million budget.
+
+| Lambda | Selected sites | Additional ports | Investment cost | Served demand (kWh/week) |
+| --- | ---: | ---: | ---: | ---: |
+| 0 | 14 | 55 | $601,935 | 490,980.66 |
+| 1 | 14 | 55 | $601,935 | 490,980.68 |
+| 2 | 14 | 55 | $601,935 | 490,980.69 |
+| 4 | 14 | 55 | $601,935 | 490,980.70 |
+| 10 | 14 | 55 | $601,935 | 490,980.70 |
+
+All five scenarios returned OPTIMAL with a 0.0% final MIP gap.
+
+Key findings for the report:
+
+1. Investment decisions remained unchanged across all five equity weights: 14 selected facilities, 55 additional ports, and $601,935 in modeled investment cost.
+
+2. Total served demand remained approximately 490,981 kWh/week, indicating that increasing the equity weight did not materially increase aggregate charging service.
+
+3. Equity weighting changed service allocation among some Census tracts even though the aggregate results remained nearly constant.
+
+4. Comparing lambda = 0 with lambda = 1, the aggregate service rate for high-shortage tracts (g = 1) remained approximately 5.14%. The low-shortage group (g = 0) decreased from 93.60% to 93.38%, while the partial-shortage group (0 < g < 1) increased from 24.43% to 30.54%.
+
+5. The partial-shortage group contains only five tracts. Therefore, its improvement should not be presented as evidence of a broad improvement for all underserved areas.
+
+6. Weighted objective values are not directly comparable across different lambda values because the objective function itself changes.
+
+Recommended report interpretation:
+
+The equity sensitivity analysis suggests that increasing the equity weight can redistribute charging service among individual Census tracts without materially changing investment decisions or aggregate served demand. However, the most severely underserved group did not experience a meaningful aggregate service-rate improvement, indicating limitations in what equity weighting alone can achieve under the current accessibility and capacity constraints.
+
+Detailed experiment outputs are available in `results/tract_equity/`, particularly `results/tract_equity/equity_five_scenario_comparison.csv`.
+
 ## 9. Data-audit facts to disclose
 
 - 51,322 matched electric-registration records were allocated to tracts.
