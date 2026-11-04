@@ -70,17 +70,28 @@ These are scenario inputs selected before optimization, not values estimated by 
 
 ## 6. Expected base-case result
 
-A successful run should report an optimal candidate solution close to the checked-in reference result:
+A successful run using `config/tract_case.json` should reproduce the current checked-in tract-level reference result:
 
-- 2,285 tract demand points.
-- 7,185 accessible demand-site pairs.
-- 14 selected municipal sites.
-- 31 additional Level 2 ports.
-- $472,727 modeled investment cost.
-- Approximately 493,415 kWh/week served.
-- All automated sanity checks passing.
+- 2,285 Census tract demand points.
+- 40 municipal investment candidates.
+- 787 modeled supply sites.
+- 7,191 accessible demand-site pairs.
+- 14 selected municipal facilities.
+- 55 additional Level 2 charging ports.
+- $601,935 in modeled investment cost.
+- Approximately 490,980.68 kWh/week of served demand.
+- 982,519.84 kWh/week of projected demand.
+- An overall service rate of approximately 49.97%.
+- $3,148,065 of unused investment budget.
+- A Stage 1 equity-weighted objective value of approximately 516,773.56.
+- Both optimization stages returning OPTIMAL with a 0.0% MIP gap.
+- All automated feasibility checks passing.
 
-Small solver-log differences are acceptable, but material differences in the final solution should be investigated before the report is updated.
+These results use a $3.75 million budget, a 0.5-mile service radius, lambda = 1, facility-specific municipal operating hours, and the updated 20% installation limit.
+
+Small numerical differences due to solver tolerances may be acceptable, but material differences in selected sites, ports, investment cost, or total served demand should be investigated before updating the report.
+
+The reported results represent a model-based candidate solution under the stated assumptions, not a final construction plan.
 
 ## 7. Run the ZIP-versus-tract comparison
 
