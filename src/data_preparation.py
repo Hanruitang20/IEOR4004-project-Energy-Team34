@@ -38,6 +38,8 @@ def load_config(path: Path) -> dict[str, object]:
     for key in required_positive:
         if float(config[key]) <= 0:
             raise ValueError(f"{key} must be positive")
+    if not np.isfinite(float(config["weekly_operating_hours"])) or float(config["weekly_operating_hours"]) > 168:
+        raise ValueError("weekly_operating_hours must be finite and at most 168")
     if not 0 <= float(config["public_l2_share"]) <= 1:
         raise ValueError("public_l2_share must be between 0 and 1")
     if not 0 <= float(config["availability_factor"]) <= 1:
@@ -318,17 +320,28 @@ def _load_demand(
 def _reported_existing_ports(row: pd.Series) -> tuple[int, str]:
     if pd.notna(row["L2 spaces (explicit)"]):
         return int(row["L2 spaces (explicit)"]), "municipal_explicit_l2_count"
-    evidence = str(row["L2 evidence"])
-    if "L2 rate listed" in evidence and pd.notna(row["EV spaces (type unspecified)"]):
+    evidence = str(row.get("L2 evidence", ""))
+    if "L2 rate listed" in evidence and pd.notna(row.get("EV spaces (type unspecified)")):
         return int(row["EV spaces (type unspecified)"]), "municipal_ev_count_with_l2_rate"
     return 0, "no_municipal_l2_count"
+
+
+def municipal_operating_hours(facilities: pd.DataFrame) -> pd.Series:
+    """Read H_j from the authoritative workbook; never silently fill missing hours."""
+    if "Scheduled hours/week" not in facilities:
+        raise ValueError("Municipal workbook requires a 'Scheduled hours/week' column")
+    hours = pd.to_numeric(facilities["Scheduled hours/week"], errors="coerce")
+    invalid = ~np.isfinite(hours) | ~hours.between(0, 168)
+    if invalid.any():
+        ids = facilities.loc[invalid, "Facility ID"].astype(str).tolist()
+        raise ValueError(f"Municipal weekly hours must be numeric and between 0 and 168: {ids}")
+    return hours.astype(float)
 
 
 def _load_municipal(
     data_dir: Path,
     public_sites: pd.DataFrame,
     config: dict[str, object],
-    port_capacity_kwh: float,
 ) -> tuple[pd.DataFrame, set[int], pd.DataFrame]:
     facilities = pd.read_excel(
         data_dir / "NYC_Municipal_Parking_Locations.xlsx",
@@ -337,6 +350,14 @@ def _load_municipal(
     )
     geocodes = pd.read_csv(data_dir / "municipal_facilities_geocoded.csv")
     facilities["facility_id"] = facilities["Facility ID"].astype(str).str.strip()
+    facilities["operating_hours_per_week"] = municipal_operating_hours(facilities)
+    facilities["operating_hours_basis"] = facilities.get(
+        "Hours review status", pd.Series("Workbook schedule", index=facilities.index)
+    ).fillna("Workbook schedule")
+    # Geocodes supply locations only. Hours in Excel are the authoritative input.
+    geocodes = geocodes.drop(
+        columns=["operating_hours_per_week", "operating_hours_basis"], errors="ignore"
+    )
     municipal = facilities.merge(geocodes, on="facility_id", how="left", validate="one_to_one")
 
     minimum_score = float(config["minimum_geocode_score"])
@@ -393,8 +414,14 @@ def _load_municipal(
     municipal["site_id"] = "M:" + municipal["facility_id"]
     municipal["site_type"] = "municipal"
     municipal["site_name"] = municipal["Facility name"]
-    municipal["existing_capacity_kwh"] = municipal["existing_ports"] * port_capacity_kwh
-    municipal["added_port_capacity_kwh"] = port_capacity_kwh
+    municipal["added_port_capacity_kwh"] = (
+        float(config["port_power_kw"])
+        * municipal["operating_hours_per_week"]
+        * float(config["availability_factor"])
+    )
+    municipal["existing_capacity_kwh"] = (
+        municipal["existing_ports"] * municipal["added_port_capacity_kwh"]
+    )
     municipal["fixed_cost_usd"] = float(config["fixed_first_time_install_cost_usd"])
     municipal["port_cost_usd"] = float(config["incremental_port_cost_usd"])
     return municipal, matched_ids, excluded
@@ -424,13 +451,15 @@ def prepare_model_data(
     ].copy()
 
     municipal, matched_ids, excluded = _load_municipal(
-        data_dir, public_sites, config, port_capacity_kwh
+        data_dir, public_sites, config
     )
     other = public_sites.loc[~public_sites["id"].astype(int).isin(matched_ids)].copy()
     other["site_id"] = "O:" + other["id"].astype(int).astype(str)
     other["site_type"] = "other"
     other["site_name"] = other["station_name"]
     other["existing_ports"] = other["ev_level2_evse_num"].astype(int)
+    other["operating_hours_per_week"] = float(config["weekly_operating_hours"])
+    other["operating_hours_basis"] = "Assumed nonmunicipal hours from config; not verified"
     other["existing_capacity_kwh"] = other["existing_ports"] * port_capacity_kwh
     other["added_port_capacity_kwh"] = 0.0
 
@@ -441,6 +470,8 @@ def prepare_model_data(
         "latitude",
         "longitude",
         "existing_ports",
+        "operating_hours_per_week",
+        "operating_hours_basis",
         "existing_capacity_kwh",
         "added_port_capacity_kwh",
     ]
@@ -485,6 +516,12 @@ def prepare_model_data(
         "municipal_candidates_matched_to_public_station": int(len(matched_ids)),
         "modeled_supply_sites_after_deduplication": int(len(sites)),
         "accessible_pairs": int(len(accessible)),
+        "municipal_hours_source": "NYC_Municipal_Parking_Locations.xlsx: Scheduled hours/week",
+        "municipal_weekly_hours_min": float(municipal["operating_hours_per_week"].min()),
+        "municipal_weekly_hours_max": float(municipal["operating_hours_per_week"].max()),
+        "municipal_hours_below_168": int(municipal["operating_hours_per_week"].lt(168).sum()),
+        "municipal_hours_review_status_counts": municipal["operating_hours_basis"].value_counts().to_dict(),
+        "nonmunicipal_weekly_hours_assumed": float(config["weekly_operating_hours"]),
     }
 
     return ModelData(

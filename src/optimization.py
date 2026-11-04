@@ -120,6 +120,8 @@ def solve_with_gurobi(data: ModelData) -> Solution:
         raise RuntimeError(f"No candidate solution. Solver status: {_status_name(gp, model.Status)}")
 
     primary_value = float(primary_objective.getValue())
+    primary_status = _status_name(gp, model.Status)
+    primary_gap = float(model.MIPGap)
     primary_tolerance = max(1e-4, abs(primary_value) * 1e-7)
     model.addConstr(primary_objective >= primary_value - primary_tolerance, name="primary_optimum")
     model.setObjective(investment_cost, gp.GRB.MINIMIZE)
@@ -180,6 +182,11 @@ def solve_with_gurobi(data: ModelData) -> Solution:
         "scenario_name": config["scenario_name"],
         "solver": "Gurobi",
         "solver_status": _status_name(gp, model.Status),
+        "primary_solver_status": primary_status,
+        "primary_mip_gap": primary_gap,
+        "final_mip_gap": float(model.MIPGap),
+        "primary_stage1_objective": primary_value,
+        "primary_preservation_tolerance": primary_tolerance,
         "primary_objective_equity_weighted_kwh": weighted_served,
         "total_served_kwh": total_served,
         "baseline_demand_kwh": float(demand_result["baseline_demand_kwh"].sum()),

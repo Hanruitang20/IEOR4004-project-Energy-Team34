@@ -10,6 +10,7 @@ from src.data_preparation import (
     allocate_zip_demand_to_tracts,
     haversine_matrix_miles,
     prepare_model_data,
+    municipal_operating_hours,
 )
 
 
@@ -46,6 +47,26 @@ class DataPreparationTests(unittest.TestCase):
         limits = self.data.municipal["max_additional_ports"]
         self.assertTrue(limits.ge(0).all())
         self.assertTrue((limits == limits.astype(int)).all())
+
+    def test_hours_scale_existing_and_added_capacity(self) -> None:
+        m = self.data.municipal.set_index("facility_id")
+        self.assertAlmostEqual(m.at["belmont", "added_port_capacity_kwh"], 7.2 * 90 * .9)
+        self.assertAlmostEqual(m.at["gunhill", "existing_capacity_kwh"],
+                               m.at["gunhill", "existing_ports"] * 7.2 * 112 * .9)
+        np.testing.assert_allclose(m["existing_capacity_kwh"],
+                                   m["existing_ports"] * m["added_port_capacity_kwh"])
+        other = self.data.sites.loc[self.data.sites["site_type"].eq("other")]
+        self.assertTrue(other["operating_hours_per_week"].eq(168).all())
+
+    def test_missing_and_invalid_hours_fail_instead_of_defaulting(self) -> None:
+        for value in [None, "unknown", -1, 169, float("inf")]:
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                municipal_operating_hours(pd.DataFrame({
+                    "Facility ID": ["test"], "Scheduled hours/week": [value]}))
+        with self.assertRaises(ValueError):
+            municipal_operating_hours(pd.DataFrame({"Facility ID": ["test"]}))
+        self.assertEqual(municipal_operating_hours(pd.DataFrame({
+            "Facility ID": ["closed"], "Scheduled hours/week": [0]})).iloc[0], 0)
 
     def test_hud_residential_ratio_allocation_conserves_matched_records(self) -> None:
         zip_demand = pd.DataFrame(
