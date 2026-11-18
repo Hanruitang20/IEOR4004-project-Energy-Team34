@@ -55,16 +55,18 @@ def _validate_curbside_config(config: dict[str, object]) -> None:
     if not 0 <= float(config["curbside_availability_factor"]) <= 1:
         raise ValueError("curbside_availability_factor must be between 0 and 1")
     max_sites = config.get("curbside_max_sites")
-    if max_sites is not None and int(max_sites) < 0:
-        raise ValueError("curbside_max_sites must be nonnegative or null")
+    if max_sites is not None:
+        value = float(max_sites)
+        if not np.isfinite(value) or value < 0 or value != int(value):
+            raise ValueError("curbside_max_sites must be a nonnegative integer or null")
 
 
-def build_curbside_candidates(demand: pd.DataFrame, config: dict[str, object]) -> pd.DataFrame:
-    """One curbside candidate at each demand point with no accessible existing supply.
+def build_curbside_candidates(demand: pd.DataFrame, config: dict[str, object],
+                             project_root: Path | None = None) -> pd.DataFrame:
+    """Load resident-suggested locations, or retain the legacy tract-center scenario.
 
-    Candidate coordinates are the demand point's own coordinates (the Census tract
-    internal point in the tract model). Each opened candidate installs a fixed block
-    of ``curbside_ports_per_site`` ports, so the decision is binary per candidate.
+    Each opened candidate installs a fixed block of ``curbside_ports_per_site`` ports.
+    Resident coordinates are preserved and are not moved to demand-point centroids.
     """
     ports = int(config["curbside_ports_per_site"])
     port_capacity = (
@@ -72,14 +74,23 @@ def build_curbside_candidates(demand: pd.DataFrame, config: dict[str, object]) -
         * float(config["curbside_weekly_operating_hours"])
         * float(config["curbside_availability_factor"])
     )
-    candidates = demand.loc[
-        demand["accessible_existing_supply_kwh"] <= 1e-9,
-        ["geography_id", "latitude", "longitude"]
-        + [c for c in ["tract_name", "county_name"] if c in demand.columns],
-    ].copy()
-    candidates["site_id"] = "C:" + candidates["geography_id"].astype(str)
+    if config.get("curbside_candidates_path"):
+        from .resident_candidates import load_resident_candidates
+        if project_root is None:
+            raise ValueError("project_root is required for a resident candidate file")
+        path = Path(str(config["curbside_candidates_path"]))
+        if not path.is_absolute():
+            path = project_root / path
+        candidates = load_resident_candidates(path)
+    else:
+        candidates = demand.loc[
+            demand["accessible_existing_supply_kwh"] <= 1e-9,
+            ["geography_id", "latitude", "longitude"]
+            + [c for c in ["tract_name", "county_name"] if c in demand.columns],
+        ].copy()
+        candidates["site_id"] = "C:" + candidates["geography_id"].astype(str)
+        candidates["site_name"] = "Curbside candidate at " + candidates["geography_id"].astype(str)
     candidates["site_type"] = "curbside"
-    candidates["site_name"] = "Curbside candidate at " + candidates["geography_id"].astype(str)
     candidates["existing_ports"] = 0
     candidates["operating_hours_per_week"] = float(config["curbside_weekly_operating_hours"])
     candidates["operating_hours_basis"] = "Curbside assumption from config (24/7 street access)"
@@ -472,7 +483,6 @@ def _load_municipal(
     municipal["existing_ports"] = municipal[
         ["reported_existing_ports", "matched_public_ports"]
     ].max(axis=1).astype(int)
-    municipal["first_time_install_indicator"] = municipal["existing_ports"].eq(0).astype(int)
     remaining_spaces = (
         municipal["Parking spaces"].astype(int) - municipal["existing_ports"]
     ).clip(lower=0)
@@ -493,7 +503,12 @@ def _load_municipal(
     municipal["existing_capacity_kwh"] = (
         municipal["existing_ports"] * municipal["added_port_capacity_kwh"]
     )
-    municipal["fixed_cost_usd"] = float(config["fixed_first_time_install_cost_usd"])
+    # F_j includes the inventory-based first-time indicator before optimization.
+    municipal["applicable_fixed_cost_usd"] = np.where(
+        municipal["existing_ports"].eq(0),
+        float(config["fixed_first_time_install_cost_usd"]),
+        0.0,
+    )
     municipal["port_cost_usd"] = float(config["incremental_port_cost_usd"])
     return municipal, matched_ids, excluded
 
@@ -583,7 +598,7 @@ def prepare_model_data(
     curbside = pd.DataFrame()
     curbside_audit: dict[str, object] = {"curbside_enabled": curbside_enabled(config)}
     if curbside_enabled(config):
-        curbside = build_curbside_candidates(demand, config)
+        curbside = build_curbside_candidates(demand, config, project_root)
         curb_distance = haversine_matrix_miles(
             demand["latitude"].to_numpy(float),
             demand["longitude"].to_numpy(float),
@@ -607,7 +622,10 @@ def prepare_model_data(
         accessible = pd.concat([accessible, curb_pairs], ignore_index=True)
         curbside_audit.update(
             {
-                "curbside_candidate_rule": "demand points with zero accessible existing supply",
+                "curbside_candidate_rule": (
+                    "screened public resident suggestions; installation feasibility unverified"
+                    if config.get("curbside_candidates_path") else "demand points with zero accessible existing supply"),
+                "curbside_candidates_path": config.get("curbside_candidates_path"),
                 "curbside_candidates": int(len(curbside)),
                 "curbside_accessible_pairs": int(len(curb_pairs)),
                 "curbside_ports_per_site": int(config["curbside_ports_per_site"]),
@@ -615,6 +633,9 @@ def prepare_model_data(
                 "curbside_site_capacity_kwh": float(curbside["site_capacity_kwh"].iloc[0]) if len(curbside) else None,
             }
         )
+
+    if curbside_enabled(config) and config.get("curbside_candidates_path"):
+        curbside_audit.update(curbside.attrs.get("resident_candidate_audit", {}))
 
     audit = {
         **demand_audit,

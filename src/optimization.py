@@ -83,8 +83,7 @@ def solve_with_gurobi(data: ModelData) -> Solution:
     flow_by_site = pairs.groupby("site_id").groups
 
     investment_cost = gp.quicksum(
-        float(municipal.at[site_id, "fixed_cost_usd"])
-        * int(municipal.at[site_id, "first_time_install_indicator"])
+        float(municipal.at[site_id, "applicable_fixed_cost_usd"])
         * y[site_id]
         + float(municipal.at[site_id, "port_cost_usd"]) * x[site_id]
         for site_id in municipal.index
@@ -165,8 +164,7 @@ def solve_with_gurobi(data: ModelData) -> Solution:
         {site_id: int(round(x[site_id].X)) for site_id in municipal.index}
     )
     municipal_result["investment_cost_usd"] = (
-        municipal_result["fixed_cost_usd"]
-        * municipal_result["first_time_install_indicator"]
+        municipal_result["applicable_fixed_cost_usd"]
         * municipal_result["selected"]
         + municipal_result["port_cost_usd"] * municipal_result["additional_ports"]
     )
@@ -249,7 +247,7 @@ def solve_with_gurobi(data: ModelData) -> Solution:
         "growth_multiplier": (1.0 + float(config["annual_demand_growth_rate"]))
         ** int(config["planning_horizon_years"]),
         "data_audit": data.audit,
-        "note": "The second solve minimizes cost only among primary-objective-optimal solutions.",
+        "note": "Stage 2 preserves the Stage 1 incumbent within the recorded tolerance, then minimizes installation cost. Report both MIP gaps; a nonzero gap is not an exact optimum.",
     }
     if curbside_result is not None:
         selected_curb = curbside_result["selected"].eq(1)
@@ -258,6 +256,7 @@ def solve_with_gurobi(data: ModelData) -> Solution:
                 "municipal_investment_cost_usd": municipal_spent,
                 "curbside_investment_cost_usd": curbside_spent,
                 "curbside_candidates": int(len(curbside_result)),
+                "curbside_max_sites": config.get("curbside_max_sites"),
                 "selected_curbside_sites": int(selected_curb.sum()),
                 "curbside_ports": int(curbside_result["additional_ports"].sum()),
                 "served_by_curbside_kwh": float(curbside_result["served_kwh"].sum()),
@@ -323,6 +322,19 @@ def solve_with_gurobi(data: ModelData) -> Solution:
         "service_radius_miles": float(config["service_radius_miles"]),
         "weighted_objective_recomputed": weighted_served,
     }
+    checks["primary_incumbent_preserved"] = weighted_served >= primary_value - primary_tolerance - tolerance
+    if curbside_result is not None:
+        checks["curbside_activation_holds"] = bool(
+            curbside_result["additional_ports"].eq(
+                curbside_result["selected"] * curbside_result["ports_per_site"]
+            ).all()
+        )
+        if config.get("curbside_max_sites") is not None:
+            checks["curbside_site_limit_holds"] = int(curbside_result["selected"].sum()) <= int(config["curbside_max_sites"])
+            checks["curbside_max_sites"] = int(config["curbside_max_sites"])
+        checks["all_checks_pass"] = bool(checks["all_checks_pass"] and checks["curbside_activation_holds"]
+                                         and checks.get("curbside_site_limit_holds", True))
+    checks["all_checks_pass"] = bool(checks["all_checks_pass"] and checks["primary_incumbent_preserved"])
     return Solution(summary, municipal_result, demand_result, site_result, checks, curbside_result)
 
 
