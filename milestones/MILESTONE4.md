@@ -87,6 +87,12 @@ These are selected inputs, not estimates calculated from the cross-sectional dat
 
 The group must confirm the 5% growth rate, five-year horizon, equity weight of 1.0, 60 kWh/EV/week, and 25% public-L2 share before final submission. If any value changes, the model and all affected results must be rerun.
 
+## Equity and inventory interpretation
+
+For each tract, the baseline shortage score is `g_i = max(0, 1 - S_i^0 / D_i)` when `D_i > 0`, and zero otherwise. `S_i^0` is the sum of existing capacity at accessible sites. This is a charging-access proxy, not a measure of income or demographic equity: the same site's capacity can appear in several tracts' scores, while network capacity constraints prevent its flow from being allocated twice. Scores use baseline demand and remain fixed across growth scenarios.
+
+Municipal existing-port counts combine reported inventory with nearby public-station matching. Missing municipal charger counts are not necessarily independently verified zeros; retain that uncertainty when interpreting results.
+
 ## Current tract result
 
 Under the current base-case assumptions, Gurobi returned the following optimal candidate solution:
@@ -200,4 +206,4 @@ python -m unittest discover -s tests
 
 The official HUD-USPS crosswalk is included in `data/`, so the optimization does not require internet access. The normal run reads cached municipal geocodes. Regenerating those geocodes with `python src/geocode_candidates.py` requires internet access and may produce different results if the geocoding service changes.
 
-For the report-ready formulation, terminology, assumptions, and limitations, return to [Milestone 4 Report Context and Reminders](MILESTONE4_REPORT_REMINDERS.md).
+For the complete formulation, see the [Milestone 3 Final PDF](IEOR4004_Milestone3_Latest.pdf).
