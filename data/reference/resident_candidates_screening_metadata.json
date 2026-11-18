@@ -1,0 +1,20 @@
+{
+  "source_locations": 544,
+  "eligible": 487,
+  "excluded": 57,
+  "exclusion_combinations": {
+    "outside_nyc_land_boundary_or_shoreline_review": 1,
+    "no_published_support": 56
+  },
+  "eligible_by_borough": {
+    "Brooklyn": 221,
+    "Staten Island": 13,
+    "Manhattan": 125,
+    "Bronx": 45,
+    "Queens": 83
+  },
+  "boundary_source": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne",
+  "boundary_download": "https://data.cityofnewyork.us/resource/gthc-hcne.geojson?$limit=5000",
+  "boundary_sha256": "be770a4463b68c2bacc0b0443380fe77936be0fb9c1835b5e9de53ff21effc34",
+  "policy": "Require published Wanted feedback. Exclude outside NYC land polygon (including shoreline-review points) and explicit trailing-borough conflicts. Preserve original coordinates. No geocoding or curb feasibility approval."
+}

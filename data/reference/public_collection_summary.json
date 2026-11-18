@@ -1,0 +1,22 @@
+{
+  "source_url": "https://nycdotprojects.info/project-feedback-map/where-should-dot-install-curbside-l2-ev-chargers-next",
+  "collected_on": "2026-11-18",
+  "map_record_count": 631,
+  "extracted_records": 631,
+  "unique_locations": 544,
+  "address_pages_fetched": 64,
+  "records_with_addresses": 629,
+  "missing_address_comment_ids": [
+    "36292",
+    "35674"
+  ],
+  "feedback_counts": {
+    "Wanted": 558,
+    "In Review": 64,
+    "Not Wanted": 9
+  },
+  "duplicate_records_grouped": 87,
+  "deduplication": "Equal coordinates rounded to 6 decimals OR identical normalized address within 25m of representative original pin; no fuzzy street-name matching.",
+  "boundary_filter": "none; public pins may be outside NYC or not on feasible curb segments",
+  "scope": "Public resident suggestions only; no names or comment bodies retained; not official approved candidates; model unchanged"
+}
