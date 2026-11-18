@@ -1,5 +1,9 @@
 # IEOR 4004 NYC Public Level 2 EV Charging Optimization
 
+## Curbside extension scenario — November 18, 2026
+
+An optional curbside Level 2 scenario has been added. It does not change the base case: `config/tract_case.json` and `results/tract_case/` are unchanged. `config/tract_curbside_case.json` adds one curbside candidate (4 ports, $100,000) at each of the 1,121 tracts with no existing supply within 0.5 mile, and the curbside sites share the $3.75M budget. Reference result: 10 municipal facilities with 43 ports plus 33 curbside sites with 132 ports, $3,747,331 invested, serving 583,373.79 kWh/week (59.38% vs 49.97%). This result was generated with SciPy/HiGHS through a gurobipy-compatible shim; rerun with Gurobi before reporting. See [docs/CURBSIDE.md](docs/CURBSIDE.md) for the formulation change, parameter sources and limitations. Fourteen pipeline tests pass.
+
 ## Current installation limits — November 4, 2026
 
 All 40 municipal facilities now use the same planning rule: U_j = min(20, floor(0.20 × max(0, parking spaces_j − existing L2 ports_j))). This replaces the former 10% rule; no three-site exceptions are applied. Both tract and ZIP configurations use 20%. These are assumed space-allocation limits, not verified electrical or construction limits. Gun Hill remains included and its closure notice remains unresolved.

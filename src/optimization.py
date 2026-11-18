@@ -18,6 +18,7 @@ class Solution:
     demand: pd.DataFrame
     site_utilization: pd.DataFrame
     sanity_checks: dict[str, object]
+    curbside: pd.DataFrame | None = None
 
 
 def _status_name(gp, status: int) -> str:
@@ -62,6 +63,16 @@ def solve_with_gurobi(data: ModelData) -> Solution:
         )
         for site_id in municipal.index
     }
+    # Curbside extension: w[k] = 1 opens candidate k with a fixed block of ports.
+    curbside = (
+        data.curbside.set_index("site_id", drop=False)
+        if data.curbside is not None and len(data.curbside)
+        else pd.DataFrame()
+    )
+    w = {
+        site_id: model.addVar(vtype=gp.GRB.BINARY, name=f"w[{site_id}]")
+        for site_id in curbside.index
+    }
     f = {
         pair_index: model.addVar(vtype=gp.GRB.CONTINUOUS, lb=0.0, name=f"f[{pair_index}]")
         for pair_index in pairs.index
@@ -78,6 +89,16 @@ def solve_with_gurobi(data: ModelData) -> Solution:
         + float(municipal.at[site_id, "port_cost_usd"]) * x[site_id]
         for site_id in municipal.index
     )
+    if len(curbside):
+        investment_cost = investment_cost + gp.quicksum(
+            float(curbside.at[site_id, "site_cost_usd"]) * w[site_id] for site_id in curbside.index
+        )
+        max_sites = config.get("curbside_max_sites")
+        if max_sites is not None:
+            model.addConstr(
+                gp.quicksum(w[site_id] for site_id in curbside.index) <= int(max_sites),
+                name="curbside_site_limit",
+            )
     model.addConstr(investment_cost <= float(config["budget_usd"]), name="capital_budget")
 
     for site_id in municipal.index:
@@ -98,6 +119,8 @@ def solve_with_gurobi(data: ModelData) -> Solution:
         capacity = float(sites.at[site_id, "existing_capacity_kwh"])
         if site_id in municipal.index:
             capacity += float(municipal.at[site_id, "added_port_capacity_kwh"]) * x[site_id]
+        elif site_id in w:
+            capacity += float(curbside.at[site_id, "site_capacity_kwh"]) * w[site_id]
         model.addConstr(
             gp.quicksum(f[int(k)] for k in pair_indices) <= capacity,
             name=f"capacity[{site_id}]",
@@ -158,8 +181,26 @@ def solve_with_gurobi(data: ModelData) -> Solution:
         demand_result["served_kwh"] / demand_result["projected_demand_kwh"]
     )
 
+    curbside_result = None
+    if len(curbside):
+        curbside_result = data.curbside.copy()
+        curbside_result["selected"] = curbside_result["site_id"].map(
+            {site_id: int(round(w[site_id].X)) for site_id in curbside.index}
+        )
+        curbside_result["additional_ports"] = (
+            curbside_result["selected"] * curbside_result["ports_per_site"]
+        )
+        curbside_result["investment_cost_usd"] = (
+            curbside_result["selected"] * curbside_result["site_cost_usd"]
+        )
+        curbside_result["served_kwh"] = curbside_result["site_id"].map(site_served).fillna(0.0)
+
     site_result = data.sites.copy()
     added_ports_by_site = municipal_result.set_index("site_id")["additional_ports"]
+    if curbside_result is not None:
+        added_ports_by_site = pd.concat(
+            [added_ports_by_site, curbside_result.set_index("site_id")["additional_ports"]]
+        )
     site_result["additional_ports"] = site_result["site_id"].map(added_ports_by_site).fillna(0).astype(int)
     site_result["available_capacity_kwh"] = (
         site_result["existing_capacity_kwh"]
@@ -170,7 +211,11 @@ def solve_with_gurobi(data: ModelData) -> Solution:
         "available_capacity_kwh"
     ].replace(0.0, pd.NA)
 
-    spent = float(municipal_result["investment_cost_usd"].sum())
+    municipal_spent = float(municipal_result["investment_cost_usd"].sum())
+    curbside_spent = (
+        float(curbside_result["investment_cost_usd"].sum()) if curbside_result is not None else 0.0
+    )
+    spent = municipal_spent + curbside_spent
     total_served = float(demand_result["served_kwh"].sum())
     weighted_served = float(
         (
@@ -206,6 +251,30 @@ def solve_with_gurobi(data: ModelData) -> Solution:
         "data_audit": data.audit,
         "note": "The second solve minimizes cost only among primary-objective-optimal solutions.",
     }
+    if curbside_result is not None:
+        selected_curb = curbside_result["selected"].eq(1)
+        summary.update(
+            {
+                "municipal_investment_cost_usd": municipal_spent,
+                "curbside_investment_cost_usd": curbside_spent,
+                "curbside_candidates": int(len(curbside_result)),
+                "selected_curbside_sites": int(selected_curb.sum()),
+                "curbside_ports": int(curbside_result["additional_ports"].sum()),
+                "served_by_curbside_kwh": float(curbside_result["served_kwh"].sum()),
+                "served_by_municipal_kwh": float(municipal_result["served_kwh"].sum()),
+                "service_rate": total_served
+                / float(demand_result["projected_demand_kwh"].sum()),
+                "selected_curbside_sites_by_county": (
+                    curbside_result.loc[selected_curb, "county_name"].value_counts().to_dict()
+                    if "county_name" in curbside_result
+                    else {}
+                ),
+                "curbside_note": (
+                    "additional_ports counts municipal ports only; curbside_ports is separate. "
+                    "investment_cost_usd is the municipal + curbside total."
+                ),
+            }
+        )
 
     tolerance = 1e-5
     max_demand_violation = float(
@@ -225,9 +294,13 @@ def solve_with_gurobi(data: ModelData) -> Solution:
             )
         ).all()
     )
-    selected_with_access = set(
-        municipal_result.loc[municipal_result["selected"].eq(1), "site_id"]
-    ).issubset(set(pairs["site_id"]))
+    selected_site_ids = set(municipal_result.loc[municipal_result["selected"].eq(1), "site_id"])
+    if curbside_result is not None:
+        selected_site_ids |= set(curbside_result.loc[curbside_result["selected"].eq(1), "site_id"])
+        max_sites = config.get("curbside_max_sites")
+        if max_sites is not None:
+            activation_ok = activation_ok and int(curbside_result["selected"].sum()) <= int(max_sites)
+    selected_with_access = selected_site_ids.issubset(set(pairs["site_id"]))
     checks = {
         "all_checks_pass": bool(
             spent <= float(config["budget_usd"]) + tolerance
@@ -250,7 +323,7 @@ def solve_with_gurobi(data: ModelData) -> Solution:
         "service_radius_miles": float(config["service_radius_miles"]),
         "weighted_objective_recomputed": weighted_served,
     }
-    return Solution(summary, municipal_result, demand_result, site_result, checks)
+    return Solution(summary, municipal_result, demand_result, site_result, checks, curbside_result)
 
 
 def write_solution(solution: Solution, output_dir: Path) -> None:
@@ -269,3 +342,7 @@ def write_solution(solution: Solution, output_dir: Path) -> None:
     solution.site_utilization.sort_values("site_id").to_csv(
         output_dir / "site_utilization.csv", index=False
     )
+    if solution.curbside is not None:
+        solution.curbside.sort_values(
+            ["selected", "served_kwh", "site_id"], ascending=[False, False, True]
+        ).to_csv(output_dir / "curbside_candidate_solution.csv", index=False)

@@ -11,6 +11,7 @@ Use this page to find the authoritative project documents. The current working r
 - [Milestone 4 Report Context and Reminders](../MILESTONE4_REPORT_REMINDERS.md): shared writing context, frozen formulation, assumptions requiring team confirmation, solver terminology, verified result, and wording cautions. This file remains in the repository root so every group member can see it immediately.
 - [Milestone 3 Final PDF](IEOR4004_Milestone3_Latest.pdf): finalized algebraic formulation that the code implements.
 - [Milestone 4 Implementation and Results](MILESTONE4.md): model-to-code mapping, tract data preparation, verified candidate solution, ZIP comparison, and sanity-check interpretation.
+- [Curbside Extension Scenario](CURBSIDE.md): optional curbside Level 2 candidates, formulation change, parameter sources, reference result and limitations. Does not change the base case.
 
 ## Execution document
 

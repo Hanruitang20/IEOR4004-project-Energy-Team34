@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import json
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 import numpy as np
@@ -22,6 +22,75 @@ class ModelData:
     accessible_pairs: pd.DataFrame
     excluded_candidates: pd.DataFrame
     audit: dict[str, object]
+    # Curbside extension (empty unless config["curbside_enabled"] is true).
+    curbside: pd.DataFrame = field(default_factory=pd.DataFrame)
+
+
+CURBSIDE_REQUIRED_KEYS = [
+    "curbside_ports_per_site",
+    "curbside_cost_per_port_usd",
+    "curbside_fixed_cost_per_site_usd",
+    "curbside_weekly_operating_hours",
+    "curbside_availability_factor",
+]
+
+
+def curbside_enabled(config: dict[str, object]) -> bool:
+    return bool(config.get("curbside_enabled", False))
+
+
+def _validate_curbside_config(config: dict[str, object]) -> None:
+    missing = [key for key in CURBSIDE_REQUIRED_KEYS if key not in config]
+    if missing:
+        raise ValueError(f"curbside_enabled is true but these keys are missing: {missing}")
+    if int(config["curbside_ports_per_site"]) <= 0:
+        raise ValueError("curbside_ports_per_site must be a positive integer")
+    if float(config["curbside_cost_per_port_usd"]) < 0 or float(
+        config["curbside_fixed_cost_per_site_usd"]
+    ) < 0:
+        raise ValueError("curbside costs must be nonnegative")
+    hours = float(config["curbside_weekly_operating_hours"])
+    if not np.isfinite(hours) or not 0 <= hours <= 168:
+        raise ValueError("curbside_weekly_operating_hours must be between 0 and 168")
+    if not 0 <= float(config["curbside_availability_factor"]) <= 1:
+        raise ValueError("curbside_availability_factor must be between 0 and 1")
+    max_sites = config.get("curbside_max_sites")
+    if max_sites is not None and int(max_sites) < 0:
+        raise ValueError("curbside_max_sites must be nonnegative or null")
+
+
+def build_curbside_candidates(demand: pd.DataFrame, config: dict[str, object]) -> pd.DataFrame:
+    """One curbside candidate at each demand point with no accessible existing supply.
+
+    Candidate coordinates are the demand point's own coordinates (the Census tract
+    internal point in the tract model). Each opened candidate installs a fixed block
+    of ``curbside_ports_per_site`` ports, so the decision is binary per candidate.
+    """
+    ports = int(config["curbside_ports_per_site"])
+    port_capacity = (
+        float(config["port_power_kw"])
+        * float(config["curbside_weekly_operating_hours"])
+        * float(config["curbside_availability_factor"])
+    )
+    candidates = demand.loc[
+        demand["accessible_existing_supply_kwh"] <= 1e-9,
+        ["geography_id", "latitude", "longitude"]
+        + [c for c in ["tract_name", "county_name"] if c in demand.columns],
+    ].copy()
+    candidates["site_id"] = "C:" + candidates["geography_id"].astype(str)
+    candidates["site_type"] = "curbside"
+    candidates["site_name"] = "Curbside candidate at " + candidates["geography_id"].astype(str)
+    candidates["existing_ports"] = 0
+    candidates["operating_hours_per_week"] = float(config["curbside_weekly_operating_hours"])
+    candidates["operating_hours_basis"] = "Curbside assumption from config (24/7 street access)"
+    candidates["existing_capacity_kwh"] = 0.0
+    candidates["added_port_capacity_kwh"] = port_capacity
+    candidates["ports_per_site"] = ports
+    candidates["site_capacity_kwh"] = ports * port_capacity
+    candidates["site_cost_usd"] = float(config["curbside_fixed_cost_per_site_usd"]) + ports * float(
+        config["curbside_cost_per_port_usd"]
+    )
+    return candidates.reset_index(drop=True)
 
 
 def load_config(path: Path) -> dict[str, object]:
@@ -44,6 +113,8 @@ def load_config(path: Path) -> dict[str, object]:
         raise ValueError("public_l2_share must be between 0 and 1")
     if not 0 <= float(config["availability_factor"]) <= 1:
         raise ValueError("availability_factor must be between 0 and 1")
+    if curbside_enabled(config):
+        _validate_curbside_config(config)
     return config
 
 
@@ -507,6 +578,44 @@ def prepare_model_data(
         - demand["accessible_existing_supply_kwh"] / demand["baseline_demand_kwh"],
     ).clip(upper=1.0)
 
+    # Curbside extension. Equity scores above use existing supply only, so they are
+    # identical with or without curbside candidates (candidates have no existing ports).
+    curbside = pd.DataFrame()
+    curbside_audit: dict[str, object] = {"curbside_enabled": curbside_enabled(config)}
+    if curbside_enabled(config):
+        curbside = build_curbside_candidates(demand, config)
+        curb_distance = haversine_matrix_miles(
+            demand["latitude"].to_numpy(float),
+            demand["longitude"].to_numpy(float),
+            curbside["latitude"].to_numpy(float),
+            curbside["longitude"].to_numpy(float),
+        )
+        c_demand_index, c_site_index = np.where(
+            curb_distance <= float(config["service_radius_miles"]) + 1e-12
+        )
+        curb_pairs = pd.DataFrame(
+            {
+                "demand_id": demand.iloc[c_demand_index]["demand_id"].to_numpy(),
+                "site_id": curbside.iloc[c_site_index]["site_id"].to_numpy(),
+                "distance_miles": curb_distance[c_demand_index, c_site_index],
+                "existing_capacity_kwh": 0.0,
+            }
+        )
+        sites = pd.concat([sites, curbside[site_columns]], ignore_index=True)
+        if sites["site_id"].duplicated().any():
+            raise ValueError("Curbside candidate IDs collide with existing site IDs")
+        accessible = pd.concat([accessible, curb_pairs], ignore_index=True)
+        curbside_audit.update(
+            {
+                "curbside_candidate_rule": "demand points with zero accessible existing supply",
+                "curbside_candidates": int(len(curbside)),
+                "curbside_accessible_pairs": int(len(curb_pairs)),
+                "curbside_ports_per_site": int(config["curbside_ports_per_site"]),
+                "curbside_site_cost_usd": float(curbside["site_cost_usd"].iloc[0]) if len(curbside) else None,
+                "curbside_site_capacity_kwh": float(curbside["site_capacity_kwh"].iloc[0]) if len(curbside) else None,
+            }
+        )
+
     audit = {
         **demand_audit,
         "public_l2_source_rows": int(len(public_sites)),
@@ -523,6 +632,10 @@ def prepare_model_data(
         "municipal_hours_review_status_counts": municipal["operating_hours_basis"].value_counts().to_dict(),
         "nonmunicipal_weekly_hours_assumed": float(config["weekly_operating_hours"]),
     }
+    if curbside_enabled(config):
+        audit.update(curbside_audit)
+        audit["modeled_supply_sites_after_deduplication"] = int(len(sites) - len(curbside))
+        audit["accessible_pairs"] = int(len(accessible))
 
     return ModelData(
         config=config,
@@ -532,4 +645,5 @@ def prepare_model_data(
         accessible_pairs=accessible,
         excluded_candidates=excluded,
         audit=audit,
+        curbside=curbside,
     )

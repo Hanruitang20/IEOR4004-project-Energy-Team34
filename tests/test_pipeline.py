@@ -109,5 +109,61 @@ class DataPreparationTests(unittest.TestCase):
         self.assertAlmostEqual(float(audit["allocation_conservation_error_records"]), 0.0)
 
 
+class CurbsideExtensionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.base = prepare_model_data(PROJECT_ROOT, PROJECT_ROOT / "config" / "tract_case.json")
+        cls.curb = prepare_model_data(
+            PROJECT_ROOT, PROJECT_ROOT / "config" / "tract_curbside_case.json"
+        )
+
+    def test_base_case_has_no_curbside_candidates(self) -> None:
+        self.assertEqual(len(self.base.curbside), 0)
+        self.assertFalse(self.base.sites["site_type"].eq("curbside").any())
+
+    def test_curbside_candidates_are_unserved_demand_points(self) -> None:
+        c = self.curb.curbside
+        self.assertGreater(len(c), 0)
+        unserved = self.curb.demand.loc[
+            self.curb.demand["accessible_existing_supply_kwh"] <= 1e-9, "geography_id"
+        ].astype(str)
+        self.assertEqual(set(c["geography_id"].astype(str)), set(unserved))
+        self.assertFalse(self.curb.sites["site_id"].duplicated().any())
+
+    def test_curbside_capacity_and_cost_follow_config(self) -> None:
+        cfg = self.curb.config
+        c = self.curb.curbside
+        per_port = (
+            cfg["port_power_kw"]
+            * cfg["curbside_weekly_operating_hours"]
+            * cfg["curbside_availability_factor"]
+        )
+        np.testing.assert_allclose(c["site_capacity_kwh"], per_port * cfg["curbside_ports_per_site"])
+        np.testing.assert_allclose(
+            c["site_cost_usd"],
+            cfg["curbside_fixed_cost_per_site_usd"]
+            + cfg["curbside_ports_per_site"] * cfg["curbside_cost_per_port_usd"],
+        )
+        self.assertTrue(c["existing_capacity_kwh"].eq(0).all())
+
+    def test_curbside_does_not_change_demand_or_equity(self) -> None:
+        cols = ["demand_id", "projected_demand_kwh", "equity_shortage_score"]
+        pd.testing.assert_frame_equal(
+            self.base.demand[cols].reset_index(drop=True),
+            self.curb.demand[cols].reset_index(drop=True),
+        )
+
+    def test_curbside_pairs_respect_radius(self) -> None:
+        pairs = self.curb.accessible_pairs
+        curb_pairs = pairs.loc[pairs["site_id"].str.startswith("C:")]
+        self.assertGreater(len(curb_pairs), 0)
+        self.assertLessEqual(
+            float(curb_pairs["distance_miles"].max()),
+            float(self.curb.config["service_radius_miles"]) + 1e-10,
+        )
+        base_pairs = pairs.loc[~pairs["site_id"].str.startswith("C:")]
+        self.assertEqual(len(base_pairs), len(self.base.accessible_pairs))
+
+
 if __name__ == "__main__":
     unittest.main()
