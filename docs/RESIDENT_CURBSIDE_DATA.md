@@ -51,6 +51,8 @@ installation budget and at most 150 curbside projects. The existing cost assumpt
 of $25,000/curbside port (four ports/site, $100,000/site) is not a DOT quotation and
 requires independent cost evidence or sensitivity analysis.
 
-This data-only addition does not change the repository's solver, configuration or
-checked-in reference results. The existing `tract_curbside_case.json` still generates
-tract-center candidates until the resident-location loader/configuration is integrated.
+The resident-location loader is now integrated in `src/resident_candidates.py` and
+`src/data_preparation.py`. Run `config/tract_resident_curbside_15m_cap150.json` for
+this scenario; the older `tract_curbside_case.json` intentionally retains its
+synthetic tract-center candidates. See [verified run](../results/resident_curbside_15m_cap150/RUN_NOTES.md)
+and [cost parameters](COST_PARAMETERS.md). Source demand and existing-supply equity scores are unchanged.

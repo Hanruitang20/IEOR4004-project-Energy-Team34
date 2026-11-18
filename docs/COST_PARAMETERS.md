@@ -1,6 +1,6 @@
 # Simplified cost parameters for parking plus curbside planning
 
-This notation change preserves the existing municipal cost assumptions; it does not change the solver or publish a new run.
+This notation change preserves the existing municipal cost assumptions. The solver now uses the precomputed `applicable_fixed_cost_usd` directly, replacing the former product of fixed cost and first-time indicator. The resident-data scenario has been rerun with Gurobi; see `results/resident_curbside_15m_cap150/`. Historical output snapshots may retain the former column names.
 
 | Parameter | Definition | Planning value / basis |
 | --- | --- | --- |
