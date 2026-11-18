@@ -32,7 +32,7 @@ This repository contains the data, Gurobi implementation, verified outputs, and 
 
 The current Milestone 4 working model represents demand at the Census-tract level, uses the required 0.5-mile base-case radius, and solves the Milestone 3 equity-weighted formulation without changing its objective or constraints. The earlier ZIP-point implementation is retained as a spatial baseline for sanity checking.
 
-> **Writing the report?** Start with [Milestone 4 Report Context and Reminders](MILESTONE4_REPORT_REMINDERS.md). It records the frozen formulation, assumptions requiring team confirmation, verified result terminology, limitations, and wording cautions.
+> **Writing the report?** Start with [Milestone 4 Report Context and Reminders](milestones/MILESTONE4_REPORT_REMINDERS.md). It records the frozen formulation, assumptions requiring team confirmation, verified result terminology, limitations, and wording cautions.
 
 
 ## Current checked-in tract result
@@ -73,10 +73,11 @@ These results represent a model-based candidate investment plan under the stated
 | Need | Document or command |
 | --- | --- |
 | Give an AI assistant the full project context | [AI Project Reading and Handoff Guide](AGENTS.md) |
-| Write or review the Milestone 4 report | [Milestone 4 Report Context and Reminders](MILESTONE4_REPORT_REMINDERS.md) |
+| Write or review the Milestone 4 report | [Milestone 4 Report Context and Reminders](milestones/MILESTONE4_REPORT_REMINDERS.md) |
 | Run the project on a teammate's Gurobi environment | [Gurobi Run Instructions](GUROBI_RUN_INSTRUCTIONS.md) |
-| Read the implementation and sanity-check findings | [Milestone 4 Implementation and Results](docs/MILESTONE4.md) |
-| Review the final algebraic formulation | [Milestone 3 Final PDF](docs/IEOR4004_Milestone3_Latest.pdf) |
+| Read the implementation and sanity-check findings | [Milestone 4 Implementation and Results](milestones/MILESTONE4.md) |
+| Review the final algebraic formulation | [Milestone 3 Final PDF](milestones/IEOR4004_Milestone3_Latest.pdf) |
+| Review the Milestone 5 report draft | [Milestone 5 Word Draft](milestones/Milestone5_Draft.docx) |
 | Browse all project documentation | [Documentation Index](docs/README.md) |
 | Run the current tract model | `python run_model.py --config config/tract_case.json --output-dir results/tract_case` |
 | Run the ZIP-versus-tract comparison | `python run_geography_comparison.py` |
@@ -91,7 +92,7 @@ After pulling the repository, a teammate can start an AI session in the reposito
 ```text
 README.md                         Project overview and current verified result
 AGENTS.md                         Required reading order and rules for AI assistants
-MILESTONE4_REPORT_REMINDERS.md    Shared report-writing context at the repository root
+milestones/                       Milestone reports and supporting documentation
 GUROBI_RUN_INSTRUCTIONS.md        Portable setup and execution instructions
 config/                           ZIP baseline and tract working-model assumptions
 data/                             Source snapshots and prepared datasets
@@ -229,4 +230,4 @@ The token is sent only in the request header and is not saved by the script.
 - The ICCT hardware and installation inputs are 2019 benchmarks.
 - Twenty-two ZIP rows containing 34 registrations had no positive NYC tract match and were excluded rather than assigned invented locations; 51,322 matched records were conserved exactly.
 
-For the required reporting language and interpretation of these limitations, use [Milestone 4 Report Context and Reminders](MILESTONE4_REPORT_REMINDERS.md).
+For the required reporting language and interpretation of these limitations, use [Milestone 4 Report Context and Reminders](milestones/MILESTONE4_REPORT_REMINDERS.md).

@@ -33,9 +33,9 @@ This file applies to the entire repository. Any AI assistant working on this pro
 ## Required reading order
 
 1. Read `README.md` for the project scope, current verified result, repository map, and command overview.
-2. Read `docs/IEOR4004_Milestone3_Latest.pdf` for the finalized algebraic formulation. Treat this PDF as the authority for the objective, sets, parameters, decision variables, and constraints.
-3. Read `MILESTONE4_REPORT_REMINDERS.md` for the frozen interpretation, assumptions requiring group confirmation, terminology, limitations, and report wording.
-4. Read `docs/MILESTONE4.md` for the model-to-code mapping, tract data preparation, current Gurobi result, ZIP comparison, and sanity-check interpretation.
+2. Read `milestones/IEOR4004_Milestone3_Latest.pdf` for the finalized algebraic formulation. Treat this PDF as the authority for the objective, sets, parameters, decision variables, and constraints.
+3. Read `milestones/MILESTONE4_REPORT_REMINDERS.md` for the frozen interpretation, assumptions requiring group confirmation, terminology, limitations, and report wording.
+4. Read `milestones/MILESTONE4.md` for the model-to-code mapping, tract data preparation, current Gurobi result, ZIP comparison, and sanity-check interpretation.
 5. Read `GUROBI_RUN_INSTRUCTIONS.md` before running or packaging the model.
 6. Read `config/tract_case.json`, then `config/base_case.json`. The tract configuration is the current working model; the ZIP configuration is a comparison baseline.
 7. Read the implementation in this order:
@@ -62,7 +62,7 @@ Use the file that controls the type of claim:
 2. Code and tests for implementation behavior.
 3. `config/tract_case.json` for current run assumptions.
 4. Checked-in tract `summary.json` and `sanity_checks.json` for verified numerical results from the current committed run.
-5. `MILESTONE4_REPORT_REMINDERS.md` for report interpretation and wording.
+5. `milestones/MILESTONE4_REPORT_REMINDERS.md` for report interpretation and wording.
 6. README and other summaries for navigation.
 
 If these sources conflict, flag the conflict before editing or reporting a result. Do not silently reconcile it by inventing a value, changing the formulation, or overwriting checked-in results.

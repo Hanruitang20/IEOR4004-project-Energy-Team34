@@ -200,4 +200,4 @@ python -m unittest discover -s tests
 
 The official HUD-USPS crosswalk is included in `data/`, so the optimization does not require internet access. The normal run reads cached municipal geocodes. Regenerating those geocodes with `python src/geocode_candidates.py` requires internet access and may produce different results if the geocoding service changes.
 
-For the report-ready formulation, terminology, assumptions, and limitations, return to [Milestone 4 Report Context and Reminders](../MILESTONE4_REPORT_REMINDERS.md).
+For the report-ready formulation, terminology, assumptions, and limitations, return to [Milestone 4 Report Context and Reminders](MILESTONE4_REPORT_REMINDERS.md).
