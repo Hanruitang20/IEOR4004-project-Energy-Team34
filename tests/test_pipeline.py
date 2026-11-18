@@ -65,6 +65,13 @@ class DataPreparationTests(unittest.TestCase):
         other = self.data.sites.loc[self.data.sites["site_type"].eq("other")]
         self.assertTrue(other["operating_hours_per_week"].eq(168).all())
 
+    def test_fixed_cost_absorbs_first_time_indicator(self) -> None:
+        m = self.data.municipal
+        expected = np.where(m["existing_ports"].eq(0),
+                            self.data.config["fixed_first_time_install_cost_usd"], 0.0)
+        np.testing.assert_array_equal(m["applicable_fixed_cost_usd"], expected)
+        self.assertNotIn("first_time_install_indicator", m.columns)
+
     def test_missing_and_invalid_hours_fail_instead_of_defaulting(self) -> None:
         for value in [None, "unknown", -1, 169, float("inf")]:
             with self.subTest(value=value), self.assertRaises(ValueError):
