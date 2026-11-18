@@ -2,6 +2,14 @@
 
 This package contains the code, configuration, data, tests, documentation, and reference outputs required to reproduce the IEOR 4004 Milestone 4 candidate solution. All project paths are relative to the extracted package directory.
 
+## Selected resident-data scenario
+
+```bash
+python run_model.py --config config/tract_resident_curbside_15m_cap150.json --output-dir results/resident_curbside_15m_cap150
+```
+
+Expected candidate: 11 municipal sites / 41 new ports and 115 curbside sites / 460 new ports; $11,974,897, 664,576.38 kWh/week served (67.64%). Stage 1 and cost gaps: 0.2053% and 0.4672%, within 0.5% tolerance. Alternate incumbents can differ within tolerance. See `results/resident_curbside_15m_cap150/RUN_NOTES.md` and `docs/RESIDENT_CURBSIDE_MODEL.md`. The commands and results below preserve the historical baseline and synthetic-curbside comparisons.
+
 ## 1. Requirements
 
 - Python 3.10 or later is recommended.
