@@ -1,5 +1,18 @@
 # IEOR 4004 NYC Public Level 2 EV Charging Optimization
 
+## Resident-suggested curbside data — November 18, 2026
+
+The collected workbook is available at
+[data/NYC_Curbside_Resident_Suggestions.xlsx](data/NYC_Curbside_Resident_Suggestions.xlsx).
+CSV snapshots contain 631 records and 544 grouped locations; 487 pass the initial
+support/boundary screen. These are resident suggestions, not approved construction
+sites. See [data definitions and limitations](docs/RESIDENT_CURBSIDE_DATA.md).
+The model-ready CSV is [resident_curbside_candidates_2026-11-18.csv](data/resident_curbside_candidates_2026-11-18.csv); filter `candidate_eligible = true` to select 487 candidates. Original records, boundary geometry and screening metadata are retained in `data/reference/`.
+
+The selected next scenario combines municipal parking and resident-suggested curbside investment with a **$15M hypothetical installation budget**, **0.5-mile radius** and **at most 150 curbside sites** (not 150 ports). The existing code/configuration and checked-in results below still describe earlier scenarios; this upload adds data and formulation guidance, not the resident-data solver integration or its results.
+
+See [simplified fixed-cost parameters](docs/COST_PARAMETERS.md): absorb the former first-installation indicator `a_j` into a precomputed municipal fixed cost `F_j`. This preserves the municipal cost assumptions and removes one displayed parameter.
+
 ## Curbside extension scenario — November 18, 2026
 
 An optional curbside Level 2 scenario has been added. It does not change the base case: `config/tract_case.json` and `results/tract_case/` are unchanged. `config/tract_curbside_case.json` adds one curbside candidate (4 ports, $100,000) at each of the 1,121 tracts with no existing supply within 0.5 mile, and the curbside sites share the $3.75M budget. Reference result: 10 municipal facilities with 43 ports plus 33 curbside sites with 132 ports, $3,747,331 invested, serving 583,373.79 kWh/week (59.38% vs 49.97%). This result was generated with SciPy/HiGHS through a gurobipy-compatible shim; rerun with Gurobi before reporting. See [docs/CURBSIDE.md](docs/CURBSIDE.md) for the formulation change, parameter sources and limitations. Fourteen pipeline tests pass.
