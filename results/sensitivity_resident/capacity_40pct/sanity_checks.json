@@ -1,0 +1,15 @@
+{
+  "all_checks_pass": true,
+  "budget_feasible": true,
+  "max_demand_violation_kwh": 1.8189894035458565e-12,
+  "max_capacity_violation_kwh": 1.5916157281026244e-12,
+  "activation_constraints_hold": true,
+  "selected_sites_have_accessible_demand": true,
+  "maximum_flow_pair_distance_miles": 0.4999828825052693,
+  "service_radius_miles": 0.5,
+  "weighted_objective_recomputed": 829915.3575059454,
+  "primary_incumbent_preserved": true,
+  "curbside_activation_holds": true,
+  "curbside_site_limit_holds": true,
+  "curbside_max_sites": 150
+}
