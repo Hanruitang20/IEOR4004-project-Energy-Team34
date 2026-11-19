@@ -172,5 +172,31 @@ class CurbsideExtensionTests(unittest.TestCase):
         self.assertEqual(len(base_pairs), len(self.base.accessible_pairs))
 
 
+class DemandMultiplierTests(unittest.TestCase):
+    def test_multiplier_scales_projected_demand_only(self) -> None:
+        config = PROJECT_ROOT / "config" / "tract_case.json"
+        base = prepare_model_data(PROJECT_ROOT, config)
+        scaled = prepare_model_data(
+            PROJECT_ROOT, config, overrides={"projected_demand_multiplier": 1.5}
+        )
+        np.testing.assert_allclose(
+            scaled.demand["projected_demand_kwh"], 1.5 * base.demand["projected_demand_kwh"]
+        )
+        np.testing.assert_allclose(
+            scaled.demand["baseline_demand_kwh"], base.demand["baseline_demand_kwh"]
+        )
+        np.testing.assert_allclose(
+            scaled.demand["equity_shortage_score"], base.demand["equity_shortage_score"]
+        )
+
+    def test_invalid_multiplier_fails(self) -> None:
+        with self.assertRaises(ValueError):
+            prepare_model_data(
+                PROJECT_ROOT,
+                PROJECT_ROOT / "config" / "tract_case.json",
+                overrides={"projected_demand_multiplier": 0},
+            )
+
+
 if __name__ == "__main__":
     unittest.main()
