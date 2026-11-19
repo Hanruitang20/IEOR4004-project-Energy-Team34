@@ -1,6 +1,6 @@
 # Project Documentation Index
 
-Use this page to find the authoritative project documents. The current working result is the tract-level Gurobi model; the ZIP-point model is retained only as a comparison and sensitivity baseline.
+Use this page to find the authoritative project documents. The current working result is the resident-curbside plus municipal parking model (`config/tract_resident_curbside_15m_cap150.json`, Gurobi). The parking-only tract model is the Milestone 4 baseline, and the ZIP-point model is retained only as a spatial comparison.
 
 ## AI onboarding
 
@@ -20,7 +20,10 @@ Use this page to find the authoritative project documents. The current working r
 
 ## Supporting repository locations
 
-- `config/tract_case.json`: current tract working-model assumptions.
+- `config/tract_resident_curbside_15m_cap150.json`: current working-model assumptions (resident curbside + municipal parking).
+- `results/resident_curbside_15m_cap150/`: verified Gurobi result for the current model.
+- `results/sensitivity_resident/`: Section 6 sensitivity runs (Gurobi).
+- `config/tract_case.json`: parking-only tract baseline (Milestone 4).
 - `config/base_case.json`: earlier ZIP-point comparison assumptions.
 - `results/geography_comparison/tract/`: checked-in tract reference outputs.
 - `results/geography_comparison/zip/`: checked-in ZIP reference outputs.
