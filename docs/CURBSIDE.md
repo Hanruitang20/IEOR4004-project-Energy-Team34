@@ -48,9 +48,9 @@ Sources:
 | Service rate | 49.97% | 59.38% |
 | Served by curbside (kWh/week) | — | 95,800.32 (all 33 sites at full capacity) |
 
-Selected curbside sites by county: Kings 14, Queens 14, Richmond 4, Bronx 1. Other optimal solutions can choose different tracts with the same objective value, so the exact site list may differ between solvers.
+Selected curbside sites by county: Queens 16, Kings (Brooklyn) 9, Richmond (Staten Island) 7, Bronx 1. Other optimal solutions can choose different tracts with the same objective value, so the exact site list may differ between solvers.
 
-All sanity checks pass. **Solver note:** this reference result was generated with SciPy/HiGHS through a gurobipy-compatible shim because Gurobi was not available in the generating environment. The unchanged tract base case was reproduced exactly with the same shim (14 facilities, 55 ports, $601,935, 490,980.68 kWh/week). Rerun with Gurobi before reporting:
+All sanity checks pass. **Solver:** Gurobi; both stages returned OPTIMAL (Stage 1 gap 0.0040%, Stage 2 gap 0.00003%). An earlier exploratory run with a different solver reached the same totals with a different but equally optimal site list. To reproduce:
 
 ```bash
 python run_model.py --config config/tract_curbside_case.json --output-dir results/tract_curbside_case
