@@ -157,7 +157,14 @@ def _calculate_energy_demand(
     growth_multiplier = (1.0 + float(config["annual_demand_growth_rate"])) ** int(
         config["planning_horizon_years"]
     )
-    demand["projected_demand_kwh"] = demand["baseline_demand_kwh"] * growth_multiplier
+    # Optional sensitivity scaling of projected demand only. Baseline demand, and
+    # therefore the shortage scores g_i, are unchanged. Default 1.0 = no change.
+    demand_multiplier = float(config.get("projected_demand_multiplier", 1.0))
+    if not np.isfinite(demand_multiplier) or demand_multiplier <= 0:
+        raise ValueError("projected_demand_multiplier must be positive")
+    demand["projected_demand_kwh"] = (
+        demand["baseline_demand_kwh"] * growth_multiplier * demand_multiplier
+    )
     return demand
 
 
