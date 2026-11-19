@@ -10,7 +10,8 @@ Use this page to find the authoritative project documents. The current working r
 
 - [Milestone 3 Final PDF](../milestones/IEOR4004_Milestone3_Latest.pdf): finalized algebraic formulation that the code implements.
 - [Milestone 4 Implementation and Results](../milestones/MILESTONE4.md): model-to-code mapping, tract data preparation, verified candidate solution, ZIP comparison, and sanity-check interpretation.
-- [Milestone 5 Report Draft](../milestones/Milestone5_Draft.docx): current Word report draft.
+- [Milestone 5 Report Draft](../milestones/Milestone5_Draft.docx): current Word report draft (Section 6 updated November 18, 2026 with the resident-curbside sensitivity analysis).
+- [Section 6 sensitivity run notes](../results/sensitivity_resident/RUN_NOTES.md): scenarios, solver settings, outputs and caveats.
 - [Curbside Extension Scenario](CURBSIDE.md): optional curbside Level 2 candidates, formulation change, parameter sources, reference result and limitations. Does not change the base case.
 
 ## Execution document
