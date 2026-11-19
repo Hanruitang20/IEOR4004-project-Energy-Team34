@@ -6,7 +6,7 @@
 
 ## Curbside extension scenario — November 18, 2026
 
-`config/tract_curbside_case.json` enables an optional curbside extension (`curbside_enabled: true`). It is documented in `docs/CURBSIDE.md`. It adds curbside candidates K with binary w_k, a shared budget term and a capacity constraint; nothing in the base-case formulation, configuration or results changes. Configs without `curbside_enabled` behave exactly as before. `results/tract_curbside_case/` was generated with SciPy/HiGHS through a gurobipy-compatible shim, so do not describe it as a Gurobi result until it has been rerun with Gurobi. Curbside cost ($25,000/port) and availability (0.6) are planning assumptions.
+`config/tract_curbside_case.json` enables an optional curbside extension (`curbside_enabled: true`). It is documented in `docs/CURBSIDE.md`. It adds curbside candidates K with binary w_k, a shared budget term and a capacity constraint; nothing in the base-case formulation, configuration or results changes. Configs without `curbside_enabled` behave exactly as before. `results/tract_curbside_case/` is a Gurobi run (both stages OPTIMAL; 33 curbside sites: Queens 16, Brooklyn 9, Staten Island 7, Bronx 1). Curbside cost ($25,000/port) and availability (0.6) are planning assumptions.
 
 ## Current installation limits — November 4, 2026
 

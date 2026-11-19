@@ -82,7 +82,7 @@ These are scenario inputs selected before optimization, not values estimated by 
 python run_model.py --config config/tract_curbside_case.json --output-dir results/tract_curbside_case
 ```
 
-Expected (reference HiGHS run): OPTIMAL, 33 curbside sites (132 ports) plus 10 municipal facilities (43 ports), $3,747,331 invested, 583,373.79 kWh/week served (59.38%). An alternative optimum can pick different tracts with the same objective value. The run also writes `curbside_candidate_solution.csv`. Rerunning with Gurobi overwrites the HiGHS note in the `solver` field of `summary.json`. See `docs/CURBSIDE.md`.
+Expected (Gurobi): OPTIMAL, 33 curbside sites (132 ports) plus 10 municipal facilities (43 ports), $3,747,331 invested, 583,373.79 kWh/week served (59.38%). An alternative optimum can pick different tracts with the same objective value. The run also writes `curbside_candidate_solution.csv`. See `docs/CURBSIDE.md`.
 
 ## 6. Expected base-case result
 

@@ -27,7 +27,7 @@ See [simplified fixed-cost parameters](docs/COST_PARAMETERS.md): absorb the form
 
 ## Earlier synthetic curbside comparison — November 18, 2026
 
-An optional curbside Level 2 scenario has been added. It does not change the base case: `config/tract_case.json` and `results/tract_case/` are unchanged. `config/tract_curbside_case.json` adds one curbside candidate (4 ports, $100,000) at each of the 1,121 tracts with no existing supply within 0.5 mile, and the curbside sites share the $3.75M budget. Reference result: 10 municipal facilities with 43 ports plus 33 curbside sites with 132 ports, $3,747,331 invested, serving 583,373.79 kWh/week (59.38% vs 49.97%). This result was generated with SciPy/HiGHS through a gurobipy-compatible shim; rerun with Gurobi before reporting. See [docs/CURBSIDE.md](docs/CURBSIDE.md) for the formulation change, parameter sources and limitations.
+An optional curbside Level 2 scenario has been added. It does not change the base case: `config/tract_case.json` and `results/tract_case/` are unchanged. `config/tract_curbside_case.json` adds one curbside candidate (4 ports, $100,000) at each of the 1,121 tracts with no existing supply within 0.5 mile, and the curbside sites share the $3.75M budget. Reference result: 10 municipal facilities with 43 ports plus 33 curbside sites with 132 ports, $3,747,331 invested, serving 583,373.79 kWh/week (59.38% vs 49.97%). Solved with Gurobi (both stages OPTIMAL; Stage 1 gap 0.0040%, Stage 2 gap 0.00003%); the 33 curbside sites are in Queens (16), Brooklyn (9), Staten Island (7) and the Bronx (1). See [docs/CURBSIDE.md](docs/CURBSIDE.md) for the formulation change, parameter sources and limitations.
 
 ## Current installation limits — November 4, 2026
 
