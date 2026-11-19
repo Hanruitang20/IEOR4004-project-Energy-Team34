@@ -1,5 +1,9 @@
 # IEOR 4004 NYC Public Level 2 EV Charging Optimization
 
+## Section 6 sensitivity analysis — November 18, 2026
+
+`run_resident_sensitivity.py` re-optimizes the resident-curbside reference (`config/tract_resident_curbside_15m_cap150.json`) one parameter at a time: budget, curbside site cost, projected demand, curbside capacity factor, λ, and optionally the service radius. Each scenario's configuration and outputs are in `results/sensitivity_resident/<scenario>/`; the comparison table is `results/sensitivity_resident/sensitivity_comparison.csv`, and the figures are in `results/sensitivity_resident/figures/`. Main findings: the service radius matters most (41.4%–86.2% served); service flattens above about $10M (the $15M budget is not binding: $2.25M unused at a 0.01% gap); the plan is unchanged for curbside costs of $50k–$100k per site; λ shifts service toward high-shortage tracts without changing investment. These outputs were generated with SciPy/HiGHS at a 0.01% gap; rerun with Gurobi before final reporting. See `results/sensitivity_resident/RUN_NOTES.md`. A new optional config key, `projected_demand_multiplier` (default 1.0), scales projected demand without changing g_i. Twenty-one tests pass (one skipped).
+
 ## Resident-suggested curbside data — November 18, 2026
 
 The collected workbook is available at

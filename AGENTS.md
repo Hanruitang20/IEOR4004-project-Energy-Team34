@@ -1,5 +1,9 @@
 # AI Project Reading and Handoff Guide
 
+## Section 6 sensitivity runs — November 18, 2026
+
+`results/sensitivity_resident/` holds one-at-a-time sensitivity runs of the resident-curbside reference, produced by `run_resident_sensitivity.py`. They were solved with SciPy/HiGHS through a gurobipy-compatible shim at a 0.01% MIP gap, so do not describe them as Gurobi results until rerun with Gurobi. The checked-in reference `results/resident_curbside_15m_cap150/` (Gurobi, 0.5% gap) is unchanged. `projected_demand_multiplier` (default 1.0) scales projected demand only; baseline demand and g_i are unchanged. Alternative optima exist among nearby resident pins, so site-list differences between runs with equal service are not parameter effects.
+
 ## Curbside extension scenario — November 18, 2026
 
 `config/tract_curbside_case.json` enables an optional curbside extension (`curbside_enabled: true`). It is documented in `docs/CURBSIDE.md`. It adds curbside candidates K with binary w_k, a shared budget term and a capacity constraint; nothing in the base-case formulation, configuration or results changes. Configs without `curbside_enabled` behave exactly as before. `results/tract_curbside_case/` was generated with SciPy/HiGHS through a gurobipy-compatible shim, so do not describe it as a Gurobi result until it has been rerun with Gurobi. Curbside cost ($25,000/port) and availability (0.6) are planning assumptions.
