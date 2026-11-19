@@ -2,7 +2,7 @@
 
 ## Section 6 sensitivity analysis — November 18, 2026
 
-`run_resident_sensitivity.py` re-optimizes the resident-curbside reference (`config/tract_resident_curbside_15m_cap150.json`) one parameter at a time: budget, curbside site cost, projected demand, curbside capacity factor, λ, and optionally the service radius. Each scenario's configuration and outputs are in `results/sensitivity_resident/<scenario>/`; the comparison table is `results/sensitivity_resident/sensitivity_comparison.csv`, and the figures are in `results/sensitivity_resident/figures/`. Main findings: the service radius matters most (41.4%–86.2% served); service flattens above about $10M (the $15M budget is not binding: $2.25M unused at a 0.01% gap); the plan is unchanged for curbside costs of $50k–$100k per site; λ shifts service toward high-shortage tracts without changing investment. These outputs were generated with SciPy/HiGHS at a 0.01% gap; rerun with Gurobi before final reporting. See `results/sensitivity_resident/RUN_NOTES.md`. A new optional config key, `projected_demand_multiplier` (default 1.0), scales projected demand without changing g_i. Twenty-one tests pass (one skipped).
+`run_resident_sensitivity.py` re-optimizes the resident-curbside reference (`config/tract_resident_curbside_15m_cap150.json`) one parameter at a time: budget, curbside site cost, projected demand, curbside capacity factor, λ, and optionally the service radius. Each scenario's configuration and outputs are in `results/sensitivity_resident/<scenario>/`; the comparison table is `results/sensitivity_resident/sensitivity_comparison.csv`, and the figures are in `results/sensitivity_resident/figures/`. Main findings (Gurobi, 0.01% gap): the service radius matters most (41.4%–86.2% served); service flattens above about $10M (the $15M budget is not binding: $2.25M unused); the plan is essentially unchanged for curbside costs of $50k–$100k per site; λ shifts service toward high-shortage tracts without changing investment. The sensitivity reference is re-solved at a 0.01% gap, so it serves 665,451 kWh/week (67.73%) with 123 curbside sites for $12,754,897 and leaves $2,245,103 unused; the verified main result below (67.64%, 115 sites, $3,025,103 unused) used a 0.5% gap. The difference is solver tolerance, not a different model. See `results/sensitivity_resident/RUN_NOTES.md`. A new optional config key, `projected_demand_multiplier` (default 1.0), scales projected demand without changing g_i. Twenty-one tests pass (one skipped).
 
 ## Resident-suggested curbside data — November 18, 2026
 
@@ -19,7 +19,7 @@ The selected next scenario combines municipal parking and resident-suggested cur
 python run_model.py --config config/tract_resident_curbside_15m_cap150.json --output-dir results/resident_curbside_15m_cap150
 ```
 
-**Verified result:** 67.64% served (664,576.38 kWh/week), $11,974,897 invested, 11 municipal facilities with 41 added ports, and 115 curbside sites with 460 added ports. Remaining budget: $3,025,103. Stage 1 and Stage 2 MIP gaps are 0.2053% and 0.4672%, respectively, within the configured 0.5% tolerance; this is not an exact zero-gap optimum. All feasibility checks and 19 tests pass. The parking-only tract and ZIP baselines were rerun and retain their original numerical results.
+**Verified result:** 67.64% served (664,576.38 kWh/week), $11,974,897 invested, 11 municipal facilities with 41 added ports, and 115 curbside sites with 460 added ports. Remaining budget: $3,025,103. Stage 1 and Stage 2 MIP gaps are 0.2053% and 0.4672%, respectively, within the configured 0.5% tolerance; this is not an exact zero-gap optimum. All feasibility checks pass (19 tests passed at the time of this run; with the sensitivity additions, 21 pass and one is skipped). The parking-only tract and ZIP baselines were rerun and retain their original numerical results.
 
 See [formulation and implementation](docs/RESIDENT_CURBSIDE_MODEL.md), [run notes and output files](results/resident_curbside_15m_cap150/RUN_NOTES.md), and [data provenance](docs/RESIDENT_CURBSIDE_DATA.md). Results below document earlier parking-only and synthetic-curbside comparisons; they are preserved separately.
 
@@ -27,7 +27,7 @@ See [simplified fixed-cost parameters](docs/COST_PARAMETERS.md): absorb the form
 
 ## Earlier synthetic curbside comparison — November 18, 2026
 
-An optional curbside Level 2 scenario has been added. It does not change the base case: `config/tract_case.json` and `results/tract_case/` are unchanged. `config/tract_curbside_case.json` adds one curbside candidate (4 ports, $100,000) at each of the 1,121 tracts with no existing supply within 0.5 mile, and the curbside sites share the $3.75M budget. Reference result: 10 municipal facilities with 43 ports plus 33 curbside sites with 132 ports, $3,747,331 invested, serving 583,373.79 kWh/week (59.38% vs 49.97%). This result was generated with SciPy/HiGHS through a gurobipy-compatible shim; rerun with Gurobi before reporting. See [docs/CURBSIDE.md](docs/CURBSIDE.md) for the formulation change, parameter sources and limitations. Fourteen pipeline tests pass.
+An optional curbside Level 2 scenario has been added. It does not change the base case: `config/tract_case.json` and `results/tract_case/` are unchanged. `config/tract_curbside_case.json` adds one curbside candidate (4 ports, $100,000) at each of the 1,121 tracts with no existing supply within 0.5 mile, and the curbside sites share the $3.75M budget. Reference result: 10 municipal facilities with 43 ports plus 33 curbside sites with 132 ports, $3,747,331 invested, serving 583,373.79 kWh/week (59.38% vs 49.97%). This result was generated with SciPy/HiGHS through a gurobipy-compatible shim; rerun with Gurobi before reporting. See [docs/CURBSIDE.md](docs/CURBSIDE.md) for the formulation change, parameter sources and limitations.
 
 ## Current installation limits — November 4, 2026
 
@@ -55,18 +55,18 @@ Run `python run_model.py --config config/tract_case.json --output-dir results/tr
 
 This repository contains the data, Gurobi implementation, verified outputs, and report guidance for Team 34's NYC public Level 2 charging location-allocation project.
 
-The current Milestone 4 working model represents demand at the Census-tract level, uses the required 0.5-mile base-case radius, and solves the Milestone 3 equity-weighted formulation without changing its objective or constraints. The earlier ZIP-point implementation is retained as a spatial baseline for sanity checking.
+The current working model is the resident-curbside plus municipal parking model described at the top of this README. The Milestone 4 parking-only model represents demand at the Census-tract level, uses the required 0.5-mile base-case radius, and solves the Milestone 3 equity-weighted formulation without changing its objective or constraints. The earlier ZIP-point implementation is retained as a spatial baseline for sanity checking.
 
 > **Writing the report?** See [Milestone 4 Implementation and Results](milestones/MILESTONE4.md) for the formulation, assumptions requiring team confirmation, results, and limitations.
 
 
-## Current checked-in tract result
+## Parking-only tract baseline (Milestone 4)
 
-The current working model uses Census tracts as demand points, with a 0.5-mile service radius and an equity weight of lambda = 1.
+This section documents the Milestone 4 parking-only baseline, kept for comparison. It uses Census tracts as demand points, with a 0.5-mile service radius and an equity weight of lambda = 1.
 
 The latest verified Gurobi results are stored in `results/tract_case/summary.json` and `results/geography_comparison/tract/summary.json`.
 
-The current tract-level model reports:
+The parking-only tract baseline reports:
 
 - 2,285 Census tract demand points.
 - 40 municipal investment candidates.
@@ -104,7 +104,9 @@ These results represent a model-based candidate investment plan under the stated
 | Review the final algebraic formulation | [Milestone 3 Final PDF](milestones/IEOR4004_Milestone3_Latest.pdf) |
 | Review the Milestone 5 report draft | [Milestone 5 Word Draft](milestones/Milestone5_Draft.docx) |
 | Browse all project documentation | [Documentation Index](docs/README.md) |
-| Run the current tract model | `python run_model.py --config config/tract_case.json --output-dir results/tract_case` |
+| Run the current resident-curbside model | `python run_model.py --config config/tract_resident_curbside_15m_cap150.json --output-dir results/resident_curbside_15m_cap150` |
+| Run the Section 6 sensitivity analysis | `python run_resident_sensitivity.py --include-radius` |
+| Run the parking-only tract baseline | `python run_model.py --config config/tract_case.json --output-dir results/tract_case` |
 | Run the ZIP-versus-tract comparison | `python run_geography_comparison.py` |
 | Run automated tests | `python -m unittest discover -s tests` |
 
@@ -158,7 +160,7 @@ The implementation:
 
 ## Scenario assumptions
 
-The current tract run uses:
+The parking-only tract baseline uses:
 
 - Capital budget: $3.75 million.
 - Weekly energy per registered EV: 60 kWh.
@@ -221,7 +223,15 @@ The consolidated workbook records source links, snapshot dates, filters, and dat
 
 ## Reproducible workflows
 
-Run the current tract case:
+Run the current resident-curbside model and the Section 6 sensitivity analysis:
+
+```bash
+python run_model.py --config config/tract_resident_curbside_15m_cap150.json --output-dir results/resident_curbside_15m_cap150
+python run_resident_sensitivity.py --include-radius
+python plot_resident_sensitivity.py results/sensitivity_resident
+```
+
+Run the parking-only tract baseline:
 
 ```bash
 python run_model.py \

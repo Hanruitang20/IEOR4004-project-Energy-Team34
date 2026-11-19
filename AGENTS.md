@@ -2,7 +2,7 @@
 
 ## Section 6 sensitivity runs — November 18, 2026
 
-`results/sensitivity_resident/` holds one-at-a-time sensitivity runs of the resident-curbside reference, produced by `run_resident_sensitivity.py`. They were solved with SciPy/HiGHS through a gurobipy-compatible shim at a 0.01% MIP gap, so do not describe them as Gurobi results until rerun with Gurobi. The checked-in reference `results/resident_curbside_15m_cap150/` (Gurobi, 0.5% gap) is unchanged. `projected_demand_multiplier` (default 1.0) scales projected demand only; baseline demand and g_i are unchanged. Alternative optima exist among nearby resident pins, so site-list differences between runs with equal service are not parameter effects.
+`results/sensitivity_resident/` holds one-at-a-time sensitivity runs of the resident-curbside reference, produced by `run_resident_sensitivity.py`. They were solved with Gurobi at a 0.01% MIP gap (all stages OPTIMAL); `curbside_cost_125k` reports a 2.2e-05 kWh capacity residual that fails the absolute 1e-05 check but is numerical rounding. The checked-in reference `results/resident_curbside_15m_cap150/` (Gurobi, 0.5% gap) is unchanged. `projected_demand_multiplier` (default 1.0) scales projected demand only; baseline demand and g_i are unchanged. Alternative optima exist among nearby resident pins, so site-list differences between runs with equal service are not parameter effects.
 
 ## Curbside extension scenario — November 18, 2026
 
@@ -40,7 +40,7 @@ This file applies to the entire repository. Any AI assistant working on this pro
 2. Read `milestones/IEOR4004_Milestone3_Latest.pdf` for the finalized algebraic formulation. Treat this PDF as the authority for the objective, sets, parameters, decision variables, and constraints.
 3. Read `milestones/MILESTONE4.md` for the model-to-code mapping, tract data preparation, current Gurobi result, ZIP comparison, and sanity-check interpretation.
 4. Read `GUROBI_RUN_INSTRUCTIONS.md` before running or packaging the model.
-5. Read `config/tract_case.json`, then `config/base_case.json`. The tract configuration is the current working model; the ZIP configuration is a comparison baseline.
+5. Read `config/tract_resident_curbside_15m_cap150.json` (current working model: resident curbside + municipal parking), then `config/tract_case.json` (parking-only tract baseline) and `config/base_case.json` (ZIP comparison baseline).
 6. Read the implementation in this order:
    - `src/data_preparation.py`
    - `src/optimization.py`
@@ -117,7 +117,7 @@ Confirm solver status, MIP gap, all sanity checks, record-allocation conservatio
 
 After completing the reading sequence and before making a substantive change, summarize:
 
-1. The current tract model and how the ZIP baseline is used.
+1. The current resident-curbside model, the parking-only tract baseline, and how the ZIP baseline is used.
 2. The objective and projected-demand constraint in plain language.
 3. The five assumptions requiring group confirmation.
 4. The current verified candidate solution.
