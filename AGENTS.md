@@ -1,127 +1,50 @@
-# AI Project Reading and Handoff Guide
+# Project Guide for Coding Assistants
 
-## Section 6 sensitivity runs — November 18, 2026
+## Current scope
 
-`results/sensitivity_resident/` holds one-at-a-time sensitivity runs of the resident-curbside reference, produced by `run_resident_sensitivity.py`. They were solved with Gurobi at a 0.01% MIP gap (all stages OPTIMAL); `curbside_cost_125k` reports a 2.2e-05 kWh capacity residual that fails the absolute 1e-05 check but is numerical rounding. The checked-in reference `results/resident_curbside_15m_cap150/` (Gurobi, 0.5% gap) is unchanged. `projected_demand_multiplier` (default 1.0) scales projected demand only; baseline demand and g_i are unchanged. Alternative optima exist among nearby resident pins, so site-list differences between runs with equal service are not parameter effects.
+The current model adds public L2 ports at 40 municipal parking facilities and selects among 487 screened resident-suggested curbside locations. It uses 2,285 tract demand points, 747 other existing public sites, a hypothetical $15M installation budget, a 0.5-mile Haversine radius and a cap of 150 four-port curbside sites. New parking construction and DC fast charging are outside scope.
 
-## Curbside extension scenario — November 18, 2026
-
-`config/tract_curbside_case.json` enables an optional curbside extension (`curbside_enabled: true`). It is documented in `docs/CURBSIDE.md`. It adds curbside candidates K with binary w_k, a shared budget term and a capacity constraint; nothing in the base-case formulation, configuration or results changes. Configs without `curbside_enabled` behave exactly as before. `results/tract_curbside_case/` is a Gurobi run (both stages OPTIMAL; 33 curbside sites: Queens 16, Brooklyn 9, Staten Island 7, Bronx 1). Curbside cost ($25,000/port) and availability (0.6) are planning assumptions.
-
-## Current installation limits — November 4, 2026
-
-All 40 municipal facilities now use the same planning rule: U_j = min(20, floor(0.20 × max(0, parking spaces_j − existing L2 ports_j))). This replaces the former 10% rule; no three-site exceptions are applied. Both tract and ZIP configurations use 20%. These are assumed space-allocation limits, not verified electrical or construction limits. Gun Hill remains included and its closure notice remains unresolved.
-
-The refreshed tract base case selects 14 facilities and 55 additional ports for $601,935, serving 490,980.68 kWh/week out of 982,519.84 (49.97%). Both solve stages are OPTIMAL with 0.0% gaps. The radius remains 0.5 mile, λ=1, and the operating-hours capacity rule is unchanged. Compared with the previous 10% base case: +8 ports, +$49,736, and +4,665.60 kWh/week. These are the current base-case results.
-
-The direct tract and ZIP cases, geography comparison, and five ZIP sensitivity cases were refreshed. All feasibility checks pass. The ZIP one-mile sensitivity cost solve retains a 0.393% gap under the configured 1% tolerance; do not label every sensitivity result an exact cost optimum. Nine pipeline tests pass. Earlier separately reported radius/growth experiments used the former 10% limits and are not current-base-case results.
-
-
-## Operating-hours update — November 4, 2026
-
-This update replaces the former assumption of uniform 168-hour weekly operating time for municipal facilities with facility-specific operating hours. The working demand geography remains Census tract; ZIP runs are comparison cases. The objective, projected demand, radius, cost rules and inventory-matching algorithm are unchanged.
-
-- **H_j** is site operating hours in hours/week. Municipal values come from `data/NYC_Municipal_Parking_Locations.xlsx`, column `Scheduled hours/week`, joined by `Facility ID`. Excel is authoritative even if geocoded CSV metadata contains hours.
-- **q_j = P × H_j × α**, and **C_j^0 = n_j^0 × P × H_j × α**, with P = 7.2 kW and α = 0.90. For 90 hours/week, q_j = 583.2 kWh/(port·week). Both municipal existing and added-port capacity use this rule. No new decision variable or constraint is needed.
-- Missing, nonnumeric, infinite, negative or >168 municipal hours raise an error; zero is allowed. No municipal missing value silently becomes 168. Outputs expose `operating_hours_per_week` and its source/review status. Availability remains separate from scheduled hours.
-- Other public sites retain the config `weekly_operating_hours` value of 168 as an **unverified assumption**. Municipal schedules must not be applied to unrelated private/curbside sites.
-- The operating-hours update used the cleaned workbook and revised coordinates. Its earlier results have been superseded by the current 20% installation-limit base case reported above. The implementation retains the nearest-station-per-facility matching algorithm. The Gurobi notebook now uses the current verified model pipeline.
-- **Unresolved inputs:** Bronxdale's 168 hours is labeled an assumption. Hunts Point's user-entered 168 hours is retained, although DOT's published Mon–Sat 6am–10pm totals 96. Gun Hill remains included at 112 hours, with a December 1, 2026 closure notice; this is not a claim of future access. Ferry overnight/Sunday access, courthouse garage versus outdoor-lot access, and Gowanus/Sunnyside curbside access need review. Do not describe these schedules as verified charging-access hours or model the announced closure as already applied.
-- Equity scores are recalculated from existing hours-adjusted capacity before optimization. The five demand/policy inputs remain 60 kWh/EV/week, 25% public L2 share, 5% annual growth, five years and λ=1. Costs remain assumptions/historical benchmarks, distances remain point-based Haversine without barrier screening, and estimated tract locations do not locate individual EVs.
-
-Run `python run_model.py --config config/tract_case.json --output-dir results/tract_case`, `python run_geography_comparison.py`, `python run_sensitivity.py`, and `python -m unittest discover -s tests` after changing hours. The sensitivity runner remains ZIP-based. `results/base_case` was also refreshed.
-
-
-This file applies to the entire repository. Any AI assistant working on this project must read the materials below in order before proposing edits, changing the model, or rewriting report content.
+The model maximizes equity-weighted weekly served energy, then minimizes cost while preserving the achieved Stage 1 incumbent within epsilon. The projected-demand bound is `D_i(1+r)^T`; do not add a simultaneous baseline-demand cap. A nonzero MIP gap does not establish an exact optimum.
 
 ## Required reading order
 
-1. Read `README.md` for the project scope, current verified result, repository map, and command overview.
-2. Read `milestones/IEOR4004_Milestone3_Latest.pdf` for the finalized algebraic formulation. Treat this PDF as the authority for the objective, sets, parameters, decision variables, and constraints.
-3. Read `milestones/MILESTONE4.md` for the model-to-code mapping, tract data preparation, current Gurobi result, ZIP comparison, and sanity-check interpretation.
-4. Read `GUROBI_RUN_INSTRUCTIONS.md` before running or packaging the model.
-5. Read `config/tract_resident_curbside_15m_cap150.json` (current working model: resident curbside + municipal parking), then `config/tract_case.json` (parking-only tract baseline) and `config/base_case.json` (ZIP comparison baseline).
-6. Read the implementation in this order:
-   - `src/data_preparation.py`
-   - `src/optimization.py`
-   - `run_model.py`
-   - `run_geography_comparison.py`
-   - `run_sensitivity.py`
-   - `download_hud_crosswalk.py`
-7. Read `tests/test_pipeline.py` to understand the automated invariants.
-8. Inspect the checked-in result files in this order:
-   - `results/geography_comparison/tract/summary.json`
-   - `results/geography_comparison/tract/sanity_checks.json`
-   - `results/geography_comparison/comparison.csv`
-   - `results/geography_comparison/tract/municipal_candidate_solution.csv`
-   - Other tract, ZIP, or sensitivity CSV files only as needed for the task.
-9. Inspect `data/hud_zip_tract_crosswalk_metadata.json` and the `Data guide` and `Sources` sheets in `data/NYC_EV_Project_Data.xlsx` before making claims about data provenance.
+1. `README.md` and `GUROBI_RUN_INSTRUCTIONS.md` for the current scenario and execution.
+2. `docs/RESIDENT_CURBSIDE_MODEL.md`, `docs/COST_PARAMETERS.md`, `docs/INPUT_ASSUMPTIONS.md` and `docs/RESIDENT_CURBSIDE_DATA.md` for formulation, inputs and limitations.
+3. `config/tract_resident_curbside_15m_cap150.json`, then the comparison configs `config/tract_case.json` and `config/base_case.json`.
+4. `src/data_preparation.py`, `src/resident_candidates.py`, `src/optimization.py`, `run_model.py`, `run_gurobi.py` and `run_resident_sensitivity.py`.
+5. Tests in `tests/`; current `results/resident_curbside_15m_cap150/summary.json` and `sanity_checks.json`; sensitivity configs, summaries, checks and `RUN_NOTES.md` as relevant.
+6. For historical context, `milestones/IEOR4004_Milestone3_Latest.pdf`, `milestones/MILESTONE4.md`, `run_geography_comparison.py` and `run_sensitivity.py`. Milestone 3 is the historical municipal-only formulation; use the resident-curbside document for the approved extension.
+7. Before provenance claims, inspect `data/hud_zip_tract_crosswalk_metadata.json` and the `Data guide` and `Sources` sheets in `data/NYC_EV_Project_Data.xlsx`.
 
-## Source-of-truth hierarchy
+## Sources of truth
 
-Use the file that controls the type of claim:
+- Code and tests control implementation behavior; the selected scenario JSON controls numerical assumptions.
+- Current formulation: `docs/RESIDENT_CURBSIDE_MODEL.md`. Fixed municipal cost absorbs the former first-time indicator before optimization.
+- Main recorded result: `results/resident_curbside_15m_cap150/`, solved at 0.5% tolerance and 120 seconds per stage.
+- Section 6 recorded scenarios: `results/sensitivity_resident/`, solved at 0.01% tolerance and 600 seconds per stage. Keep their numbers separate from the main reference.
+- Parking-only tract and ZIP results are comparisons, not the current principal result. The synthetic tract-center curbside case is also historical.
 
-1. Finalized Milestone 3 PDF for the mathematical formulation.
-2. Code and tests for implementation behavior.
-3. `config/tract_case.json` for current run assumptions.
-4. Checked-in tract `summary.json` and `sanity_checks.json` for verified numerical results from the current committed run.
-5. `milestones/MILESTONE4.md` for report interpretation, assumptions, and limitations.
-6. README and other summaries for navigation.
+Flag conflicts rather than inventing values or silently overwriting a recorded result. Solver incumbents, nonzero tolerances and alternative portfolios can produce different site lists and costs on reruns. Do not attribute every site swap to a scenario parameter.
 
-If these sources conflict, flag the conflict before editing or reporting a result. Do not silently reconcile it by inventing a value, changing the formulation, or overwriting checked-in results.
+The main recorded result is 664,576.38 kWh/week served (67.64%), $11,974,897 invested, 11 municipal facilities with 41 added ports, and 115 curbside sites with 460 ports. Its Stage 1 and Stage 2 gaps are 0.2053% and 0.4672%; all main-run checks pass. It was reproduced on November 19 with Gurobi 13.0.3. See the README for the distinct recorded sensitivity reference.
 
-## Current model facts
+## Input and interpretation rules
 
-- Current demand geography: Census tract.
-- Required base-case service radius: 0.5 mile.
-- Primary objective: maximize equity-weighted served demand using the finalized Milestone 3 formulation.
-- Projected-demand limit: `D_i(1+r)^T`; do not add the old unprojected demand constraint to the same future-demand run.
-- Current scenario inputs: `r=5%`, `T=5`, `lambda=1`, 60 kWh/EV/week, and 25% public-L2 share.
-- These five inputs are assumptions requiring group confirmation; they are not values estimated by Gurobi.
-- Current verified solution: 2,285 Census tract demand points, 40 municipal investment candidates, 787 modeled supply sites, 7,191 accessible pairs, 14 selected municipal facilities, 55 additional Level 2 ports, $601,935 in modeled investment cost, and 490,980.68 kWh/week served (49.97% of projected demand).
-- Solver status: `OPTIMAL`; final MIP gap: 0.0%; all automated checks pass.
-- The ZIP-point model is a comparison baseline, not the current report result.
+- Do not change the objective, constraints, base radius or five demand/policy assumptions without group authorization: 60 kWh/EV/week, 25% public L2 share, 5% annual growth, five years and lambda = 1. These are scenario inputs, not values estimated by Gurobi.
+- Municipal hours come from the facility workbook, column `Scheduled hours/week`, joined by `Facility ID`. The geocoded CSV supplies coordinates. Missing or invalid hours fail rather than becoming 168; zero is allowed.
+- Municipal capacity is `7.2 × H_j × 0.90` per port. Other existing sites retain the unverified 168-hour assumption. A curbside site provides four ports and 2,903.04 kWh/week under its 60% capacity factor.
+- Municipal installation limits are uniformly `min(20, floor(0.20 × max(0, spaces − existing L2 ports)))`. They are planning assumptions, not verified engineering limits.
+- Retain unresolved schedules and closure notices described in `docs/INPUT_ASSUMPTIONS.md`; Gun Hill stays included unless explicitly instructed otherwise. Do not quietly correct Hunts Point's retained 168 hours without documenting and rerunning the change.
+- Tract points and HUD residential ratios approximate EV locations. Do not invent coordinates or impute unmatched registration rows without approval and documentation.
+- Accessibility is Haversine distance only. Do not claim bridge, water, highway, street-network or pedestrian-barrier screening.
+- Equity scores measure accessible-existing-supply shortage against baseline demand, not income or demographics. Existing supply may appear in several scores, while network capacity constraints prevent flow from being used twice. Demand-growth sensitivity holds scores fixed; radius changes recompute them.
+- Costs and budgets are assumptions/historical benchmarks, not contractor quotes or a confirmed remaining grant balance. Resident pins are not approved construction sites. Unknown inventory needs review.
+- Keep source snapshots and checked-in results unless refreshing them is explicitly requested. Use `outputs/` for fresh local runs. Record both solver gaps, conservation, positive-flow distance and each feasibility check before reporting results.
+- The recorded $125k/site sensitivity fails the strict capacity check by about 2.2e-05 kWh; retain the exception unless a separate numerical validation is documented. Never silently relabel a failed check.
+- Keep paths repository-relative. Never commit license files, tokens, passwords, `.env` files or machine-specific settings.
 
-## Rules for changes
+## Verification
 
-- Do not change the objective, constraints, symbols, 0.5-mile base case, or five highlighted scenario assumptions without explicit group approval.
-- Do not present assumptions as data-derived estimates.
-- Do not invent coordinates or impute unmatched ZIP records unless the group approves and the method is documented.
-- Do not claim that bridge, water, highway, or pedestrian-barrier screening is implemented; the current accessible-pair code uses Haversine distance only.
-- Do not describe the solution as a final construction plan or real-world guarantee.
-- Preserve repository-relative paths. Never add a teammate's local absolute path.
-- Never commit license files, HUD tokens, passwords, API keys, `.env` files, or machine-specific settings.
-- Preserve the original data snapshots and checked-in reference results unless the task explicitly requires refreshing them.
-- If an assumption, data-preparation rule, or model equation changes, rerun the affected model and update the results, README, implementation document, reminder, and tests together.
+For documentation and organization changes, run `git diff --check` and `python -m unittest discover -s tests`. For a launcher change, also run `python run_gurobi.py` to a fresh ignored output folder. For model/config/data changes, rerun affected scenarios, baselines and tests, then update their documentation together. Do not overwrite historical outputs merely to verify a refactor.
 
-## Required verification
-
-For documentation-only work:
-
-```bash
-git diff --check
-python -m unittest discover -s tests
-```
-
-For model, configuration, or data-preparation changes:
-
-```bash
-python run_model.py --config config/tract_case.json --output-dir results/tract_case
-python run_geography_comparison.py
-python -m unittest discover -s tests
-```
-
-Confirm solver status, MIP gap, all sanity checks, record-allocation conservation, and maximum positive-flow distance before updating reported numbers.
-
-## AI handoff response
-
-After completing the reading sequence and before making a substantive change, summarize:
-
-1. The current resident-curbside model, the parking-only tract baseline, and how the ZIP baseline is used.
-2. The objective and projected-demand constraint in plain language.
-3. The five assumptions requiring group confirmation.
-4. The current verified candidate solution.
-5. The important spatial, barrier-screening, equity, cost, and data limitations.
-6. The exact files that the requested task would change and which verification commands will be run.
-
-If the user's request is only to understand the repository, stop after this summary and do not modify files.
+Before substantive edits, summarize the current model, historical comparisons, assumptions, verified result, limitations, planned file changes and validation commands for the user. A request only to understand the repository does not authorize changes.

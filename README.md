@@ -6,17 +6,23 @@ This Python/Gurobi project helps NYC DOT choose where to add public Level 2 char
 
 The model first maximizes equity-weighted weekly charging energy served, then minimizes installation cost while preserving the first-stage incumbent within a small numerical tolerance. Equity weights represent existing charging-access shortages, not income or demographic equity.
 
-## Run the current model
+## How to run Gurobi
 
-From the repository root, use Python 3.11 or later and an active Gurobi license:
+**Start with [run_gurobi.py](run_gurobi.py)**. It selects the current municipal + resident-curbside model. The actual Gurobi variables, objective and constraints are in [src/optimization.py](src/optimization.py).
+
+1. Download and unzip the repository, or clone it. Open the project folder in desktop VS Code and open its terminal.
+2. Activate Python 3.11+ with a suitable Gurobi license, then install the packages.
+3. Run the launcher and open `outputs/current_model/` to see your results.
 
 ```bash
 python -m pip install -r requirements.txt
-python run_model.py --config config/tract_resident_curbside_15m_cap150.json --output-dir results/resident_curbside_rerun
+python run_gurobi.py
 python -m unittest discover -s tests
 ```
 
-The main inputs and cached geocodes are included; a normal model run does not download new data. If Gurobi reports an invalid locale on macOS, prefix the command with `LC_ALL=C`.
+For environment setup, licensing, parameter changes and result interpretation, follow the **[step-by-step Gurobi run guide](GUROBI_RUN_INSTRUCTIONS.md)**. For Google Colab, open **[Run_Current_Model.ipynb](notebooks/Run_Current_Model.ipynb)** and run its cells in order.
+
+The launcher uses `config/tract_resident_curbside_15m_cap150.json`; fresh results go to the Git-ignored `outputs/current_model/` folder. Use `--output-dir outputs/my_run` to keep another run. Reusing an output folder replaces its files. No original data or recorded reference results are changed by the default command. The main inputs and cached geocodes are included; normal execution does not download new data.
 
 ## Scenario and reference results
 
@@ -61,7 +67,7 @@ The recorded `$125,000/site` scenario fails the strict post-solve capacity check
 | Municipal costs | $6,217/added port; $20,000 setup only at facilities with no modeled existing L2 ports |
 | Curbside cost | $100,000 per four-port site |
 
-Budgets, energy use, charging share, growth, power, capacity factors, costs and installation limits are planning assumptions or historical benchmarks—not confirmed NYC DOT allocations, construction quotes or verified electrical limits. Municipal hours come from the facility workbook; other public sites use an unverified 168-hour assumption. See the model and data notes below for unresolved schedules, including Hunts Point and Gun Hill.
+Budgets, energy use, charging share, growth, power, capacity factors, costs and installation limits are planning assumptions or historical benchmarks—not confirmed NYC DOT allocations, construction quotes or verified electrical limits. Municipal hours come from the facility workbook; other public sites use an unverified 168-hour assumption. See [input assumptions](docs/INPUT_ASSUMPTIONS.md) for unresolved schedules, including Hunts Point and Gun Hill.
 
 Resident pins are suggestions, not approved construction sites. Tract points approximate EV locations, and accessibility uses straight-line Haversine distance without street-network or barrier screening. The results do not establish construction feasibility or actual future utilization.
 
@@ -71,13 +77,15 @@ Resident pins are suggestions, not approved construction sites. Tract points app
 | --- | --- |
 | `config/tract_resident_curbside_15m_cap150.json` | Current municipal + resident-curbside scenario |
 | `src/data_preparation.py` | Demand allocation, inventory matching, capacities and accessibility |
-| `src/optimization.py` | Two-stage MILP and feasibility checks |
+| `run_gurobi.py` | Current-model launcher; start here |
+| `src/optimization.py` | Actual Gurobi variables, constraints, two-stage objectives and checks |
+| `notebooks/` | Current Colab runner and archived Milestone 4 notebook |
 | `data/` | Cleaned workbooks, CSVs and source snapshots |
 | `results/` | Recorded solutions, scenario comparisons and figures |
 | `tests/` | Automated pipeline and model checks |
 
 A run writes `summary.json`, `sanity_checks.json`, `municipal_candidate_solution.csv`, `curbside_candidate_solution.csv`, `demand_service_solution.csv` and `site_utilization.csv`. `additional_ports` in the summary counts municipal ports; `curbside_ports` is separate. Investment includes both.
 
-For detail, see [current formulation](docs/RESIDENT_CURBSIDE_MODEL.md), [cost parameters](docs/COST_PARAMETERS.md), [resident-data provenance](docs/RESIDENT_CURBSIDE_DATA.md) and [sensitivity run notes](results/sensitivity_resident/RUN_NOTES.md).
+For the complete navigation map, see [docs/README.md](docs/README.md). For detail, see [current formulation](docs/RESIDENT_CURBSIDE_MODEL.md), [cost parameters](docs/COST_PARAMETERS.md), [resident-data provenance](docs/RESIDENT_CURBSIDE_DATA.md) and [sensitivity run notes](results/sensitivity_resident/RUN_NOTES.md).
 
 The parking-only tract model (`config/tract_case.json`) and ZIP model (`config/base_case.json`) are retained as comparison baselines. `run_geography_comparison.py` compares those baselines; `run_sensitivity.py` is the older ZIP sensitivity runner, not the current Section 6 analysis. Earlier synthetic tract-center curbside candidates are documented separately in [CURBSIDE.md](docs/CURBSIDE.md).
